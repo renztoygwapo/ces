@@ -1,5 +1,5 @@
 <?php
-class Dashboard extends Admin_Controller {
+class Dashboard extends Frontend_Controller {
 
     public function __construct(){
         parent::__construct();
@@ -13,5 +13,8 @@ class Dashboard extends Admin_Controller {
     
     public function modal() {
       $this->load->view('admin/_layout_modal', $this->data);
+    }
+    public function home(){
+
     }
 }

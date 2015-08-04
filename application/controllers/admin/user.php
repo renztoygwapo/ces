@@ -4,6 +4,9 @@ class User extends Admin_Controller {
     public function __construct(){
         parent::__construct();
     }
+    public function index(){
+        $this->load->view('index');
+    }
 
     public function login(){
     	
@@ -30,5 +33,6 @@ class User extends Admin_Controller {
     	$this->user_m->logout();
     	redirect('admin/user/login');
     }
+
 
 }

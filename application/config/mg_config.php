@@ -1,2 +1,2 @@
 <?php
-$config['site_name'] = 'Mega Gas';
+$config['site_name'] = 'Carmen Elementary School';
