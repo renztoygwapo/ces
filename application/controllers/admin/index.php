@@ -10,7 +10,7 @@ class Index extends Admin_Controller {
 
     public function login(){
       
-      $dashboard = 'admin/home-admin/';
+      $dashboard = 'admin/home_admin/';
       $this->user_m->loggedin() == FALSE || redirect($dashboard);
       
       $rules = $this->user_m->rules;
@@ -22,7 +22,7 @@ class Index extends Admin_Controller {
         }
         else {
            $this->session->set_flashdata('error', 'Username/Password Combination does not exist.');
-          redirect('admin/user/login');
+          redirect('admin/index/login');
         }
       }
         $this->data['subview'] = 'admin/user/login';
@@ -31,7 +31,7 @@ class Index extends Admin_Controller {
 
     public function logout(){
       $this->user_m->logout();
-      redirect('admin/user/login');
+      redirect('admin/index/login');
     }
 
 

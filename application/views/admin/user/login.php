@@ -1,7 +1,7 @@
 <body class="login">
 <!-- BEGIN LOGO -->
 <div class="logo">
-	<h3 style="color:yellow;">MEGA GAS Corp.</h3>
+	<h3 style="color:yellow;">Carmen Elementary School</h3>
 </div>
 
 <!-- END SIDEBAR TOGGLER BUTTON -->
@@ -53,7 +53,8 @@
 			</div>
 		</div>
 		<div class="form-actions">
-		<?php echo form_submit('submit', 'Log in', 'class="btn green pull-right"'); ?>
+		<input type="submit" value="Login" class="btn blue pull-right">
+		<?php //echo form_submit('submit', 'Log in', 'class="btn green pull-right"'); ?>
 		<i class="m-icon-swapright m-icon-white"></i>
 		</div>
 		&copy; <?php echo date('Y'); ?> <?php echo $meta_title; ?>
