@@ -325,4 +325,7 @@
       </div>
     </div>
 
+    <?php //knowing how to git ?>
+
+
     <?php $this->load->view('admin/components/frontpage_tail'); ?>
