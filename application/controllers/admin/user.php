@@ -1,11 +1,12 @@
 <?php
-class User extends Admin_Controller {
+class User extends Frontend_Controller {
 
     public function __construct(){
         parent::__construct();
     }
-    public function index(){
-        $this->load->view('index');
+
+    public function login(){
+    	$this->load->view('admin/login');
     }
 
 
