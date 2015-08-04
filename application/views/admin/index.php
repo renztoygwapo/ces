@@ -1,5 +1,3 @@
-<?php $this->load->view('admin/components/page_head'); ?>
-
 <!-- Body BEGIN -->
 <body class="corporate">
     <!-- BEGIN TOP BAR -->
@@ -794,4 +792,3 @@
         <!-- END CLIENTS -->
       </div>
     </div>
-<?php $this->load->view('admin/components/page_tail'); ?>
