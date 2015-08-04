@@ -9,5 +9,9 @@ class User extends Frontend_Controller {
     	$this->load->view('admin/login');
     }
 
+    public function register(){
+    	$this->load->view('admin/register');
+    }
+
 
 }
