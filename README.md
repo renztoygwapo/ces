@@ -1,4 +1,4 @@
-megagas
+CARMEN ELEMETARY SCHOOL MANAGEMENT System
 =======
 
-mis mega gas system
+this system is made up of codeigniter framework and metroponic bootstrap templates.
