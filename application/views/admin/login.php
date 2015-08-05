@@ -48,12 +48,12 @@
                       <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-10 padding-right-30">
                         <hr>
                         <div class="login-socio">
-                            <p class="text-muted">or login using:</p>
+      
                             <ul class="social-icons">
-                                <li><a href="#" data-original-title="facebook" class="facebook" title="facebook"></a></li>
-                                <li><a href="#" data-original-title="Twitter" class="twitter" title="Twitter"></a></li>
-                                <li><a href="#" data-original-title="Google Plus" class="googleplus" title="Google Plus"></a></li>
-                                <li><a href="#" data-original-title="Linkedin" class="linkedin" title="LinkedIn"></a></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
                             </ul>
                         </div>
                       </div>
