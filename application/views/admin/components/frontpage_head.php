@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="#"><img src="../../assets/frontend/layout/img/logos/logo-corp-red.png" alt="Metronic FrontEnd"></a>
+        <a class="site-logo" href="<?php echo site_url()?>"><img src="../../assets/frontend/layout/img/logos/logo-corp-red.png" alt="Metronic FrontEnd"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
@@ -111,24 +111,10 @@ License: You must have a valid license purchased only from themeforest (the abov
               <a href="<?php echo site_url('gallery/')?>">Gallery</a>
             </li>
             <li class="dropdown">
-              <a href="<?php echo site_url('about/')?>">About Us</a>   
+              <a href="<?php echo site_url('about/')?>">About Us</a>  
+              <span class="sep"></span> 
             </li>
-            <!-- BEGIN TOP SEARCH -->
-            <li class="menu-search">
-              <span class="sep"></span>
-              <i class="fa fa-search search-btn"></i>
-              <div class="search-box">
-                <form action="#">
-                  <div class="input-group">
-                    <input type="text" placeholder="Search" class="form-control">
-                    <span class="input-group-btn">
-                      <button class="btn btn-primary" type="submit">Search</button>
-                    </span>
-                  </div>
-                </form>
-              </div> 
-            </li>
-            <!-- END TOP SEARCH -->
+         
           </ul>
         </div>
         <!-- END NAVIGATION -->
