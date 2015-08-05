@@ -46,7 +46,7 @@
                     </div>
                     <div class="row">
                       <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-10 padding-right-30">
-                        <hr>
+                     
                         <div class="login-socio">
       
                             <ul class="social-icons">
