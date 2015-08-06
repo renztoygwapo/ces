@@ -6,19 +6,20 @@
        
         <!-- BEGIN SIDEBAR & CONTENT -->
         <div class="row margin-bottom-40">
-          <!-- BEGIN SIDEBAR -->
-          <div class="sidebar col-md-2 col-sm-2">
-          
-          </div>
-          <!-- END SIDEBAR -->
 
-          <!-- BEGIN CONTENT -->
+          <!-- Notifications-->
+          <?php if($this->session->flashdata('result') != false){ ?>
+          <div id="prefix_419624997860" class="Metronic-alerts alert alert-info fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+          </div>
+          <?php } ?>
+
           <div class="col-md-10 col-sm-10">
             <h1>Create an account</h1>
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
-                  <form class="form-horizontal" action="<?php echo site_url('admin/user/insert'); ?>" method="post">
+                  <form class="form-horizontal" action="<?php echo site_url('register/insert'); ?>" method="post">
                     <fieldset>
                       <legend>Your Basic Personal Details</legend>
                       <div class="form-group">
@@ -48,9 +49,9 @@
                        
                       <select class="form-control" name ="role" required>
                         <option>-----   Select Type of User  -----</option>
-                        <option> Teacher</option>
-                        <option> Student </option>
-                        <option> Alumni </option>
+                        <option>Teacher</option>
+                        <option>Student</option>
+                        <option>Alumni</option>
                       </select>
                     
                         </div>
