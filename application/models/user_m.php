@@ -40,6 +40,15 @@ class User_M extends MY_Model
 		}
 	}
 
+
+	public function register_user($data){
+				
+		
+		$this->db->insert('users', $data); // insert user
+
+	}
+
+
 	public function logout ()
 	{
 		$this->session->sess_destroy();
