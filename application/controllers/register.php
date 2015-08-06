@@ -16,7 +16,7 @@ class Register extends Frontend_Controller {
 		$firstname = $this->input->post('firstname');
 		$lastname = $this->input->post('lastname');
 		$username = $this->input->post('username');
-		$password = sha1("".$this->input->post('password'));
+		$password = $this->input->post('password');
 		$email = $this->input->post('email');
 		$role = $this->input->post('role');
 		$this->load->model('user_m');
@@ -24,11 +24,11 @@ class Register extends Frontend_Controller {
 		   'firstname' => $firstname ,
 		   'lastname' => $lastname ,
 		   'username' => $username ,
-		   'password' => $password ,
+		   'password' => $this->user_m->hash($password),TRUE,
 		   'email' => $email ,
 		   'role' => $role
 		);
-		$this->user_m->register_user($data);
+		$this->user_m->save($data);
 		$this->session->set_flashdata('result', 'Successfully Registered!');
 		redirect('/register/','refresh');
 
