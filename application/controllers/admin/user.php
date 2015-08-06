@@ -11,7 +11,15 @@ class User extends Frontend_Controller {
 
     public function register(){
     	$this->load->view('admin/register');
+
     }
 
+    public function insert(){
+    	
+		$this->load->model('user_m');
+		$this->user_m->register_user();
+		redirect('/register');
+
+	}
 
 }

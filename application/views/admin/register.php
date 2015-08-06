@@ -18,25 +18,25 @@
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
-                  <form class="form-horizontal" role="form">
+                  <form class="form-horizontal" action="<?php echo site_url('admin/user/insert'); ?>" method="post">
                     <fieldset>
-                      <legend>Your personal details</legend>
+                      <legend>Your Basic Personal Details</legend>
                       <div class="form-group">
                         <label for="firstname" class="col-lg-4 control-label">First Name <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="firstname">
+                          <input type="text" name="firstname" class="form-control" id="firstname " required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="lastname" class="col-lg-4 control-label">Last Name <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="lastname">
+                          <input type="text" name="lastname" class="form-control" id="lastname" required>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="email" class="col-lg-4 control-label">Email <span class="require">*</span></label>
+                        <label for="email" class="col-lg-4 control-label ">Email <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="email">
+                          <input type="email" name="email" class="form-control" id="email" required>
                         </div>
                       </div>
 
@@ -45,14 +45,15 @@
                       <div class="form-group">
                         <label for="user_type" class="col-lg-4 control-label">I am a/an <span class="require">*</span></label>
                         <div class="col-lg-8">
-                        
-                      <select class="form-control">
+                       
+                      <select class="form-control" name ="role" required>
                         <option>-----   Select Type of User  -----</option>
                         <option> Teacher</option>
                         <option> Student </option>
                         <option> Alumni </option>
                       </select>
-                  </div>
+                    
+                        </div>
 
 
                       </div>
@@ -63,17 +64,23 @@
 
                     </fieldset>
                     <fieldset>
-                      <legend>Your password</legend>
+                      <legend>Your Account:</legend>
+                      <div class="form-group">
+                        <label for="password" class="col-lg-4 control-label">Username <span class="require">*</span></label>
+                        <div class="col-lg-8">
+                          <input type="text" name = "username" class="form-control" id="username" required>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label for="password" class="col-lg-4 control-label">Password <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="password">
+                          <input type="password" name ="password" class="form-control" id="password" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="confirm-password" class="col-lg-4 control-label">Confirm password <span class="require">*</span></label>
                         <div class="col-lg-8">
-                          <input type="text" class="form-control" id="confirm-password">
+                          <input type="password" class="form-control" id="confirm-password" required>
                         </div>
                       </div>
                     </fieldset>
