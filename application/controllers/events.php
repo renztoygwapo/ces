@@ -10,3 +10,5 @@ class Events extends Frontend_Controller {
 
     }
 }
+
+?>
