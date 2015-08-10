@@ -40,6 +40,24 @@ class User_M extends MY_Model
 		}
 	}
 
+	
+	public function checkrole(){
+
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
+		$user = $this->get_by(array(
+			'username' => $this->input->post('username'),
+			'password' => $this->hash($this->input->post('password')),
+		), TRUE);
+
+
+		if(count($user)){
+			return $user->role;
+		}
+
+	}
+
 
 	public function logout ()
 	{

@@ -24,7 +24,7 @@ class Register extends Frontend_Controller {
 		   'firstname' => $firstname ,
 		   'lastname' => $lastname ,
 		   'username' => $username ,
-		   'password' => $this->user_m->hash($password),TRUE,
+		   'password' => $this->user_m->hash($password),
 		   'email' => $email ,
 		   'role' => $role
 		);
