@@ -17,7 +17,7 @@
           </div>
           <?php } ?>
 
-            <h1>Login</h1>
+            <h1>Login As Student</h1>
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
@@ -61,10 +61,9 @@
                 </div>
                 <div class="col-md-4 col-sm-4 pull-right">
                   <div class="form-info">
-                    <h2><em>Important</em> Information</h2>
-                    <p>Duis autem vel eum iriure at dolor vulputate velit esse vel molestie at dolore.</p>
+                    <h2>Login as <em>Teacher</em></h2>
 
-                    <button type="button" class="btn btn-default">More details</button>
+                    <button type="button" class="btn btn-default">Click Here!</button>
                   </div>
                 </div>
               </div>

@@ -10,4 +10,9 @@ class Student extends Admin_Controller {
       $this->load->view('admin/student/index');
 
     }
+
+    public function logout(){
+    	$this->user_m->logout();
+    	redirect('/login/');
+    }
 }
