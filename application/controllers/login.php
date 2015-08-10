@@ -7,15 +7,10 @@ class Login extends Frontend_Controller {
     
     public function index(){
  
-    	$check = $this->user_m->checkrole();
-    	var_dump($check);
-    	if($check == 'Teacher'){
-    		$dashboard = 'admin/teacher/';
-    	}else if($check == 'Student'){
-    		$dashboard = 'admin/student/';
-    	}else{
-    		$dashboard = 'admin/student/';
-    	}
+    	//$check = $this->user_m->checkrole();
+    	//	var_dump($check);
+    	
+    	$dashboard = 'admin/student';
     	$this->user_m->loggedin() == FALSE || redirect($dashboard);
     	
     	$rules = $this->user_m->rules;
@@ -23,8 +18,6 @@ class Login extends Frontend_Controller {
     	if ($this->form_validation->run() == TRUE) {
     		// We can login and redirect
     		if ($this->user_m->login() == TRUE) {
-
-
     			redirect($dashboard);
     		}
     		else {

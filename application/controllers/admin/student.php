@@ -7,7 +7,7 @@ class Student extends Admin_Controller {
 
     public function index() {
      // $this->data['subview'] = 'admin/dashboard/index';
-      $this->load->view('admin/student');
+      $this->load->view('admin/student/index');
 
     }
 }
