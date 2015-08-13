@@ -22,7 +22,7 @@ class User_M extends MY_Model
 		parent::__construct();
 	}
 
-	public function login ()
+	public function login()
 	{
 		$user = $this->get_by(array(
 			'username' => $this->input->post('username'),
