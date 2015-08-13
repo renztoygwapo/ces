@@ -15,7 +15,8 @@ class Login extends Frontend_Controller {
             //var_dump($this->form_validation->run());
             if($this->form_validation->run() == true){
                 var_dump($this->user_m->login());
-                    $check = $this->user_m->checkrole();
+                   //if($this->user_m->login() != NULL){
+                     $check = $this->user_m->checkrole();
                     if($check != NULL){
                         
                         $this->user_m->login();
@@ -28,11 +29,13 @@ class Login extends Frontend_Controller {
                                     redirect('admin/alumni/');
                                 }
                             
-                        } else {
-                                $this->session->set_flashdata('error', 'Username/Password Combination does not exist.');
-                                redirect('login/');
                         }
                     }
+                  // }
+                    // else {
+                    //             $this->session->set_flashdata('error', 'Username/Password Combination does not exist.');
+                    //             redirect('login/');
+                    //     }
               
             } 
 
