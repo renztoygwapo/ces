@@ -50,14 +50,7 @@
 				
 					</a>
 				</li>
-				<li >
-					<a href="<?php echo site_url('admin/mycalendar/')?>" >
-					<i class=" icon-calendar"></i>
-					<span class="title">My Calendar</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
+		
 				<li>
 					<a href="<?php echo site_url('admin/myfiles/')?>" >
 					<i class="icon-briefcase"></i>

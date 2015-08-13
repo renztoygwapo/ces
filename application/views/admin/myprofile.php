@@ -35,14 +35,14 @@
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
 				<li>
-					<a href="<?php echo site_url('admin/home_admin/')?>">
+					<a href="<?php echo site_url('admin/home_admin/')?>" >
 					<i class="icon-home"></i>
 					<span class="title">Dashboard</span>
 					<span class="selected"></span>
 				
 					</a>
 				</li>
-				<li class="start active">
+				<li  class="start active">
 					<a href="<?php echo site_url('admin/myprofile/')?>" >
 					<i class="icon-user"></i>
 					<span class="title">My Profile</span>
@@ -51,15 +51,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo site_url('admin/mycalendar/')?>" >
-					<i class=" icon-calendar"></i>
-					<span class="title">My Calendar</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="javascript:;">
+					<a href="<?php echo site_url('admin/myfiles/')?>" >
 					<i class="icon-briefcase"></i>
 					<span class="title">My Files</span>
 					<span class="selected"></span>
@@ -67,15 +59,15 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
 					<span class="title">Request</span>
 					<span class="selected"></span>
 				
 					</a>
 				</li>
-				<li>
-					<a href="javascript:;">
+				<li >
+					<a href="<?php echo site_url('admin/rankings/')?>" >
 					<i class="icon-trophy"></i>
 					<span class="title">Rankings</span>
 					<span class="selected"></span>
@@ -83,7 +75,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="<?php echo site_url('admin/reports/')?>" >
 					<i class="icon-bar-chart"></i>
 					<span class="title">Reports</span>
 					<span class="selected"></span>
@@ -91,7 +83,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="javascript:;">
+					<a href="<?php echo site_url('admin/forum_db/')?>" >
 					<i class="icon-users"></i>
 					<span class="title">Forums</span>
 					<span class="selected"></span>
@@ -104,6 +96,7 @@
 	</div>
 	<!-- END SIDEBAR -->
 
+	
 <!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content">
@@ -222,10 +215,6 @@
 					<li>
 						<i class="fa fa-home"></i>
 						<a href="index.html">Home</a>
-						<i class="fa fa-angle-right"></i>
-					</li>
-					<li>
-						<a href="#">Extra</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
@@ -963,10 +952,7 @@
 												<a data-toggle="tab" href="#tab_3-3">
 												<i class="fa fa-lock"></i> Change Password </a>
 											</li>
-											<li>
-												<a data-toggle="tab" href="#tab_4-4">
-												<i class="fa fa-eye"></i> Privacity Settings </a>
-											</li>
+						
 										</ul>
 									</div>
 									<div class="col-md-9">
@@ -1070,59 +1056,7 @@
 													</div>
 												</form>
 											</div>
-											<div id="tab_4-4" class="tab-pane">
-												<form action="#">
-													<table class="table table-bordered table-striped">
-													<tr>
-														<td>
-															 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus..
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="radio" name="optionsRadios1" value="option1"/>
-															Yes </label>
-															<label class="uniform-inline">
-															<input type="radio" name="optionsRadios1" value="option2" checked/>
-															No </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															 Enim eiusmod high life accusamus terry richardson ad squid wolf moon
-														</td>
-														<td>
-															<label class="uniform-inline">
-															<input type="checkbox" value=""/> Yes </label>
-														</td>
-													</tr>
-													</table>
-													<!--end profile-settings-->
-													<div class="margin-top-10">
-														<a href="#" class="btn green">
-														Save Changes </a>
-														<a href="#" class="btn default">
-														Cancel </a>
-													</div>
-												</form>
-											</div>
+											
 										</div>
 									</div>
 									<!--end col-md-9-->
