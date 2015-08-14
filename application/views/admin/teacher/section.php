@@ -141,9 +141,7 @@
 									 19.11.2010
 								</td>
 								<td>
-									<span class="label label-sm label-danger">
-									Delete 
-									</span>
+									
 								<a href="<?php echo site_url('teacher/studentList')?>">
 									<span class="label label-sm label-success">
 									 View Student 
@@ -166,9 +164,7 @@
 									 19.11.2010
 								</td>
 								<td>
-									<span class="label label-sm label-danger">
-									Delete 
-									</span>
+									
 
 									<span class="label label-sm label-success">
 									 View Student 
@@ -190,9 +186,7 @@
 									 13.11.2010
 								</td>
 								<td>
-									<span class="label label-sm label-danger">
-									Delete 
-									</span>
+								
 
 									<span class="label label-sm label-success">
 									 View Student 
@@ -213,10 +207,7 @@
 									 12.11.2010
 								</td>
 								<td>
-									<span class="label label-sm label-danger">
-									Delete 
-									</span>
-
+								
 									<span class="label label-sm label-success">
 									 View Student 
 									</span>
@@ -237,9 +228,7 @@
 									 17.11.2010
 								</td>
 								<td>
-									<span class="label label-sm label-danger">
-									Delete 
-									</span>
+								
 
 									<span class="label label-sm label-success">
 									 View Student 
