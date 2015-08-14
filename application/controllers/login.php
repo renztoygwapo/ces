@@ -22,11 +22,11 @@ class Login extends Frontend_Controller {
                         $this->user_m->login();
                         if($this->user_m->loggedin() == true){
                                     if($check == 'Student'){
-                                    redirect('admin/student/');
+                                    redirect('student/');
                                 }else if($check == 'Teacher'){
-                                    redirect('admin/teacher/');
+                                    redirect('teacher/');
                                 }else if($check == 'Alumni'){
-                                    redirect('admin/alumni/');
+                                    redirect('alumni/');
                                 }
                             
                         }
