@@ -11,7 +11,7 @@ class Teacher extends Admin_Controller {
 
     }
 
-    
+
      public function profile() {
     
       $this->load->view('admin/teacher/myprofile');
@@ -53,11 +53,21 @@ class Teacher extends Admin_Controller {
       $this->load->view('admin/teacher/events');
 
     }
+         public function section() {
+     
+      $this->load->view('admin/teacher/section');
+
+    }
+
+     public function studentList() {
+     
+      $this->load->view('admin/teacher/studentList');
+
+    }
 
 
 
 
-    
      public function logout(){
     	$this->user_m->logout();
     	redirect('/login/');
