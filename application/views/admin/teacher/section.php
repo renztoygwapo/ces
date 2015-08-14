@@ -142,7 +142,7 @@
 											<td><?php echo  $section->section_name; ?></td>
 											<td><?php echo  $section->subject_name; ?></td>
 											<td><?php echo  $section->school_yr; ?></td>
-											<td><?php echo anchor('teacher/section/student_list/' . $section->id, 'View Student'); ?></td>
+											<td><?php echo anchor('teacher/studentList/' . $section->id, 'View Student'); ?></td>
 										</tr>
 														<?php endforeach; ?>
 														<?php else: ?>
