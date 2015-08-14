@@ -73,6 +73,7 @@ jQuery(document).ready(function() {
    Index.initMiniCharts();
    Index.initIntro();
    Tasks.initDashboardWidget();
+   TableAdvanced.init();
 });
 </script>
 <!-- END JAVASCRIPTS -->

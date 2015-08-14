@@ -39,8 +39,13 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="<?php echo site_url('/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/admin/pages/css/profile.css'); ?>" rel="stylesheet" type="text/css"/>
 
-<!-- END PAGE LEVEL STYLES -->
+<link href="<?php echo site_url('/assets/global/plugins/select2/select2.css'); ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo site_url('/assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css'); ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo site_url('/assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css'); ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo site_url('/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css'); ?>" rel="stylesheet" type="text/css"/>
 
+
+<!-- END PAGE LEVEL STYLES -->
 
 <link href="<?php echo site_url('/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css'); ?>" rel="stylesheet" type="text/css"/>
@@ -49,6 +54,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- BEGIN PAGE STYLES -->
 <link href="<?php echo site_url('/assets/admin/pages/css/tasks.css'); ?>" rel="stylesheet" type="text/css"/>
 <!-- END PAGE STYLES -->
+
 <!-- BEGIN THEME STYLES -->
 <link href="<?php echo site_url('/assets/global/css/components.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/css/plugins.css'); ?>" rel="stylesheet" type="text/css"/>
@@ -56,6 +62,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link id="style_color" href= "<?php echo site_url('/assets/admin/layout/css/themes/darkblue.css '); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/admin/layout/css/themes/default.css'); ?>" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="<?php echo site_url('/assets/admin/layout/css/custom.css'); ?>" rel="stylesheet" type="text/css"/>
+
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 <!-- BEGIN PAGE LEVEL STYLES -->
@@ -82,7 +89,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="index.html">
-			<img src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			<img src="<?php echo site_url('/assets/admin/layout/img/logo.png'); ?> " alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -216,13 +223,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('teacher/request')?>" >
-					<i class="icon-docs"></i>
-					<span class="title">Request</span>
+					<li>
+					<a href="<?php echo site_url('teacher/section')?>" >
+					<i class="icon-briefcase"></i>
+					<span class="title">My Section</span>
 					<span class="selected"></span>
-				
 					</a>
+
+
 				</li>
 				<li >
 					<a href="<?php echo site_url('teacher/rankings')?>" >
@@ -232,30 +240,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('teacher/reports')?>" >
-					<i class="icon-bar-chart"></i>
-					<span class="title">Reports</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-					<li>
-					<a href="<?php echo site_url('teacher/events')?>" >
-					<i class="icon-notebook"></i>
-					<span class="title">Events</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('teacher/forum')?>" >
-					<i class="icon-users"></i>
-					<span class="title">Forums</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
+			
+					
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
@@ -272,7 +258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Modal title</h4>
+							<h4 class="modal-title">Modal ticcctle</h4>
 						</div>
 						<div class="modal-body">
 							 Widget settings form goes here
@@ -287,6 +273,236 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- /.modal-dialog -->
 			</div>
 			<!-- /.modal -->
+			<!-- add section  -->
+			<div class="modal fade" id="addsection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Section Form</h4>
+						</div>
+						<div class="modal-body">
+							
+					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Section Name <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>
+							
+									
+									<div class="form-group">
+										<label class="control-label col-md-3">Subject Name<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">Math</option>
+												<option value="Category 1">English</option>
+												<option value="Category 1">Science</option>
+												
+											</select>
+										</div>
+									</div>
+							
+								
+									<div class="form-group">
+										<label class="control-label col-md-3">School Year<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												
+											</select>
+										</div>
+									</div>
+								
+								</div>
+							</form>
+
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Submit</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- end add section  -->
+
+
+
+			<!-- add student  -->
+			<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Enrollment Form</h4>
+						</div>
+						<div class="modal-body">
+							
+					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">Student Name <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>
+							
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Student Grade<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">100</option>
+												<option value="Category 1">90</option>
+												<option value="Category 1">80</option>
+												
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Subject Name<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">Math</option>
+												<option value="Category 1">English</option>
+												<option value="Category 1">Science</option>
+												
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Grading Period<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">First Grading</option>
+												<option value="Category 1">Second Grading</option>
+												<option value="Category 1">Third Grading</option>
+												<option value="Category 1">Fourth Grading</option>
+												
+											</select>
+										</div>
+									</div>
+
+							
+								
+									<div class="form-group">
+										<label class="control-label col-md-3">School Year<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												<option value="Category 1">2016</option>
+												
+											</select>
+										</div>
+									</div>
+								
+								</div>
+							</form>
+
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Submit</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- end add student  -->
+
+
+
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
 			<!-- BEGIN STYLE CUSTOMIZER -->
 			<div class="theme-panel hidden-xs hidden-sm">
