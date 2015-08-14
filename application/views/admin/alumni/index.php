@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
+<?php $this->load->view('admin/components/page_head_alumni'); ?>
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
 			Home <small></small>

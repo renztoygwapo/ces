@@ -46,7 +46,7 @@
 <script src="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery.sparkline.min.js'); ?>" type="text/javascript"></script>
-
+<script src="<?php echo site_url('/assets/global/plugins/gritter/js/jquery.gritter.js'); ?>" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo site_url('/assets/global/scripts/metronic.js'); ?>" type="text/javascript"></script>
@@ -55,8 +55,6 @@
 <script src="<?php echo site_url('/assets/admin/layout/scripts/demo.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/index.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/tasks.js'); ?>" type="text/javascript"></script>
-<script src="<?php echo site_url('/assets/admin/pages/scripts/form-dropzone.js'); ?>" type="text/javascript"></script>
-
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {    
