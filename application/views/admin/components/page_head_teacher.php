@@ -326,8 +326,8 @@ License: You must have a valid license purchased only from themeforest(the above
 										<div class="col-md-4">
 											<select class="form-control" name="school_yr">
 												<option value="">Select...</option>
-												<option value="2016">2016</option>
-												<option value="2016">2016</option>
+												<option value="2015">2015</option>
+												<option value="2014">2014</option>
 												<option value="2016">2016</option>
 												<option value="2016">2016</option>
 												<option value="2016">2016</option>
@@ -368,14 +368,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							
 					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
 								<div class="form-body">
-									<div class="alert alert-danger display-hide">
-										<button class="close" data-close="alert"></button>
-										You have some form errors. Please check below.
-									</div>
-									<div class="alert alert-success display-hide">
-										<button class="close" data-close="alert"></button>
-										Your form validation is successful!
-									</div>
+								
 									<div class="form-group">
 										<label class="control-label col-md-3">Student Name <span class="required" aria-required="true">
 										* </span>
