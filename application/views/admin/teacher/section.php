@@ -140,7 +140,8 @@
 
 										<tr class="gradeX odd" role="row">
 											<td><?php echo  $section->section_name; ?></td>
-											<td><?php echo  $section->subject_name; ?></td>
+											<td><?php echo  $section->subject_name
+											; ?></td>
 											<td><?php echo  $section->school_yr; ?></td>
 											<td><?php echo anchor('teacher/studentList/' . $section->id, 'View Student'); ?></td>
 										</tr>

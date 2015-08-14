@@ -6,7 +6,7 @@ class Student extends Admin_Controller {
     }
 
     public function index() {
-     
+      
       $this->load->view('admin/student/index');
 
     }

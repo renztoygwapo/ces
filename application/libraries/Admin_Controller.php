@@ -19,7 +19,7 @@ class Admin_Controller extends MY_Controller
     );
     if (in_array(uri_string(), $exception_uris) == FALSE) {
       if ($this->user_m->loggedin() == FALSE) {
-        redirect('admin/index/login');
+        redirect('login');
       }
     }
 	}
