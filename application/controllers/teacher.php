@@ -3,11 +3,12 @@ class Teacher extends Admin_Controller {
 
     public function __construct(){
         parent::__construct();
+        $this->load->model('teacher_m');
     }
 
     public function index() {
-     // $this->data['subview'] = 'admin/dashboard/index';
-      $this->load->view('admin/teacher/index');
+
+       $this->load->view('admin/teacher/index');
 
     }
 
@@ -54,10 +55,33 @@ class Teacher extends Admin_Controller {
 
     }
          public function section() {
-     
-      $this->load->view('admin/teacher/section');
+
+      $data['sections'] = $this->teacher_m->get();
+      $this->load->view('admin/teacher/section',$data);
 
     }
+    public function add_section(){
+     
+        $rules = $this->teacher_m->rules_admin;
+        $this->form_validation->set_rules($rules);
+          if ($this->form_validation->run() == TRUE) {
+            $data = array(
+              'section_name' => $this->input->post('section_name'),
+               'subject_name' => $this->input->post('subject'),
+                'school_yr' => $this->input->post('school_yr'),
+
+              );
+            $this->teacher_m->save($data);
+            $this->session->set_flashdata('result', 'Section Successfully Added!');
+            redirect('teacher/section','refresh');
+          }else{
+            echo 'false';
+          }
+    
+      // $this->load->teacher_m();
+      // $this->teacher_m->save($data);
+    }
+
 
      public function studentList() {
      

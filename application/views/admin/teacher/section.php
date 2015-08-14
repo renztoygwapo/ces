@@ -22,6 +22,15 @@
 
 	<div class="row">
 				<div class="col-md-12">
+
+
+				<!-- confirmation -->
+				<!-- Notifications-->
+          <?php if($this->session->flashdata('result') != false){ ?>
+          <div id="prefix_419624997860" class="Metronic-alerts alert alert-info fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+          </div>
+          <?php } ?>
 					<!-- BEGIN EXAMPLE TABLE PORTLET-->
 					<div class="portlet box grey-cascade">
 						<div class="portlet-title">
@@ -126,115 +135,21 @@
 							</tr>
 							</thead>
 							<tbody>
-							
-							<tr class="gradeX odd" role="row">
-							
-								<td class="sorting_1">
-									 coop
-								</td>
-								<td>
-									<a href="mailto:userwow@gmail.com">
-									good@gmail.com </a>
-								</td>
-								
-								<td class="center">
-									 19.11.2010
-								</td>
-								<td>
-									
-								<a href="<?php echo site_url('teacher/studentList')?>">
-									<span class="label label-sm label-success">
-									 View Student 
-									</span>
-								</a>
-								</td>
-							</tr>
+									<!-- calling all Sections -->
+															<?php if(count($sections)): foreach($sections as $section): ?>
 
-							<tr class="gradeX even" role="row">
-							
-								<td class="sorting_1">
-									 foopl
-								</td>
-								<td>
-									<a href="mailto:userwow@gmail.com">
-									good@gmail.com </a>
-								</td>
-							
-								<td class="center">
-									 19.11.2010
-								</td>
-								<td>
-									
-
-									<span class="label label-sm label-success">
-									 View Student 
-									</span>
-								</td>
-							</tr>
-
-							<tr class="gradeX odd" role="row">
-							
-								<td class="sorting_1">
-									 fop
-								</td>
-								<td>
-									<a href="mailto:userwow@gmail.com">
-									good@gmail.com </a>
-								</td>
-							
-								<td class="center">
-									 13.11.2010
-								</td>
-								<td>
-								
-
-									<span class="label label-sm label-success">
-									 View Student 
-									</span>
-								</td>
-							</tr>
-
-							<tr class="gradeX even" role="row">
-								<td class="sorting_1">
-									 goop
-								</td>
-								<td>
-									<a href="mailto:userwow@gmail.com">
-									good@gmail.com </a>
-								</td>
-								
-								<td class="center">
-									 12.11.2010
-								</td>
-								<td>
-								
-									<span class="label label-sm label-success">
-									 View Student 
-									</span>
-								</td>
-							</tr>
-
-							<tr class="gradeX odd" role="row">
-						
-								<td class="sorting_1">
-									 kop
-								</td>
-								<td>
-									<a href="mailto:userwow@gmail.com">
-									good@gmail.com </a>
-								</td>
-							
-								<td class="center">
-									 17.11.2010
-								</td>
-								<td>
-								
-
-									<span class="label label-sm label-success">
-									 View Student 
-									</span>
-								</td>
-							</tr>
+										<tr class="gradeX odd" role="row">
+											<td><?php echo  $section->section_name; ?></td>
+											<td><?php echo  $section->subject_name; ?></td>
+											<td><?php echo  $section->school_yr; ?></td>
+											<td><?php echo anchor('teacher/section/student_list/' . $section->id, 'View Student'); ?></td>
+										</tr>
+														<?php endforeach; ?>
+														<?php else: ?>
+										<tr>
+											<td colspan="3">We could not find any Sections.</td>
+										</tr>
+								<?php endif; ?>	
 
 						</tbody>
 							</table>

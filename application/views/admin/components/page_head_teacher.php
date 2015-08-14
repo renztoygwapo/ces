@@ -282,8 +282,8 @@ License: You must have a valid license purchased only from themeforest(the above
 							<h4 class="modal-title">Section Form</h4>
 						</div>
 						<div class="modal-body">
-							
-					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+
+					<form action="<?php echo site_url('teacher/add_section'); ?>" id="form_sample_1" class="form-horizontal" method="POST">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -298,7 +298,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<input type="text" name="name" data-required="1" class="form-control">
+											<input type="text" name="section_name" data-required="1" class="form-control">
 										</div>
 									</div>
 							
@@ -308,11 +308,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name="subject">
 												<option value="">Select...</option>
-												<option value="Category 1">Math</option>
-												<option value="Category 1">English</option>
-												<option value="Category 1">Science</option>
+												<option value="Math">Math</option>
+												<option value="English">English</option>
+												<option value="Science">Science</option>
 												
 											</select>
 										</div>
@@ -324,46 +324,30 @@ License: You must have a valid license purchased only from themeforest(the above
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name="school_yr">
 												<option value="">Select...</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+												<option value="2016">2016</option>
+
 											</select>
 										</div>
 									</div>
 								
 								</div>
-							</form>
-
-
-						</div>
+						
 						<div class="modal-footer">
-							<button type="button" class="btn blue">Submit</button>
+							<input type="submit" class="btn blue" value="Submit">
 							<button type="button" class="btn default" data-dismiss="modal">Close</button>
 						</div>
-					</div>
+					</form>
+
+						</div>
+						</div>
 					<!-- /.modal-content -->
 				</div>
 				<!-- /.modal-dialog -->
