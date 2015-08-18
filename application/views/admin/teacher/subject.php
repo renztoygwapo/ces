@@ -50,6 +50,41 @@
 										<button class="close" data-close="alert"></button>
 										Your form validation is successful!
 									</div>
+								
+									
+
+									<div class="form-group">
+										<label class="control-label col-md-3">My Role<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">Advisory</option>
+												<option value="Category 2">Floating Teacher</option>
+											
+											</select>
+										</div>
+									</div>
+
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Section Name<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name="select">
+												<option value="">Select...</option>
+												<option value="Category 1">Section 1</option>
+												<option value="Category 2">Section 2</option>
+												<option value="Category 3">Section 3</option>
+												<option value="Category 4">Section 5</option>
+												<option value="Category 5">Section 6</option>
+											</select>
+										</div>
+									</div>
+
+
 									<div class="form-group">
 										<label class="control-label col-md-3">Select Subject<span class="required" aria-required="true">
 										* </span>

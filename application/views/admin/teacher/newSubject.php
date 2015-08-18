@@ -47,6 +47,9 @@
 								<thead>
 								<tr>
 									<th>
+										<i class="fa fa-briefcase"></i>My Role
+									</th>
+									<th>
 										<i class="fa fa-briefcase"></i>Section Name
 									</th>
 									<th class="hidden-xs">
@@ -63,11 +66,12 @@
 								</thead>
 								<tbody>
 								<tr>
-									<td class="highlight">
-										<div class="success">
-										</div>
-										<a href="javascript:;">
-										RedBull </a>
+									<td >
+										 Advisory
+									</td>
+									<td >
+									
+										RedBull 
 									</td>
 									<td class="hidden-xs">
 										 10:00 am
