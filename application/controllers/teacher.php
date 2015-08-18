@@ -54,10 +54,16 @@ class Teacher extends Admin_Controller {
       $this->load->view('admin/teacher/events');
 
     }
-         public function section() {
+         public function subject() {
 
       $data['sections'] = $this->teacher_m->get();
-      $this->load->view('admin/teacher/section',$data);
+      $this->load->view('admin/teacher/subject',$data);
+
+    }
+        public function newsubject() {
+
+      $data['sections'] = $this->teacher_m->get();
+      $this->load->view('admin/teacher/newSubject',$data);
 
     }
     public function add_section(){

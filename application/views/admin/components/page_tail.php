@@ -46,8 +46,25 @@
 <script src="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery.sparkline.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/jquery-validation/js/jquery.validate.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/jquery-validation/js/additional-methods.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/select2/select2.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/ckeditor/ckeditor.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-markdown/lib/markdown.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js'); ?>" type="text/javascript"></script>
+
 
 <!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL STYLES -->
+<script src="<?php echo site_url('/assets/admin/pages/scripts/form-validation.js'); ?>"></script>
+<!-- END PAGE LEVEL STYLES -->
+
+
+
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="<?php echo site_url('/assets/global/scripts/metronic.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/layout/scripts/layout.js'); ?>" type="text/javascript"></script>
@@ -74,9 +91,21 @@ jQuery(document).ready(function() {
    Index.initIntro();
    Tasks.initDashboardWidget();
    TableAdvanced.init();
+   FormValidation.init();
 });
 </script>
+
+
 <!-- END JAVASCRIPTS -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37564768-1', 'keenthemes.com');
+  ga('send', 'pageview');
+</script>
+
 </body>
 <!-- END BODY -->
 </html>

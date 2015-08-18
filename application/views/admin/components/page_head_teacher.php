@@ -43,13 +43,17 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="<?php echo site_url('/assets/global/plugins/datatables/extensions/Scroller/css/dataTables.scroller.min.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/datatables/extensions/ColReorder/css/dataTables.colReorder.min.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css'); ?>" rel="stylesheet" type="text/css"/>
-
+<link href="<?php echo site_url('/assets/admin/pages/css/profile-old.css'); ?>" rel="stylesheet" type="text/css"/>
 
 <!-- END PAGE LEVEL STYLES -->
 
 <link href="<?php echo site_url('/assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/global/plugins/jqvmap/jqvmap/jqvmap.css'); ?>" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css'); ?>"/>
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css'); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo site_url('/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css  '); ?>"/>
+
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="<?php echo site_url('/assets/admin/pages/css/tasks.css'); ?>" rel="stylesheet" type="text/css"/>
@@ -199,6 +203,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					</form>
 					<!-- END RESPONSIVE QUICK SEARCH FORM -->
 				</li>
+
+
 				<li>
 					<a href="<?php echo site_url('teacher/')?>" >
 					<i class="icon-home"></i>
@@ -222,14 +228,28 @@ License: You must have a valid license purchased only from themeforest(the above
 					<span class="selected"></span>
 				
 					</a>
-				</li>
+				<li class="start  open">
 					<li>
-					<a href="<?php echo site_url('teacher/section')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Section</span>
+					<a href="<?php echo site_url('teacher/subject')?>" >
+					<i class="icon-book-open"></i>
+					<span class="title">My Subject</span>
+					<span class="arrow  open"></span>
 					<span class="selected"></span>
 					</a>
 
+					<ul class="sub-menu" style="display: block;">
+
+						<li>
+							<a href="<?php echo site_url('teacher/newSubject')?>" >
+							<i class="icon-plus"></i>
+							English</a>
+						</li>
+						<li>
+							<a href="<?php echo site_url('teacher/subject')?>" >
+							<i class="icon-plus"></i>
+							Add New Subject</a>
+						</li>
+					</ul>
 
 				</li>
 				<li >
