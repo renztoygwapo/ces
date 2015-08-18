@@ -124,7 +124,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</li>
 						<li>
 							<a href="extra_lock.html">
-							<i class="icon-cloud-upload"></i> Request </a>
+							<i class="icon-cloud-upload"></i> Download </a>
 						</li>
 						<li>
 							<a href="extra_lock.html">
@@ -201,14 +201,6 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('student/request')?>" >
-					<i class="icon-docs"></i>
-					<span class="title">Request</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
 				<li >
 					<a href="<?php echo site_url('student/rankings')?>" >
 					<i class="icon-trophy"></i>
@@ -237,6 +229,14 @@ License: You must have a valid license purchased only from themeforest(the above
 					<a href="<?php echo site_url('student/forum')?>" >
 					<i class="icon-users"></i>
 					<span class="title">Forums</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('student/request')?>" >
+					<i class="icon-docs"></i>
+					<span class="title">Download Form</span>
 					<span class="selected"></span>
 				
 					</a>

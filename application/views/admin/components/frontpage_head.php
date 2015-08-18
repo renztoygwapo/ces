@@ -91,7 +91,7 @@ License: You must have a valid license purchased only from themeforest (the abov
     <!-- BEGIN HEADER -->
     <div class="header">
       <div class="container">
-        <a class="site-logo" href="<?php echo site_url()?>"><img src="../../assets/frontend/layout/img/logos/logo-corp-red.png" alt="Metronic FrontEnd"></a>
+        <a class="site-logo" href="<?php echo site_url()?>"><img src="<?php echo site_url('/assets/frontend/layout/img/logos/logo-corp-red.png')?>" alt="Metronic FrontEnd"></a>
 
         <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
 
