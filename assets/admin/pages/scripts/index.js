@@ -132,42 +132,37 @@ var Index = function () {
                 header: h,
                 editable: true,
                 events: [{
-                    title: 'All Day Event',
+                    title: '',
                     start: new Date(y, m, 1),
                     backgroundColor: Metronic.getBrandColor('yellow')
                 }, {
-                    title: 'Long Event',
+                    title: '',
                     start: new Date(y, m, d - 5),
                     end: new Date(y, m, d - 2),
                     backgroundColor: Metronic.getBrandColor('blue')
                 }, {
-                    title: 'Repeating Event',
+                    title: '',
                     start: new Date(y, m, d - 3, 16, 0),
-                    allDay: false,
                     backgroundColor: Metronic.getBrandColor('red')
                 }, {
-                    title: 'Repeating Event',
+                    title: '',
                     start: new Date(y, m, d + 4, 16, 0),
-                    allDay: false,
                     backgroundColor: Metronic.getBrandColor('green')
                 }, {
-                    title: 'Meeting',
+                    title: '',
                     start: new Date(y, m, d, 10, 30),
-                    allDay: false
+                    
                 }, {
-                    title: 'Lunch',
                     start: new Date(y, m, d, 12, 0),
                     end: new Date(y, m, d, 14, 0),
                     backgroundColor: Metronic.getBrandColor('grey'),
-                    allDay: false
+                 
                 }, {
-                    title: 'Birthday Party',
                     start: new Date(y, m, d + 1, 19, 0),
                     end: new Date(y, m, d + 1, 22, 30),
                     backgroundColor: Metronic.getBrandColor('purple'),
-                    allDay: false
+                   
                 }, {
-                    title: 'Click for Google',
                     start: new Date(y, m, 28),
                     end: new Date(y, m, 29),
                     backgroundColor: Metronic.getBrandColor('yellow'),
