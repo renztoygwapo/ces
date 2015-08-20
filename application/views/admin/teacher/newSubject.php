@@ -19,9 +19,6 @@
 			</div>
 			<!-- END PAGE HEADER-->
 
-				
-
-
 				<div class="row">
 				<div class="col-md-12">
 					<!-- BEGIN VALIDATION STATES-->
@@ -93,11 +90,5 @@
 					</div>
 					<!-- END SAMPLE TABLE PORTLET-->
 				</div>
-
-
-
-
-
-
 
 <?php $this->load->view('admin/components/page_tail'); ?>

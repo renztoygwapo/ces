@@ -61,6 +61,10 @@
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL STYLES -->
 <script src="<?php echo site_url('/assets/admin/pages/scripts/form-validation.js'); ?>"></script>
+
+
+<script src="<?php echo site_url('/assets/admin/pages/scripts/calendar.js'); ?>"></script>
+
 <!-- END PAGE LEVEL STYLES -->
 
 
@@ -92,6 +96,7 @@ jQuery(document).ready(function() {
    Tasks.initDashboardWidget();
    TableAdvanced.init();
    FormValidation.init();
+   Calendar.init();
 });
 </script>
 
