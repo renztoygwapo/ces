@@ -42,8 +42,6 @@
 										<ul class="list-unstyled profile-nav">
 											<li>
 												<img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt="">
-												<a href="#" class="profile-edit">
-												edit </a>
 											</li>
 											
 										</ul>

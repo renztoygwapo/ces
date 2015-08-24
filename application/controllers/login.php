@@ -14,11 +14,12 @@ class Login extends Frontend_Controller {
             $this->form_validation->set_rules($rules);
             //var_dump($this->form_validation->run());
             if($this->form_validation->run() == true){
-                var_dump($this->user_m->login());
+               
                    //if($this->user_m->login() != NULL){
                      $check = $this->user_m->checkrole();
+                      var_dump($check);
                     if($check != NULL){
-                        
+
                         $this->user_m->login();
                         if($this->user_m->loggedin() == true){
                                     if($check == 'Student'){
@@ -30,6 +31,9 @@ class Login extends Frontend_Controller {
                                 }
                             
                         }
+                    }else{
+                        $this->session->set_flashdata('error', 'Username/Password Combination does not exist.');
+                        redirect('login/');
                     }
                   // }
                     // else {
@@ -37,7 +41,7 @@ class Login extends Frontend_Controller {
                     //             redirect('login/');
                     //     }
               
-            } 
+            }
 
 
         
