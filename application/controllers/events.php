@@ -9,6 +9,11 @@ class Events extends Frontend_Controller {
       $this->load->view('admin/events');
 
     }
+    
+     public function scpersonnel() {
+      $this->load->view('admin/scpersonnel');
+
+    }
 }
 
 ?>

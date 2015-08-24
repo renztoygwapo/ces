@@ -222,53 +222,59 @@
 
     <div class="main">
       <div class="container">
+       
         <!-- BEGIN SERVICE BOX -->   
         <div class="row service-box margin-bottom-40">
           <div class="col-md-4 col-sm-4">
             <div class="service-box-heading">
               <em><i class="fa fa-location-arrow blue"></i></em>
-              <span></span>
+              <span>VISSION</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, dolore eiusmod quis tempor incididunt ut et dolore Ut veniam unde nostrudlaboris. Sed unde omnis iste natus error sit voluptatem.</p>
+            <p>We dream of Filipinos <br />
+              Who passionately love thier country<br />
+              And whose values and competencies<br />
+              Enable them to realize thier full potential<br />
+              And contribute meaningfully<br />
+               to building the nation</p>
+               <br />
+               <p>As a learner-centered public institution,<br />
+              the Department of Education<br />
+              Continuously improves itself<br />
+              To better serve its stakeholders.</p>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="service-box-heading">
               <em><i class="fa fa-check red"></i></em>
-              <span>Well Documented</span>
+              <span>MISSION</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, dolore eiusmod quis tempor incididunt ut et dolore Ut veniam unde nostrudlaboris. Sed unde omnis iste natus error sit voluptatem.</p>
+               <p>To Protect and Promote the rightof every Filipinos to quality,
+                equitable, culture-based and complete basic education where
+                Students learn in a child-friendly gender sensitive, 
+                safe and motivating environment</p>
+
+               <p> Teacher facilitate learning and constantly nurture every learner
+                Administrators and staff as stewards of the institution, 
+                ensure as enabling and supportive environment for effective learning to happen.</p>
+
+                <p>Family, community and other stakeholders are actively engaged and
+                share responsibility for developing life-long learners.</p>
           </div>
           <div class="col-md-4 col-sm-4">
             <div class="service-box-heading">
               <em><i class="fa fa-compress green"></i></em>
-              <span>Responsive Design</span>
+              <span>CORE VALUES</span>
             </div>
-            <p>Lorem ipsum dolor sit amet, dolore eiusmod quis tempor incididunt ut et dolore Ut veniam unde nostrudlaboris. Sed unde omnis iste natus error sit voluptatem.</p>
+              <p>MAKA-DIYOS</p>
+  
+              <p> MAKATAO</p>
+            
+               <p>MAKAKALIKASAN</p>
+           
+               <p>MAKABANSA</p>
           </div>
         </div>
         <!-- END SERVICE BOX -->
-       
-        <!-- BEGIN STEPS -->
-        <div class="row margin-bottom-40 front-steps-wrapper front-steps-count-3">
-          <div class="col-md-4 col-sm-4 front-step-col">
-            <div class="front-step front-step1">
-              <h2>Mission</h2>
-              <p>Put content for mission here!</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 front-step-col">
-            <div class="front-step front-step2">
-              <h2>Vission</h2>
-              <p>Put content for Vission here!</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-4 front-step-col">
-            <div class="front-step front-step3">
-              <h2>Goal</h2>
-              <p>Put content for Goal here!</p>
-            </div>
-          </div>
-        </div>
-        <!-- END STEPS -->
+
+      
       </div>
     </div>

@@ -50,7 +50,6 @@
                       <select class="form-control" name ="role" required>
                         <option>-----   Select Type of User  -----</option>
                         <option>Teacher</option>
-                        <option>Student</option>
                         <option>Alumni</option>
                       </select>
                     
@@ -97,11 +96,10 @@
                 <div class="col-md-4 col-sm-4 pull-right">
                   <div class="form-info">
                     <h2><em>Important</em> Information</h2>
-                    <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed sit nonumy nibh sed euismod ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo quat.</p>
+                    <p>Only teacher and alumni student can register.</p>
 
-                    <p>Duis autem vel eum iriure at dolor vulputate velit esse vel molestie at dolore.</p>
+                    <p>Regular student  - You may ask to your teacher for your account</p>
 
-                    <button type="button" class="btn btn-default">More details</button>
                   </div>
                 </div>
               </div>
