@@ -2,7 +2,7 @@
 class Teacher_m extends MY_Model
 {
 	
-	protected $_table_name = 'section';
+	protected $_table_name = 'users';
 	protected $_order_by = 'id';
 
   public $rules_admin = array(

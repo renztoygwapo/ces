@@ -91,36 +91,43 @@
 									<div class="col-md-9">
 										<div class="tab-content">
 											<div id="tab_1-1" class="tab-pane active">
-												<form role="form" action="#">
+											
+												<?php
+									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
+													  echo form_open('teacher/update_profile/', $attributes);
+									                  ?>
 													<div class="form-group">
 														<label class="control-label">First Name</label>
-														<input type="text" placeholder="My First name" class="form-control"/>
+														<input type="text" placeholder="My First name" class="form-control" value="<?php echo $teachers->firstname ?>" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Last Name</label>
-														<input type="text" placeholder="My Last name" class="form-control"/>
+														<input type="text" placeholder="My Last name" class="form-control" value="<?php echo $teachers->lastname ?>" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Gender</label>
 														
-														<select class="form-control"/>
-														  <option value="volvo">Select Gender</option>
-														  <option value="saab">Male</option>
-														  <option value="mercedes">Female</option>
+														<select class="form-control" name="gender">
+														  <option value="">Select Gender</option>
+														  <option value="male">Male</option>
+														  <option value="female">Female</option>
 	
 														</select>
 													</div>
 													<div class="form-group">
 														<label class="control-label">Address</label>
-														<input type="text" placeholder="Purok 3 Carmen Davao del Norte" class="form-control"/>
+														<input type="text" placeholder="Purok 3 Carmen Davao del Norte" class="form-control" value="" name="address" />
+													</div>
+													<div class="form-group">
+														<label class="control-label">Birthday</label>
+														<input type="date"  class="form-control" value="" name="birthday" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">About Me</label>
-														<textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!"></textarea>
+														<textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!" name="about"></textarea>
 													</div>
 													<div class="margiv-top-10">
-														<a href="#" class="btn green">
-														Save Changes </a>
+														<input type="submit" value="Save Changes" class="btn green">
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>

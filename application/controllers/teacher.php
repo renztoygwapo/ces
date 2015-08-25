@@ -4,6 +4,7 @@ class Teacher extends Admin_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('teacher_m');
+        $this->load->model('profile_m');
     }
 
     public function index() {
@@ -14,8 +15,27 @@ class Teacher extends Admin_Controller {
 
 
      public function profile() {
-    
-      $this->load->view('admin/teacher/myprofile');
+      
+      $id = $this->session->userdata('id');
+      $data['teachers'] = $this->teacher_m->get($id);
+      $this->load->view('admin/teacher/myprofile',$data);
+    }
+    public function update_profile(){
+
+      $id = $this->session->userdata('id');
+      $rules = $this->profile_m->rules_admin;
+    $this->form_validation->set_rules($rules);
+        if ($this->form_validation->run() == TRUE) {
+       $data = array(
+              'gender' => $this->input->post('gender'),
+              'address' => $this->input->post('address'),
+              'birthday' => $this->input->post('birthday'),
+              'user_id' => $id
+              );
+            $this->profile_m->save($data);
+            $this->session->set_flashdata('result', 'Profile Successfully Updated!');
+            redirect('teacher/profile','refresh');
+      }
 
     }
 
@@ -94,9 +114,6 @@ class Teacher extends Admin_Controller {
       $this->load->view('admin/teacher/studentList');
 
     }
-
-
-
 
      public function logout(){
     	$this->user_m->logout();

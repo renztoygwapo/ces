@@ -6,9 +6,6 @@ class Login extends Frontend_Controller {
     }
     
     public function index(){
-        
-    	
-    	//var_dump($check);
     
             $rules = $this->user_m->rules;
             $this->form_validation->set_rules($rules);
