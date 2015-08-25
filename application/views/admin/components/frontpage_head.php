@@ -108,7 +108,7 @@ License: You must have a valid license purchased only from themeforest (the abov
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">About Us</a>
               <ul class="dropdown-menu">
-                <li><a href="<?php echo site_url('events/scpersonnel')?>">History of the School</a></li>
+                <li><a href="<?php echo site_url('events/history')?>">History of the School</a></li>
                 <li><a href="<?php echo site_url('events/scpersonnel')?>">School Personnel</a></li>
               </ul> 
               <span class="sep"></span> 

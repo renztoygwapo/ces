@@ -14,6 +14,11 @@ class Events extends Frontend_Controller {
       $this->load->view('admin/scpersonnel');
 
     }
+
+     public function history() {
+      $this->load->view('admin/history');
+
+    }
 }
 
 ?>
