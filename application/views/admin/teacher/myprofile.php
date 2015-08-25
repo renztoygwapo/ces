@@ -98,16 +98,16 @@
 									                  ?>
 													<div class="form-group">
 														<label class="control-label">First Name</label>
-														<input type="text" placeholder="My First name" class="form-control" value="<?php echo $teachers->firstname ?>" />
+														<input type="text" placeholder="My First name" name="firstname" class="form-control" value="<?php echo $teachers->firstname ?>" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Last Name</label>
-														<input type="text" placeholder="My Last name" class="form-control" value="<?php echo $teachers->lastname ?>" />
+														<input type="text" placeholder="My Last name" name="lastname" class="form-control" value="<?php echo $teachers->lastname ?>" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Gender</label>
 														
-														<select class="form-control" name="gender">
+														<select class="form-control" name="gender" required>
 														  <option value="">Select Gender</option>
 														  <option value="male">Male</option>
 														  <option value="female">Female</option>
@@ -116,22 +116,22 @@
 													</div>
 													<div class="form-group">
 														<label class="control-label">Address</label>
-														<input type="text" placeholder="Purok 3 Carmen Davao del Norte" class="form-control" value="" name="address" />
+														<input type="text" placeholder="Purok 3 Carmen Davao del Norte" class="form-control" value="<?php echo $teachers->address ?>" name="address" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Birthday</label>
-														<input type="date"  class="form-control" value="" name="birthday" />
+														<input type="date"  class="form-control" value="<?php echo $teachers->birthday ?>" name="birthday" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">About Me</label>
-														<textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!" name="about"></textarea>
+														<textarea class="form-control" rows="3" name="aboutme"><?php echo $teachers->aboutme; ?></textarea>
 													</div>
 													<div class="margiv-top-10">
 														<input type="submit" value="Save Changes" class="btn green">
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
-												</form>
+												<?php echo form_close(); ?>
 											</div>
 											<div id="tab_2-2" class="tab-pane">
 												<p>
