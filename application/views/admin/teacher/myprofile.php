@@ -168,26 +168,28 @@
 												</form>
 											</div>
 											<div id="tab_3-3" class="tab-pane">
-												<form action="#">
+												<?php
+									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
+													  echo form_open('teacher/change_pass/', $attributes);
+									                  ?>
 													<div class="form-group">
 														<label class="control-label">Current Password</label>
-														<input type="password" class="form-control"/>
+														<input type="password" class="form-control" name="current_password" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">New Password</label>
-														<input type="password" class="form-control"/>
+														<input type="password" class="form-control" name="new_pass" />
 													</div>
 													<div class="form-group">
 														<label class="control-label">Re-type New Password</label>
-														<input type="password" class="form-control"/>
+														<input type="password" class="form-control" name="retype_pass" />
 													</div>
 													<div class="margin-top-10">
-														<a href="#" class="btn green">
-														Change Password </a>
+														<input type="submit" value="Change Password" class="btn btn-primary">
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
-												</form>
+												<?php echo form_close(); ?>
 											</div>
 											
 										</div>

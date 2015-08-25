@@ -110,6 +110,43 @@ class Teacher extends Admin_Controller {
       // $this->teacher_m->save($data);
     }
 
+    public function change_pass(){
+
+    $pass = $this->input->post('current_password');
+
+    $password = $this->user_m->hash($pass);
+    $id = $this->session->userdata('id');
+    $this->db->where('password', $password);
+    $this->db->where('id', $id);
+    $query = $this->profile_m->get();
+    //var_dump($query);
+    if (count($query)) {
+
+      $new_pass = $this->input->post('new_pass');
+      $retype_pass = $this->input->post('retype_pass');
+
+      if($new_pass == $retype_pass){
+
+      $new_password = $this->user_m->hash($new_pass);
+      $data = array(
+              'password' => $new_password
+              );
+      $this->profile_m->save($data,$id);
+      $this->session->set_flashdata('result', 'Password Successfully Updated!');
+      redirect('teacher/profile','refresh');
+
+      }else{
+        var_dump('Password should Match!');
+      }
+
+      
+
+
+    }
+
+
+    }
+
 
      public function studentList() {
      
