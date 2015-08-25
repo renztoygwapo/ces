@@ -17,7 +17,7 @@
           </div>
           <?php } ?>
 
-            <h1>Login As Student</h1>
+            <h1>Login</h1>
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
@@ -59,11 +59,12 @@
                     </div>
                   </form>
                 </div>
-                <div class="col-md-4 col-sm-4 pull-right">
+                 <div class="col-md-4 col-sm-4 pull-right">
                   <div class="form-info">
-                    <h2>Login as <em>Teacher</em></h2>
+                    <h2><em>Important</em> Information</h2>
 
-                    <button type="button" class="btn btn-default">Click Here!</button>
+                    <p>Regular student  - You may ask to your teacher for your account</p>
+
                   </div>
                 </div>
               </div>

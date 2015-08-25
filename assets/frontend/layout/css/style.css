@@ -2766,25 +2766,26 @@ Demo Utils
 .ie8 .front-steps-wrapper .front-step:before {
 	display: none !important;
 }
+
 .front-steps-wrapper .front-step1:before {
-	content: "1";
+	content: "";
 	opacity: 0.2;
 }
 .front-steps-wrapper .front-step2:before {
-	content: "2";
+	content: "";
 	right: -15px;
 }
 .front-steps-wrapper .front-step3:before {
-	content: "3";
+	content: "";
 }
 .front-steps-wrapper .front-step4:before {
-	content: "4";
+	content: "";
 }
 .front-steps-wrapper .front-step5:before {
-	content: "5";
+	content: "";
 }
 .front-steps-wrapper .front-step6:before {
-	content: "6";
+	content: "";
 }
 
 .front-steps-wrapper .front-step:after { 
