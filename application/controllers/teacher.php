@@ -30,9 +30,11 @@ class Teacher extends Admin_Controller {
               'gender' => $this->input->post('gender'),
               'address' => $this->input->post('address'),
               'birthday' => $this->input->post('birthday'),
-              'user_id' => $id
+              'aboutme' => $this->input->post('aboutme'),
+              'firstname' => $this->input->post('firstname'),
+              'lastname' => $this->input->post('lastname')
               );
-            $this->profile_m->save($data);
+            $this->profile_m->save($data,$id);
             $this->session->set_flashdata('result', 'Profile Successfully Updated!');
             redirect('teacher/profile','refresh');
       }
