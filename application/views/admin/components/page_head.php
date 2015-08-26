@@ -133,6 +133,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<a href="<?php echo site_url('admin/index/logout')?>" >
 							<i class="icon-key"></i> Log Out </a>
 						</li>
+						
 					</ul>
 				</li>
 				<!-- END USER LOGIN DROPDOWN -->
