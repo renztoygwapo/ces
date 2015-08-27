@@ -112,7 +112,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
+					<img alt="" class="img-circle hide1" src="<?php echo  '../../assets/admin/pages/media/profile/profile-img.png' ?>"/>
 					<span class="username username-hide-on-mobile">
 					<?php $user_id = $this->session->userdata('id'); ?>
 					<?php echo $this->session->userdata('username'); ?></span>
@@ -120,12 +120,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="extra_profile.html">
+							<a href="<?php echo site_url('teacher/profile'); ?>">
 							<i class="icon-user"></i> My Profile </a>
-						</li>
-						<li>
-							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Calendar </a>
 						</li>
 						<li>
 							<a href="#">
@@ -134,18 +130,6 @@ License: You must have a valid license purchased only from themeforest(the above
 							</a>
 						</li>
 						<li class="divider">
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-cloud-upload"></i> Request </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-badge"></i> Rankings </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-folder-alt"></i> Reports </a>
 						</li>
 						<li>
 							<a href="login.html">
@@ -240,12 +224,13 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 
 					<ul class="sub-menu" style="display: block;">
-
+						<?php foreach ($rows as $r) : ?>
 						<li>
 							<a href="<?php echo site_url('teacher/newSubject')?>" >
 							<i class="icon-plus"></i>
-							English</a>
+							<?php echo $r->subject_name; ?></a>
 						</li>
+						<?php endforeach; ?>
 						<li>
 							<a href="<?php echo site_url('teacher/subject')?>" >
 							<i class="icon-plus"></i>

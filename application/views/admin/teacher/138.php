@@ -1,5 +1,4 @@
 
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
 	<!-- BEGIN PAGE HEADER-->
 			
 				<!-- BEGIN PAGE HEADER-->

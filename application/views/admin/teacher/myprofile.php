@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
+
 	<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
 			My Profile <small></small>
@@ -41,7 +41,7 @@
 									<div class="col-md-3">
 										<ul class="list-unstyled profile-nav">
 											<li>
-												<img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt="">
+												<img src="<?php echo  '../../assets/admin/pages/media/profile/profile-img.png' ?> " class="img-responsive" alt="">
 											</li>
 											
 										</ul>
@@ -137,11 +137,16 @@
 												<p>
 													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
 												</p>
-												<form action="#" role="form">
+												<!-- <form action="#" role="form"> -->
+												<?php
+									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
+													  echo form_open('teacher/change_pic/', $attributes);
+									             ?>
+
 													<div class="form-group">
 														<div class="fileinput fileinput-new" data-provides="fileinput">
 															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-																<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""/>
+																<img src="<?php echo $teachers->photo ?>" alt=""/>
 															</div>
 															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
 															</div>
@@ -150,8 +155,9 @@
 																<span class="fileinput-new">
 																Select image </span>
 																<span class="fileinput-exists">
-																Change </span>
-																<input type="file" name="...">
+																Change 
+																</span>
+																<input type="file" name="profilepic">
 																</span>
 																<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
 																Remove </a>
@@ -165,13 +171,15 @@
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
-												</form>
+													<?php echo form_close(); ?>
+												<!-- </form> -->
 											</div>
+
 											<div id="tab_3-3" class="tab-pane">
 												<?php
 									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
 													  echo form_open('teacher/change_pass/', $attributes);
-									                  ?>
+									             ?>
 													<div class="form-group">
 														<label class="control-label">Current Password</label>
 														<input type="password" class="form-control" name="current_password" />
