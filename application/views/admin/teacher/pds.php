@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
+
 	<!-- BEGIN PAGE HEADER-->
 	 <small><h6 class="page-title" >
 			CS FORM 212(Revised 2005) </small>

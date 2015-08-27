@@ -1,4 +1,3 @@
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
 			English Subject <small></small>
