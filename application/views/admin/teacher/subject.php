@@ -1,4 +1,4 @@
-<?php $this->load->view('admin/components/page_head_teacher'); ?>
+
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
 			Add New Subject <small></small>
@@ -40,7 +40,8 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							<form action="#" id="form_sample_1" class="form-horizontal">
+							 <form id="form_sample_1" class="form-horizontal" action="<?php echo site_url('teacher/insertsubject'); ?>" method="post">
+							<!-- <form action="#"  class="form-horizontal"> -->
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -58,10 +59,11 @@
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name ="myrole" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Category 1">Advisory</option>
-												<option value="Category 2">Floating Teacher</option>
+												<option value="Advisory">Advisory</option>
+												<option value="Floating Teacher">Floating Teacher</option>
 											
 											</select>
 										</div>
@@ -69,34 +71,47 @@
 
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Section Name<span class="required" aria-required="true">
-										* </span>
+										<label class="control-label col-md-3">Grade Level
+											<span class="required" aria-required="true"> * </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name ="myLevel" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Category 1">Section 1</option>
-												<option value="Category 2">Section 2</option>
-												<option value="Category 3">Section 3</option>
-												<option value="Category 4">Section 5</option>
-												<option value="Category 5">Section 6</option>
+												<option value="Grade 1">Grade 1</option>
+												<option value="Grade 2">Grade 2</option>
+												<option value="Grade 3">Grade 3</option>
+												<option value="Grade 4">Grade 4</option>
+												<option value="Grade 5">Grade 5</option>
+												<option value="Grade 6">Grade 6</option>
 											</select>
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="control-label col-md-3">Section Name
+											<span class="required" aria-required="true"> * </span>
+										</label>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="" name = "mysection">
+									</div>
+								</div>
 
 									<div class="form-group">
 										<label class="control-label col-md-3">Select Subject<span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name ="mySubject" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Category 1">Mathematics</option>
-												<option value="Category 2">English</option>
-												<option value="Category 3">Science</option>
-												<option value="Category 4">Filipino</option>
-												<option value="Category 5">Mother Tounge</option>
+												<option value="Filipino">Filipino</option>
+												<option value="English">English</option>
+												<option value="Mathematics">Mathematics</option>
+												<option value="Science & Health">Science & Health</option>
+												<option value="HKS">HKS</option>
+												<option value="EPP">EPP</option>
+												<option value="MSEP">MSEP</option>
 											</select>
 										</div>
 									</div>
@@ -106,13 +121,19 @@
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name ="mytimein" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Category 1">1:00 am</option>
-												<option value="Category 2">2:00 am</option>
-												<option value="Category 3">3:00 am</option>
-												<option value="Category 4">4:00 am</option>
-												<option value="Category 5">5:00 am</option>
+												<option value="7:00 am">7:00 am</option>
+												<option value="8:00 am">8:00 am</option>
+												<option value="9:00 am">9:00 am</option>
+												<option value="10:00 am">10:00 am</option>
+												<option value="11:00 am">11:00 am</option>
+												<option value="12:00 pm">12:00 pm</option>
+												<option value="1:00 pm">1:00 pm</option>
+												<option value="2:00 pm">2:00 pm</option>
+												<option value="3:00 pm">3:00 pm</option>
+												<option value="4:00 pm">4:00 pm</option>
 											</select>
 										</div>
 									</div>
@@ -122,21 +143,22 @@
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name="select">
+											<select class="form-control" name ="mytimeout" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Category 1">1:00 am</option>
-												<option value="Category 2">2:00 am</option>
-												<option value="Category 3">3:00 am</option>
-												<option value="Category 4">4:00 am</option>
-												<option value="Category 5">5:00 am</option>
+												<option value="7:00 am">7:00 am</option>
+												<option value="8:00 am">8:00 am</option>
+												<option value="9:00 am">9:00 am</option>
+												<option value="10:00 am">10:00 am</option>
+												<option value="11:00 am">11:00 am</option>
+												<option value="12:00 pm">12:00 pm</option>
+												<option value="1:00 pm">1:00 pm</option>
+												<option value="2:00 pm">2:00 pm</option>
+												<option value="3:00 pm">3:00 pm</option>
+												<option value="4:00 pm">4:00 pm</option>
 											</select>
 										</div>
-									</div>
-
-
-
-
-							
+									</div>			
 								</div>
 								<div class="form-actions">
 									<div class="row">
@@ -153,6 +175,8 @@
 					<!-- END VALIDATION STATES-->
 				</div>
 			</div>
+			</div>
+
 
 
 
