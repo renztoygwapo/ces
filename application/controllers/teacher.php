@@ -47,6 +47,12 @@ class Teacher extends Admin_Controller {
 
     }
 
+    public function pds() {
+     
+      $this->load->view('admin/teacher/pds');
+
+    }
+
        public function request() {
      
       $this->load->view('admin/teacher/request');
@@ -68,6 +74,12 @@ class Teacher extends Admin_Controller {
      public function forum() {
      
       $this->load->view('admin/teacher/forum_db');
+
+    }
+
+    public function onethreeeight() {
+     
+      $this->load->view('admin/teacher/138');
 
     }
 

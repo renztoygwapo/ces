@@ -225,6 +225,9 @@
        
         <!-- BEGIN SERVICE BOX -->   
         <div class="row service-box margin-bottom-40">
+          <div class="alert alert-success">
+                <strong>DEPED </strong> VISSION, MISSION & CORE VALUES 
+              </div>
           <div class="col-md-4 col-sm-4">
             <div class="service-box-heading">
               <em><i class="fa fa-location-arrow blue"></i></em>

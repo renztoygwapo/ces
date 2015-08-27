@@ -1,8 +1,10 @@
 <?php
 class Myfiles extends Admin_Controller {
 
-    public function __construct(){
+     public function __construct(){
         parent::__construct();
+        $this->load->model('teacher_m');
+        $this->load->model('profile_m');
     }
 
     public function index() {
