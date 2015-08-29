@@ -1,7 +1,7 @@
 
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Add New Subject <small></small>
+			Add New Section <small></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -11,13 +11,18 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#">Add new subject</a>
+						<a href="#">Add new Section</a>
 						
 					</li>
 				</ul>
 			
 			</div>
 			<!-- END PAGE HEADER-->
+			<?php if($this->session->flashdata('result') != false){ ?>
+          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+          </div>
+          <?php } ?>
 
 				<div class="row">
 				<div class="col-md-12">
@@ -25,7 +30,7 @@
 					<div class="portlet box blue-hoki">
 						<div class="portlet-title">
 							<div class="caption">
-								<i class="fa fa-gift"></i>Add my new subject
+								<i class="fa fa-gift"></i>Add new Section
 							</div>
 							<div class="tools">
 								<a href="javascript:;" class="collapse">
@@ -40,7 +45,7 @@
 						</div>
 						<div class="portlet-body form">
 							<!-- BEGIN FORM-->
-							 <form id="form_sample_1" class="form-horizontal" action="<?php echo site_url('teacher/insertsubject'); ?>" method="post">
+							 <form id="form_sample_1" class="form-horizontal" action="<?php echo site_url('teacher/insertsection'); ?>" method="post">
 							<!-- <form action="#"  class="form-horizontal"> -->
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
@@ -53,6 +58,15 @@
 									</div>
 								
 									
+										<div class="form-group">
+										<label class="control-label col-md-3">Section Name
+											<span class="required" aria-required="true"> * </span>
+										</label>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="" name = "mysection" autofocus>
+										<input type="hidden" class="form-control" placeholder="" name = "teacher_id" value="<?php echo $this->session->userdata('id'); ?>">
+									</div>
+								</div>
 
 									<div class="form-group">
 										<label class="control-label col-md-3">My Role<span class="required" aria-required="true">
@@ -88,77 +102,65 @@
 										</div>
 									</div>
 
-									<div class="form-group">
-										<label class="control-label col-md-3">Section Name
-											<span class="required" aria-required="true"> * </span>
-										</label>
-									<div class="col-md-4">
-										<input type="text" class="form-control" placeholder="" name = "mysection">
-									</div>
-								</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Select Subject<span class="required" aria-required="true">
+										<label class="control-label col-md-3">Time in:<span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name ="mySubject" required>
+											<select class="form-control" name ="myTimein" required>
 											<!-- <select class="form-control" name="select"> -->
-												<option value="">Select...</option>
+												<!-- <option value="">Select...</option>
 												<option value="Filipino">Filipino</option>
 												<option value="English">English</option>
 												<option value="Mathematics">Mathematics</option>
 												<option value="Science & Health">Science & Health</option>
 												<option value="HKS">HKS</option>
 												<option value="EPP">EPP</option>
-												<option value="MSEP">MSEP</option>
+												<option value="MSEP">MSEP</option> -->
+												<option value="8:00am">8:00am</option>
+												<option value="9:00am">9:00am</option>
+												<option value="10:00am">10:00am</option>
+												<option value="11:00am">11:00am</option>
+												<option value="12:00pm">12:00pm</option>
+												<option value="1:00am">1:00pm</option>
+												<option value="2:00am">2:00pm</option>
+												<option value="3:00am">3:00pm</option>
+												<option value="4:00am">4:00pm</option>
+												<option value="5:00am">5:00pm</option>
 											</select>
 										</div>
-									</div>
+									</div>	
+
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Time In<span class="required" aria-required="true">
+										<label class="control-label col-md-3">Time out:<span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name ="mytimein" required>
+											<select class="form-control" name ="myTimeout" required>
 											<!-- <select class="form-control" name="select"> -->
-												<option value="">Select...</option>
-												<option value="7:00 am">7:00 am</option>
-												<option value="8:00 am">8:00 am</option>
-												<option value="9:00 am">9:00 am</option>
-												<option value="10:00 am">10:00 am</option>
-												<option value="11:00 am">11:00 am</option>
-												<option value="12:00 pm">12:00 pm</option>
-												<option value="1:00 pm">1:00 pm</option>
-												<option value="2:00 pm">2:00 pm</option>
-												<option value="3:00 pm">3:00 pm</option>
-												<option value="4:00 pm">4:00 pm</option>
+												<!-- <option value="">Select...</option>
+												<option value="Filipino">Filipino</option>
+												<option value="English">English</option>
+												<option value="Mathematics">Mathematics</option>
+												<option value="Science & Health">Science & Health</option>
+												<option value="HKS">HKS</option>
+												<option value="EPP">EPP</option>
+												<option value="MSEP">MSEP</option> -->
+												<option value="8:00am">8:00am</option>
+												<option value="9:00am">9:00am</option>
+												<option value="10:00am">10:00am</option>
+												<option value="11:00am">11:00am</option>
+												<option value="12:00pm">12:00pm</option>
+												<option value="1:00am">1:00pm</option>
+												<option value="2:00am">2:00pm</option>
+												<option value="3:00am">3:00pm</option>
+												<option value="4:00am">4:00pm</option>
+												<option value="5:00am">5:00pm</option>
 											</select>
 										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-3">Time Out<span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<select class="form-control" name ="mytimeout" required>
-											<!-- <select class="form-control" name="select"> -->
-												<option value="">Select...</option>
-												<option value="7:00 am">7:00 am</option>
-												<option value="8:00 am">8:00 am</option>
-												<option value="9:00 am">9:00 am</option>
-												<option value="10:00 am">10:00 am</option>
-												<option value="11:00 am">11:00 am</option>
-												<option value="12:00 pm">12:00 pm</option>
-												<option value="1:00 pm">1:00 pm</option>
-												<option value="2:00 pm">2:00 pm</option>
-												<option value="3:00 pm">3:00 pm</option>
-												<option value="4:00 pm">4:00 pm</option>
-											</select>
-										</div>
-									</div>			
+									</div>		
 								</div>
 								<div class="form-actions">
 									<div class="row">

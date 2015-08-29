@@ -1,8 +1,8 @@
 <?php
-class Subject_m extends MY_Model
+class Section_m extends MY_Model
 {
 	
-	protected $_table_name = 'subject';
+	protected $_table_name = 'section';
 	protected $_order_by = 'id';
 	public $rules = array(
 		'role' => array(

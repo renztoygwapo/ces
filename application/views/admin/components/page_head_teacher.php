@@ -207,18 +207,11 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('teacher/myfiles')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
-				
-					</a>
 				<li class="start  open">
 					<li>
 					<a href="<?php echo site_url('teacher/subject')?>" >
 					<i class="icon-book-open"></i>
-					<span class="title">My Subject</span>
+					<span class="title">My Section</span>
 					<span class="arrow  open"></span>
 					<span class="selected"></span>
 					</a>
@@ -226,19 +219,20 @@ License: You must have a valid license purchased only from themeforest(the above
 					<ul class="sub-menu" style="display: block;">
 						<?php foreach ($rows as $r) : ?>
 						<li>
-							<a href="<?php echo site_url('teacher/newSubject')?>" >
-							<i class="icon-plus"></i>
-							<?php echo $r->subject_name; ?></a>
+							<?php $subject_id = $r->id; ?>
+							<a href="<?php echo site_url('teacher/mysubject/').'/'.$subject_id.'/' ?>" >
+							<?php echo $r->section_name; ?></a>
 						</li>
 						<?php endforeach; ?>
 						<li>
-							<a href="<?php echo site_url('teacher/subject')?>" >
+							<a href="<?php echo site_url('teacher/section')?>" >
 							<i class="icon-plus"></i>
-							Add New Subject</a>
+							Add New Section</a>
 						</li>
 					</ul>
 
 				</li>
+			</li>
 				<li >
 					<a href="<?php echo site_url('teacher/rankings')?>" >
 					<i class="icon-trophy"></i>
@@ -310,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Section Form</h4>
+							<h4 class="modal-title">Add Student Form</h4>
 						</div>
 						<div class="modal-body">
 
@@ -401,98 +395,40 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="form-body">
 								
 									<div class="form-group">
-										<label class="control-label col-md-3">Student Name <span class="required" aria-required="true">
+										<label class="control-label col-md-2">First Name <span class="required" aria-required="true">
 										* </span>
 										</label>
-										<div class="col-md-4">
+										<div class="col-md-8">
 											<input type="text" name="name" data-required="1" class="form-control">
 										</div>
 									</div>
-							
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Student Grade<span class="required" aria-required="true">
+										<label class="control-label col-md-2">Last Name <span class="required" aria-required="true">
 										* </span>
 										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="select">
-												<option value="">Select...</option>
-												<option value="Category 1">100</option>
-												<option value="Category 1">90</option>
-												<option value="Category 1">80</option>
-												
-											</select>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Subject Name<span class="required" aria-required="true">
+										<label class="control-label col-md-2">Username <span class="required" aria-required="true">
 										* </span>
 										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="select">
-												<option value="">Select...</option>
-												<option value="Category 1">Math</option>
-												<option value="Category 1">English</option>
-												<option value="Category 1">Science</option>
-												
-											</select>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3">Grading Period<span class="required" aria-required="true">
+										<label class="control-label col-md-2">Password <span class="required" aria-required="true">
 										* </span>
 										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="select">
-												<option value="">Select...</option>
-												<option value="Category 1">First Grading</option>
-												<option value="Category 1">Second Grading</option>
-												<option value="Category 1">Third Grading</option>
-												<option value="Category 1">Fourth Grading</option>
-												
-											</select>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
 										</div>
-									</div>
-
-							
-								
-									<div class="form-group">
-										<label class="control-label col-md-3">School Year<span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="select">
-												<option value="">Select...</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												<option value="Category 1">2016</option>
-												
-											</select>
-										</div>
-									</div>
-								
+									</div>				
 								</div>
 							</form>
 
