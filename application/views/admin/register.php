@@ -59,9 +59,6 @@
                       </div>
 
                       <!--  end additional fields -->
-
-
-
                     </fieldset>
                     <fieldset>
                       <legend>Your Account:</legend>

@@ -13,12 +13,7 @@ class Teacher extends Admin_Controller {
 
     }
 
-    public function header() {
-      $this->load->model('custom_m');
-      $data['rows'] = $this->custom_m->getAll();
-       $this->load->view('admin/components/page_head_teacher', $data); 
 
-    }
 
 
      public function profile() {
@@ -98,17 +93,33 @@ class Teacher extends Admin_Controller {
       $this->load->view('admin/teacher/events');
 
     }
-         public function subject() {
+         public function section() {
        $this->header(); // header of page
 
       $data['sections'] = $this->teacher_m->get();
-      $this->load->view('admin/teacher/subject',$data);
+      $this->load->view('admin/teacher/section',$data);
 
     }
-        public function newsubject() {
+        public function header() {
+      $this->load->model('section_m');
+      $data['rows'] = $this->section_m->get();
+       $this->load->view('admin/components/page_head_teacher', $data); 
+
+    }
+        public function mysubject() {
+      $id = $this->uri->segment(3);
+        //var_dump($id);
+      //$this->load->model('subject_m');
       $this->header(); // header of page
-      $data['sections'] = $this->teacher_m->get();
-      $this->load->view('admin/teacher/newSubject',$data);
+      // $this->load->model('subject_m');
+      // $data['rows'] = $this->subect_m->get();
+      // $this->load->view('admin/teacher/newSubject', $data);
+      // $data['subject'] = $this->load->model->custom_m->getAll();
+      // $this->load->view('admin/teacher/newSubject',$data);
+      $this->load->model('custom_m');
+      $data['rows'] = $this->custom_m->getAll($id);
+      $this->load->view('admin/teacher/newSubject', $data);
+
 
     }
     public function add_section(){
@@ -170,7 +181,6 @@ class Teacher extends Admin_Controller {
     $query = $this->profile_m->get();
     //var_dump($query);
     if (count($query)) {
-     
       if($new_pass == $retype_pass){
       $new_password = $this->user_m->hash($new_pass);
       $data = array(
@@ -188,31 +198,27 @@ class Teacher extends Admin_Controller {
 
 
      public function studentList() {
-     
+      $this->header();
       $this->load->view('admin/teacher/studentList');
 
     }
 
-    public function insertSubject(){
+    public function insertSection(){
     
     $rl = $this->input->post('myrole');
     $ml = $this->input->post('myLevel');
     $scn = $this->input->post('mysection');
-    $sbn = $this->input->post('mySubject');
-    $in = $this->input->post('mytimein');
-    $out = $this->input->post('mytimeout');
-    $this->load->model('subject_m');
+    $id = $this->input->post('teacher_id'); 
+    $this->load->model('section_m');
     $data = array(
        'role' => $rl ,
        'grade_level' => $ml ,
        'section_name' => $scn ,
-       'subject_name' => $sbn ,
-       'time_in' => $in ,
-       'time_out' => $out
+       'teacher_id' => $id
     );
-    $this->subject_m->save($data);
-    $this->session->set_flashdata('result', 'Successfully Registered!');
-    redirect('/teacher/subject','refresh');
+    $this->section_m->save($data);
+    $this->session->set_flashdata('result', 'Section Successfully Added!');
+    redirect('/teacher/section','refresh');
 
   }
 

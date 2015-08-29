@@ -48,12 +48,12 @@
    //   }
 
     // }
-
-    function getAll(){
-      $this->db->select('subject_name');
+    //SELECT * FROM `subject` JOIN section ON section.id = subject.section_id WHERE section.id = 2
+    function getAll($id){
+      $this->db->select('*');
       $this->db->from('subject');
-      // $this->db->where('id', 1);
-
+      $this->db->join('section', 'section.id = subject.section_id');
+      $this->db->where('section.id', $id);
       $q = $this->db->get();
         if($q->num_rows() > 0) {
         foreach ($q->result() as $row) {
@@ -64,6 +64,22 @@
 
     }
 
+     function view_subject(){
+      $this->db->select('*');
+      $this->db->from('subject');
+      $this->db->where('id');
+
+      $q = $this->db->get();
+        if($q->num_rows() > 0) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+        }
+        return $data;
+      }
+
+
   }
+
+}
 
 ?>
