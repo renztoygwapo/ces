@@ -203,12 +203,23 @@ class Teacher extends Admin_Controller {
 
     }
 
-    public function insertSection(){
+  public function insertSubject(){
+    $rl = $this->input->post('mysubjectname');
+    $ml = $this->input->post('timein');
+    $scn = $this->input->post('timeout');
+    $id = $this->input->post('section_id'); 
+    $this->load->model('subject_m');   
+  }
+
+
+
+  public function insertSection(){
     
     $rl = $this->input->post('myrole');
     $ml = $this->input->post('myLevel');
     $scn = $this->input->post('mysection');
     $id = $this->input->post('teacher_id'); 
+    
     $this->load->model('section_m');
     $data = array(
        'role' => $rl ,
