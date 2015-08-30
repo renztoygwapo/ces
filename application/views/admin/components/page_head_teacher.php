@@ -217,6 +217,8 @@ License: You must have a valid license purchased only from themeforest(the above
 					</a>
 
 					<ul class="sub-menu" style="display: block;">
+
+
 						<?php foreach ($rows as $r) : ?>
 						<li>
 							<?php $subject_id = $r->id; ?>
@@ -224,10 +226,13 @@ License: You must have a valid license purchased only from themeforest(the above
 							<?php echo $r->section_name; ?></a>
 						</li>
 						<?php endforeach; ?>
+
 						<li>
+
 							<a href="<?php echo site_url('teacher/section')?>" >
 							<i class="icon-plus"></i>
-							Add New Section</a>
+							Add New Section
+						</a>
 						</li>
 					</ul>
 
@@ -299,7 +304,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!-- /.modal -->
 			<!-- add section  -->
-			<div class="modal fade" id="addsection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal fade" id="addsubject" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
 						<div class="modal-header">
@@ -318,50 +323,92 @@ License: You must have a valid license purchased only from themeforest(the above
 										<button class="close" data-close="alert"></button>
 										Your form validation is successful!
 									</div>
-									<div class="form-group">
-										<label class="control-label col-md-3">Section Name <span class="required" aria-required="true">
+								
+								<div class="form-group">
+										<label class="control-label col-md-3">Subject<span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<input type="text" name="section_name" data-required="1" class="form-control">
-										</div>
-									</div>
-							
-									
-									<div class="form-group">
-										<label class="control-label col-md-3">Subject Name<span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="subject">
+											<select class="form-control" name ="mySubject" required>
+											<!-- <select class="form-control" name="select"> -->
 												<option value="">Select...</option>
-												<option value="Math">Math</option>
+												<option value="Filipino">Filipino</option>
 												<option value="English">English</option>
-												<option value="Science">Science</option>
-												
+												<option value="Mathematics">Mathematics</option>
+												<option value="Science & Health">Science & Health</option>
+												<option value="HKS">HKS</option>
+												<option value="EPP">EPP</option>
+												<option value="MSEP">MSEP</option>
+											
 											</select>
 										</div>
 									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Time in:<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name ="myTimein" required>
+											<!-- <select class="form-control" name="select"> -->
+												<!-- <option value="">Select...</option>
+												<option value="Filipino">Filipino</option>
+												<option value="English">English</option>
+												<option value="Mathematics">Mathematics</option>
+												<option value="Science & Health">Science & Health</option>
+												<option value="HKS">HKS</option>
+												<option value="EPP">EPP</option>
+												<option value="MSEP">MSEP</option> -->
+												<option value="8:00am">8:00am</option>
+												<option value="9:00am">9:00am</option>
+												<option value="10:00am">10:00am</option>
+												<option value="11:00am">11:00am</option>
+												<option value="12:00pm">12:00pm</option>
+												<option value="1:00am">1:00pm</option>
+												<option value="2:00am">2:00pm</option>
+												<option value="3:00am">3:00pm</option>
+												<option value="4:00am">4:00pm</option>
+												<option value="5:00am">5:00pm</option>
+											</select>
+										</div>
+									</div>
+
+
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Time out:<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<select class="form-control" name ="myTimeout" required>
+											<!-- <select class="form-control" name="select"> -->
+												<!-- <option value="">Select...</option>
+												<option value="Filipino">Filipino</option>
+												<option value="English">English</option>
+												<option value="Mathematics">Mathematics</option>
+												<option value="Science & Health">Science & Health</option>
+												<option value="HKS">HKS</option>
+												<option value="EPP">EPP</option>
+												<option value="MSEP">MSEP</option> -->
+												<option value="8:00am">8:00am</option>
+												<option value="9:00am">9:00am</option>
+												<option value="10:00am">10:00am</option>
+												<option value="11:00am">11:00am</option>
+												<option value="12:00pm">12:00pm</option>
+												<option value="1:00am">1:00pm</option>
+												<option value="2:00am">2:00pm</option>
+												<option value="3:00am">3:00pm</option>
+												<option value="4:00am">4:00pm</option>
+												<option value="5:00am">5:00pm</option>
+											</select>
+										</div>
+									</div>		
+								</div>
+								
+									
+								
 							
 								
-									<div class="form-group">
-										<label class="control-label col-md-3">School Year<span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-4">
-											<select class="form-control" name="school_yr">
-												<option value="">Select...</option>
-												<option value="2015">2015</option>
-												<option value="2014">2014</option>
-												<option value="2016">2016</option>
-												<option value="2016">2016</option>
-												<option value="2016">2016</option>
-												<option value="2016">2016</option>
-												<option value="2016">2016</option>
-
-											</select>
-										</div>
-									</div>
 								
 								</div>
 						

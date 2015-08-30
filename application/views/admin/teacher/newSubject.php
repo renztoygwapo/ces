@@ -66,7 +66,7 @@
 						<div class="portlet-body">
 							<div class="row">
 							<div class="col-md-12">	
-							<a href="#addstudent" data-toggle="modal" class="btn default btn-xs green">
+							<a href="#addsubject" data-toggle="modal" class="btn default btn-xs green">
 							<i class="fa fa-edit"></i> Add Subject</a>
 							</div>
 							</div>
