@@ -25,6 +25,8 @@ class Login extends Frontend_Controller {
                                     redirect('teacher/');
                                 }else if($check == 'Alumni'){
                                     redirect('alumni/');
+                                }else{
+                                    redirect('login','refresh');
                                 }
                             
                         }
