@@ -91,6 +91,15 @@
 				
 					</a>
 				</li>
+				<li>
+					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
+					<i class="icon-users"></i>
+					<span class="title">event</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
+
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
