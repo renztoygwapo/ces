@@ -90,6 +90,14 @@
 				
 					</a>
 				</li>
+				<li>
+					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
+					<i class="icon-users"></i>
+					<span class="title">event</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
@@ -267,50 +275,7 @@
 									 CSS grade
 								</th></tr>
 							</thead>
-							<tbody>
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							
+							<tbody>										
 							<tr role="row" class="odd">
 								<td class="sorting_1">
 									 Gecko

@@ -16,6 +16,9 @@
 <script src="../../assets/global/plugins/respond.min.js"></script>
 <script src="../../assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
+
+<script src="<?php echo site_url('/assets/global/plugins/jquery.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/jquery-migrate.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery-1.11.0.min.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/jquery-migrate-1.2.1.min.js'); ?>" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
@@ -56,14 +59,16 @@
 <script src="<?php echo site_url('/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/bootstrap-markdown/lib/markdown.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/clockface/js/clockface.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/global/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js'); ?>" type="text/javascript"></script>
 
 
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL STYLES -->
-<script src="<?php echo site_url('/assets/admin/pages/scripts/form-validation.js'); ?>"></script>
-
-
-<script src="<?php echo site_url('/assets/admin/pages/scripts/calendar.js'); ?>"></script>
+<script src="<?php echo site_url('/assets/admin/pages/scripts/form-validation.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/admin/pages/scripts/calendar.js'); ?>" type="text/javascript"></script>
 
 <!-- END PAGE LEVEL STYLES -->
 
@@ -77,6 +82,11 @@
 <script src="<?php echo site_url('/assets/admin/pages/scripts/index.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/tasks.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/form-dropzone.js'); ?>" type="text/javascript"></script>
+<script src="<?php echo site_url('/assets/admin/pages/scripts/components-pickers.js'); ?>" type="text/javascript"></script>
+
+<!-- tEST  -->
+
+<!-- END TEST -->
 
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
@@ -97,6 +107,7 @@ jQuery(document).ready(function() {
    TableAdvanced.init();
    FormValidation.init();
    Calendar.init();
+   ComponentsPickers.init();
 });
 </script>
 
