@@ -1,16 +1,13 @@
 			<?php static $ctr = 0; ?>
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			<?php foreach ($rows as $r) : ?>
-			<?php
-			if($ctr == 0){
-			?>
-			    <?php echo $r->grade_level; ?> <?php echo ' / '.$r->section_name; ?> <small> <?php echo $r->role; ?>  </small>
-			<?php
-			}
-			$ctr++;
-			?>
-			<?php endforeach; ?>
+
+			<?php if(count($rows)): foreach($rows as $row): ?>
+
+									
+											<?php echo  $row->section_name; ?> <small><?php echo $row->role; ?></small>
+										<?php endforeach; ?>			
+								<?php endif; ?>	
 
 		
 			</h3> 
@@ -89,19 +86,20 @@
 								</tr>
 								</thead>
 								<tbody>
-							<?php foreach ($rows as $r) : ?>
-							<tr>			
-								<td>
-								<?php echo $r->subject_name; ?>
-								</td>
-								<td>
-								<?php echo $r->time_in; ?>
-								</td>
-								<td>
-								<?php echo $r->time_out; ?>
-								</td>
-							</tr>
-								<?php endforeach; ?>
+								<?php if(count($rows)): foreach($rows as $row): ?>
+									<tr>
+									
+										<td><?php echo $row->subject_name; ?></td>
+										<td> <?php echo $row->time_in; ?> </td>
+										<td><?php echo $row->time_out; ?></td>
+										<?php endforeach; ?>	
+										<?php else: ?>
+											<td colspan="3">We could not find any subject.</td>
+										
+									</tr>		
+								<?php endif; ?>	
+
+
 								</tbody>
 								</table>
 							</div>
