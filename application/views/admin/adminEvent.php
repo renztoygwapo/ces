@@ -1,5 +1,47 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/uploadifive/uploadifive.css" />
+<script type="text/javascript" src="<?=base_url();?>assets/uploadifive/jquery.uploadifive.js" ></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+		$('#upload_photo').uploadifive({
+			'buttonText' : 'Photo auswählen',
+		    'uploadScript' : base + 'admin/eventadmin/upload_pic',
+		    'fileType' : 'image/*',
+		    'fileSizeLimit' : '256MB',
+		    'removeCompleted' : false,
+		    'uploadLimit' : 50,
+		    'width':'100%',
+		    'onCancel'     : function() {
+	          //  alert('The file ' + file.name + ' was cancelled!');
+	            
+	           $("img[data-img='"+file.name+"']").remove();
+	  
+	        },
+		    'onUploadComplete' : function(file, data, response) {
+				var html = '<img data-img="'+file.name+'" class="img-responsive" style="float:left; margin:10px; max-width:300px;" src="'+base+'uploads/thumbs/'+data+'" />';	
+					//alert(file.name);
+				$('#image_here').prepend(html);
+				
+				//get current value of the input form with id photo
+				var current_val = $('#photo').val();
+				
+				//assign the current_val to the input with id photo
+				$('#photo').val(current_val+','+data);	
+
+               // console.log(data);
+
+		    },
+		  	 'formData'         : {'test' : '1'}
+		});
+		
+	});
+	
+</script>
+
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -259,28 +301,29 @@
 									</div>
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
-										<form action="#" class="form-horizontal">
-											<div class="form-body">
-											
-												
+										<?php $att = array('class' => 'form-horizontal'); ?>
+                                    <?= form_open_multipart('admin/eventadmin/event_add', $att) ?>
+											<div class="form-body">		
+											<?php if($this->session->flashdata('result') != false){ ?>
+								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
+								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+								          </div>
+								          <?php } ?>		
 												<div class="form-group">
-													<label class="col-md-3 control-label">Title</label>
+													<label class="col-md-3 control-label">Event Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
 															<input type="text" class="form-control" name ="event_title" placeholder="Title of Event">
 														</div>
 													</div>
 
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Content</label>
+													<label class="col-md-3 control-label">Event Description</label>
 													<div class="col-md-4">
-														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
-															<input type="text" class="form-control" name ="event_content" placeholder="Title of Event">
-														</div>
+														<textarea name="event_description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
 													</div>
+													
 
 												</div>
 												<div class="form-group">
@@ -288,7 +331,7 @@
 													<div class="col-md-4">
 														<div class="input-icon right">
 															<i class="fa fa-calendar"></i>
-															<input type="text" class="form-control" name ="event_start" placeholder="Right icon">
+															<input type="date" class="form-control" name ="event_start" placeholder="Right icon">
 														</div>
 													</div>
 												</div>
@@ -297,34 +340,37 @@
 													<div class="col-md-4">
 														<div class="input-icon right">
 															<i class="fa fa-calendar"></i>
-															<input type="text" class="form-control" name ="event_end" placeholder="Right icon">
+															<input type="date" class="form-control" name ="event_end" placeholder="Right icon">
 														</div>
 													</div>
 												</div>
-												
-								            <div class="form-group">
-										<label class="control-label col-md-3">Date Range</label>
-										<div class="col-md-4">
-											<div class="input-group input-large date-picker input-daterange" data-date="10/11/2012" data-date-format="mm/dd/yyyy">
-												<input type="text" class="form-control" name="from">
-												<span class="input-group-addon">
-												to </span>
-												<input type="text" class="form-control" name="to">
-											</div>
-											<!-- /input-group -->
-											<span class="help-block">
-											Select date range </span>
-										</div>
-									</div>
-        	
 
-											
-												
+												<div class="form-group">
+													<label class="col-md-3 control-label">Event Picture</label>
+													<div class="col-md-9">
+											<div class="fileinput fileinput-new" data-provides="fileinput">
+												<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
+												<div>
+													<span class="btn default btn-file">
+													<span class="fileinput-new">
+													Select image </span>
+													<span class="fileinput-exists">
+													Change </span>
+													<input type="hidden" name="photo" id="photo" >
+													<input type="file" name = "userfile" required>
+													</span>
+													<a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput">
+													Remove </a>
+												</div>
+											</div>
+										</div>
+												</div>
+
 											</div>
 											<div class="form-actions fluid">
 												<div class="row">
 													<div class="col-md-offset-3 col-md-9">
-														<button type="submit" class="btn green">Submit</button>
+														<button type="submit" class="btn green">Save</button>
 														<button type="button" class="btn default">Cancel</button>
 													</div>
 												</div>
@@ -334,7 +380,7 @@
 									</div>
 								</div>
 
-		
+
 			</div>
 
 			
