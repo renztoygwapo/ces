@@ -112,7 +112,8 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="<?php echo  '../../assets/admin/pages/media/profile/profile-img.png' ?>"/>
+						
+					<img alt="" class="img-circle hide1" src="<?php echo site_url('/assets/admin/pages/media/profile/profile-img.png'); ?>"/>
 					<span class="username username-hide-on-mobile">
 					<?php $user_id = $this->session->userdata('id'); ?>
 					<?php echo $this->session->userdata('username'); ?></span>
