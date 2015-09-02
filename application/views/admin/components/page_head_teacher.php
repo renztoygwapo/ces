@@ -223,7 +223,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<?php foreach ($rows as $r) : ?>
 						<li>
 							<?php $subject_id = $r->id; ?>
-							<a href="<?php echo site_url('teacher/mysubject/').'/'.$subject_id.'/' ?>" >
+							<a href="<?php echo site_url('teacher/mysubject/').'/'.$r->section_name.'/'.$subject_id.'/' ?>" >
 							<?php echo $r->section_name; ?></a>
 						</li>
 						<?php endforeach; ?>
