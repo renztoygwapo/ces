@@ -469,33 +469,33 @@ class Teacher extends Admin_Controller {
     $middlename = $this->input->post('middlename');
     $extend = $this->input->post('extend');
     $place_of_birth = $this->input->post('place_of_birth');
-    if($this->input->post('male') == "Male"){
+    if($this->input->post('gender') == "Male"){
       $sex = 'Male';
     } else {
       $sex = 'Female';
     }
 
-    if($this->input->post('Single') == 'Single'){
+    if($this->input->post('status') == 'Single'){
       $status = 'Single';
     }
 
-    if($this->input->post('Widowed') == 'Widowed'){
+    if($this->input->post('status') == 'Widowed'){
       $status = 'Widowed';
     }
 
-    if($this->input->post('Married') == 'Married'){
+    if($this->input->post('status') == 'Married'){
       $status = 'Married';
     }
 
-    if($this->input->post('Separated') == 'Separated'){
+    if($this->input->post('status') == 'Separated'){
       $status = 'Separated';
     }
 
-    if($this->input->post('Annulled') == 'Annulled'){
+    if($this->input->post('status') == 'Annulled'){
       $status = 'Annulled';
     }
 
-    if($this->input->post('Others') == 'Others'){
+    if($this->input->post('status') == 'Others'){
       $status = 'Others';
     }
     $citizenship = $this->input->post('citizenship');
