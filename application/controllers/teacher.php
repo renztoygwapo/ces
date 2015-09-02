@@ -640,15 +640,9 @@ class Teacher extends Admin_Controller {
 
     }
         public function mysubject() {
-      $id = $this->uri->segment(3);
-        //var_dump($id);
-      //$this->load->model('subject_m');
+      $id = $this->uri->segment(4);
+      $data['section'] = $this->uri->segment(3);
       $this->header(); // header of page
-      // $this->load->model('subject_m');
-      // $data['rows'] = $this->subect_m->get();
-      // $this->load->view('admin/teacher/newSubject', $data);
-      // $data['subject'] = $this->load->model->custom_m->getAll();
-      // $this->load->view('admin/teacher/newSubject',$data);
       $this->load->model('custom_m');
       $data['rows'] = $this->custom_m->getAll($id);
       $this->load->view('admin/teacher/newSubject', $data);

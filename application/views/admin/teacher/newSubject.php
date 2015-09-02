@@ -1,15 +1,7 @@
 			<?php static $ctr = 0; ?>
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-
-			<?php if(count($rows)): foreach($rows as $row): ?>
-
-									
-											<?php echo  $row->section_name; ?> <small><?php echo $row->role; ?></small>
-										<?php endforeach; ?>			
-								<?php endif; ?>	
-
-		
+				<?php echo $section; ?>
 			</h3> 
 
 			<div class="page-bar">
