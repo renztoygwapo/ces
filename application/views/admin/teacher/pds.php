@@ -75,24 +75,24 @@
 									
 									<label>SEX</label><br>
 											<label>
-									<div >
-										<label><span class=""><input class="form-control" type="checkbox" name = "male" value = "Male"> </input></span>Male</label>
-										<label><span class=""><input class="form-control" type="checkbox" name = "female" value = "Female"></input></span>Female</label>
+									<div id="gender">
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Male" checked> </input> Male </span> </label>
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Female"></input> Female</span> </label>
 									</div>		
 									
 									</div>
 									<div class="col-md-3">
 										
 											<center></center><label>CIVIL SATATUS</label> </center><br>
-									<div >
-										<label><span class=""><input type="checkbox" name = "Single" value = "Single"></input>Single</span></label>
-										<label><span class=""><input type="checkbox" name = "Widowed" value = "Widowed"></input></span>Widowed</label>
+									<div id="status">
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" checked></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed"></input></span>Widowed</label>
 										<br>
-										<label><span class=""><input type="checkbox" name = "Married" value = "Married"></input></span>Married</label>
-										<label><span class=""><input type="checkbox" name = "Separated" value = "Separated"></input></span>Separated</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated"></input></span>Separated</label>
 										<br>
-										<label><span class=""><input type="checkbox" name = "Annulled" value = "Annulled"></input></span>Annulled</label>
-										<label><span class=""><input type="checkbox" name = "Others" value = "Others"></input></span>Others</label>	
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled"></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
 									</div>
 											
 									</div>

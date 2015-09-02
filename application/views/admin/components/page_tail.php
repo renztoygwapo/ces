@@ -83,6 +83,7 @@
 <script src="<?php echo site_url('/assets/admin/pages/scripts/tasks.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/form-dropzone.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/components-pickers.js'); ?>" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- tEST  -->
 
@@ -110,6 +111,36 @@ jQuery(document).ready(function() {
    ComponentsPickers.init();
 });
 </script>
+
+    <script type="text/javascript">
+
+    $("#gender input:checkbox").change(function() {
+        if (this.checked) {
+            var checkname = $(this).attr("name");
+            $("input:checkbox[name='" + checkname + "']").not(this).removeAttr("checked");
+        }
+    });
+
+
+    </script>
+
+  </script>
+
+    <script type="text/javascript">
+
+    $("#status input:checkbox").change(function() {
+        if (this.checked) {
+            var checkname = $(this).attr("name");
+            $("input:checkbox[name='" + checkname + "']").not(this).removeAttr("checked");
+        }
+    });
+
+
+    </script>
+
+
+
+
 
 
 <!-- END JAVASCRIPTS -->
