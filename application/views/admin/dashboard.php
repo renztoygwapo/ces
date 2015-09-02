@@ -316,7 +316,6 @@
 
 		<!--- Portlet Start For Events -->
 
-
 			<div class="row">
 				
 					<div class="portlet box blue-steel">
