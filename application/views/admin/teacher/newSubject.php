@@ -27,9 +27,7 @@
 			
 			</div>
 			<!-- END PAGE HEADER-->
-			<div class="row">
 
-			</div>
 
 			<div class="row">
 
@@ -74,6 +72,79 @@
 
 									<th>
 										<i class="fa fa-shopping-cart"></i> Time Out
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<?php if(count($rows)): foreach($rows as $row): ?>
+									<tr>
+									
+										<td><?php echo $row->subject_name; ?></td>
+										<td> <?php echo $row->time_in; ?> </td>
+										<td><?php echo $row->time_out; ?></td>
+										<?php endforeach; ?>	
+										<?php else: ?>
+											<td colspan="3">We could not find any subject.</td>
+										
+									</tr>		
+								<?php endif; ?>	
+
+
+								</tbody>
+								</table>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					<!-- END SAMPLE TABLE PORTLET-->
+				</div>
+				</div>
+
+
+			<div class="row">
+
+				<div class="col-md-12">
+					<!-- BEGIN VALIDATION STATES-->
+					<div class="portlet box blue-hoki">
+						
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-bell-o"></i>Students in Section <?php echo $section; ?>
+							</div>
+							<div class="tools">
+								<a href="javascript:;" class="collapse">
+								</a>
+								<a href="#portlet-config" data-toggle="modal" class="config">
+								</a>
+								<a href="javascript:;" class="reload">
+								</a>
+								<a href="javascript:;" class="remove">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+							<div class="col-md-12">	
+							<a href="<?php echo site_url('teacher/addnew'); ?>/<?php echo $section_id; ?>" data-toggle="modal" class="btn default btn-xs green">
+							<i class="fa fa-edit"></i> Enroll New Student</a>
+							</div>
+							</div>
+							<div class="row">
+							<div class="col-md-12">	
+							<div class="table-scrollable">
+								<table class="table table-striped table-bordered table-advance table-hover">
+								<thead>
+								<tr>		
+									<th>
+										Student Name
+									</th>
+									<th class="hidden-xs">
+										Username
+									</th>
+
+									<th>
+										Password
 									</th>
 								</tr>
 								</thead>

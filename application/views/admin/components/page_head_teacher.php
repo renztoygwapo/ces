@@ -426,6 +426,94 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!-- end add section  -->
 
+			<!-- enroll new student-->
+				<!-- add section  -->
+			<div class="modal fade" id="enrollstudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Add Student Form</h4>
+						</div>
+						<div class="modal-body">
+
+					<form action="<?php echo site_url('student/addnew'); ?>" id="form_sample_1" class="form-horizontal" method="POST">
+								<div class="form-body">
+									<div class="alert alert-danger display-hide">
+										<button class="close" data-close="alert"></button>
+										You have some form errors. Please check below.
+									</div>
+									<div class="alert alert-success display-hide">
+										<button class="close" data-close="alert"></button>
+										Your form validation is successful!
+									</div>
+									<div class="form-group">
+										<label class="control-label col-md-3">First Name:<span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" name="firstname" class="form-control">
+											<?php if(count($sections)): foreach($sections as $s): ?>
+											<input type="text" name="section_name" class="form-control" value="<?php var_dump($s->id); ?>">
+											<?php endforeach; ?>
+											<?php endif; ?>	
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Lastname:<span class="required" aria-required="true">
+										*</span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" name="lastnane" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Username:<span class="required" aria-required="true">
+										*</span>
+										</label>
+										<div class="col-md-4">
+											<input type="text" name="username" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Password:<span class="required" aria-required="true">
+										*</span>
+										</label>
+										<div class="col-md-4">
+											<input type="password" name="password" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-3">Confirm Password:<span class="required" aria-required="true">
+										*</span>
+										</label>
+										<div class="col-md-4">
+											<input type="password" name="confirm" class="form-control">
+										</div>
+									</div>
+
+
+
+								
+								</div>
+						
+						<div class="modal-footer">
+							<input type="submit" class="btn blue" value="Submit">
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</form>
+
+						</div>
+						</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- end add section  -->
 
 
 			<!-- add student  -->
