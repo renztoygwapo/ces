@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <link href="<?php echo site_url('/assets/admin/layout/css/layout.css'); ?>" rel="stylesheet" type="text/css"/>
 <link href="<?php echo site_url('/assets/admin/layout/css/themes/default.css'); ?>" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="<?php echo site_url('/assets/admin/layout/css/custom.css'); ?>" rel="stylesheet" type="text/css"/>
-<link id="style_color" href="../../assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href=" <?php echo site_url('/assets/admin/layout/css/themes/darkblue.css'); ?>" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
 <!-- BEGIN PAGE LEVEL STYLES -->
@@ -85,7 +85,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
 			<a href="index.html">
-			<img src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
+			<img src="<?php echo site_url('/assets/admin/layout/img/logo.png'); ?>" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
 				<!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
@@ -103,7 +103,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
+					<img alt="" class="img-circle hide1" src="<?php echo site_url('/assets/admin/layout/img/avatar3_small.jpg'); ?>"/>
 					<span class="username username-hide-on-mobile">
 					Bob </span>
 					<i class="fa fa-angle-down"></i>

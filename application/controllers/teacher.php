@@ -639,7 +639,7 @@ class Teacher extends Admin_Controller {
        $this->load->view('admin/components/page_head_teacher', $data); 
 
     }
-        public function mysubject() {
+    public function mysubject() {
       $id = $this->uri->segment(4);
       $data['section'] = $this->uri->segment(3);
       $this->header(); // header of page
@@ -649,6 +649,9 @@ class Teacher extends Admin_Controller {
 
 
     }
+
+   
+
     public function add_section(){
      
         $rules = $this->teacher_m->rules_admin;
