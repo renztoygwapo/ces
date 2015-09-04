@@ -14,7 +14,7 @@
                         <!-- Carousel items -->
                         <div class="carousel-inner">
                           <div class="item active">
-                           <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/carmen/founding.jpg">
+                           <img class="img-responsive" alt="" src="/uploads/<?php echo $latest->event_picture; ?>">
                           </div>
                         </div>
                     
@@ -22,16 +22,15 @@
                     </div>
                     <!-- END CAROUSEL -->             
                   </div>
-                  <h2><a href="#">2nd Founding Anniversary</a></h2>
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing condimentum eleifend enim a feugiat.</p>
-                               
-                  <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
-                  <p>Culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.</p>
+                
+                  
+                  <h2><?php echo $latest->event_title; ?></h2>
+                  <p><?php echo $latest->event_description; ?></p>
                   <ul class="blog-info">
                     <li><i class="fa fa-user"></i> By admin</li>
-                    <li><i class="fa fa-calendar"></i> 25/07/2013</li>
+                    <li><i class="fa fa-calendar"></i> <?php $date = $latest->event_start; echo $date; ?></li>
                   </ul>
-
+                    
         
 
                                     
@@ -42,35 +41,21 @@
                 <div class="col-md-3 col-sm-3 blog-sidebar">
              
                   <!-- BEGIN RECENT NEWS -->                            
-                  <h2>Upcoming Events</h2>
+                  <h2>Upcoming Events</h2>     
                   <div class="recent-news margin-bottom-10">
+                        <?php if(count($rows)): foreach($rows as $row): ?>
                     <div class="row margin-bottom-10">
                       <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/carmen/founding4.jpg">                        
+                        <img class="img-responsive" alt="" src="/uploads/<?php echo $row->event_picture; ?>">                    
                       </div>
                       <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Letiusto gnissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
+                        <h3><?php echo $row->event_title; ?></h3>
+                        <p><?php echo $row->event_description; ?></p>
                       </div>                        
                     </div>
-                    <div class="row margin-bottom-10">
-                      <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/carmen/founding2.jpg">                        
-                      </div>
-                      <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Deiusto anissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
-                      </div>                        
-                    </div>
-                    <div class="row margin-bottom-10">
-                      <div class="col-md-3">
-                        <img class="img-responsive" alt="" src="../../assets/frontend/pages/img/carmen/founding3.jpg">                       
-                      </div>
-                      <div class="col-md-9 recent-news-inner">
-                        <h3><a href="#">Tesiusto baissimos</a></h3>
-                        <p>Decusamus tiusto odiodig nis simos ducimus qui sint</p>
-                      </div>                        
-                    </div>
+                            <?php endforeach; ?>
+                      <?php endif; ?> 
+               
                   </div>
                   <!-- END RECENT NEWS -->                            
 
