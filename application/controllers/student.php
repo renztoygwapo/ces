@@ -41,7 +41,6 @@ class Student extends Admin_Controller {
 
     }
 
-
     public function change_pass(){
 
     $pass = $this->input->post('current_password');
