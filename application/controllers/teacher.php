@@ -640,8 +640,12 @@ class Teacher extends Admin_Controller {
        $this->load->view('admin/components/page_head_teacher', $data); 
 
     }
+<<<<<<< HEAD
+    public function mysubject() {
+=======
         public function mysubject() {
 
+>>>>>>> b15ecd90c46d07efff6c2e31a2cff7bb49ba205c
       $id = $this->uri->segment(4);
       $data['section'] = $this->uri->segment(3);
       $data['section_id'] = $this->uri->segment(4);
@@ -655,6 +659,9 @@ class Teacher extends Admin_Controller {
 
     }
 
+<<<<<<< HEAD
+   
+=======
      public function addnew(){
 
 
@@ -686,6 +693,7 @@ class Teacher extends Admin_Controller {
       $this->student_m->save($data);
       redirect('teacher/mysubject');
     }
+>>>>>>> b15ecd90c46d07efff6c2e31a2cff7bb49ba205c
 
     public function add_section(){
      

@@ -1,5 +1,47 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/uploadifive/uploadifive.css" />
+<script type="text/javascript" src="<?=base_url();?>assets/uploadifive/jquery.uploadifive.js" ></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+		$('#upload_photo').uploadifive({
+			'buttonText' : 'Photo auswählen',
+		    'uploadScript' : base + 'admin/eventadmin/upload_pic',
+		    'fileType' : 'image/*',
+		    'fileSizeLimit' : '256MB',
+		    'removeCompleted' : false,
+		    'uploadLimit' : 50,
+		    'width':'100%',
+		    'onCancel'     : function() {
+	          //  alert('The file ' + file.name + ' was cancelled!');
+	            
+	           $("img[data-img='"+file.name+"']").remove();
+	  
+	        },
+		    'onUploadComplete' : function(file, data, response) {
+				var html = '<img data-img="'+file.name+'" class="img-responsive" style="float:left; margin:10px; max-width:300px;" src="'+base+'uploads/thumbs/'+data+'" />';	
+					//alert(file.name);
+				$('#image_here').prepend(html);
+				
+				//get current value of the input form with id photo
+				var current_val = $('#photo').val();
+				
+				//assign the current_val to the input with id photo
+				$('#photo').val(current_val+','+data);	
+
+               // console.log(data);
+
+		    },
+		  	 'formData'         : {'test' : '1'}
+		});
+		
+	});
+	
+</script>
+
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -379,6 +421,8 @@
 												</p>
 												<form action="#" role="form">
 													<div class="form-group">
+														
+
 														<div class="fileinput fileinput-new" data-provides="fileinput">
 															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
 																<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""/>
@@ -397,6 +441,28 @@
 																Remove </a>
 															</div>
 														</div>
+
+												<div class="fileinput fileinput-new" data-provides="fileinput">
+
+
+												<div class="fileinput-preview ileinput-exists thumbnail" data-trigger="fileinput" 
+												style="width: 200px; height: 150px; line-height: 150px;">
+											</div>
+												<div>
+													<span class="btn default btn-file">
+													<span class="fileinput-new">
+													Select image </span>
+													<span class="fileinput-exists">
+													Change </span>
+													<input type="hidden" name="photo" id="photo" >
+													<div> <input type="file" name = "userfile" required> </div>
+													</span>
+													<a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput">
+													Remove </a>
+												</div>
+											</div>
+
+
 													
 													</div>
 													<div class="margin-top-10">

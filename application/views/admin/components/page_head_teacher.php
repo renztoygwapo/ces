@@ -210,7 +210,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				</li>
 				<li class="start  open">
 					<li>
-					<a href="<?php echo site_url('teacher/subject')?>" >
+					<a href="javascript:;">
 					<i class="icon-book-open"></i>
 					<span class="title">My Section</span>
 					<span class="arrow  open"></span>

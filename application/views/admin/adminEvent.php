@@ -1,5 +1,11 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 
+
+
+
+
+
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/uploadifive/uploadifive.css" />
 <script type="text/javascript" src="<?=base_url();?>assets/uploadifive/jquery.uploadifive.js" ></script>
@@ -347,7 +353,7 @@
 
 												<div class="form-group">
 													<label class="col-md-3 control-label">Event Picture</label>
-													<div class="col-md-9">
+											<div class="col-md-9">
 											<div class="fileinput fileinput-new" data-provides="fileinput">
 												<div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px; line-height: 150px;"></div>
 												<div>
