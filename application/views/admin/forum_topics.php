@@ -181,7 +181,7 @@
 				<div class="portlet box blue-hoki">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>Create a new Topic
+											<i class="fa fa-gift"></i>Create a new Topic in <?php echo $section; ?>
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -197,18 +197,15 @@
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
 										<?php $att = array('class' => 'form-horizontal'); ?>
-                                    <?= form_open_multipart('admin/eventadmin/event_add', $att) ?>
+                                    <?= form_open_multipart('admin/forum_db/event_add', $att) ?>
 											<div class="form-body">		
-											<?php if($this->session->flashdata('result') != false){ ?>
-								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
-								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
-								          </div>
-								          <?php } ?>		
+													
 												<div class="form-group">
 													<label class="col-md-3 control-label">Topic Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<input type="text" class="form-control" name ="event_title" placeholder="Title of Topic">
+															<input type="text" class="form-control" name ="title" placeholder="Title of Topic">
+															<input type="hidden" class="form-control" name ="subject" value = "<?php echo $section; ?>" placeholder="Title of Topic">
 														</div>
 													</div>
 
@@ -216,7 +213,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Topic Description</label>
 													<div class="col-md-4">
-														<textarea name="event_description" data-provide="markdown" rows="10" 
+														<textarea name="description" data-provide="markdown" rows="10" 
 														data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
 													</div>
 													
@@ -245,37 +242,30 @@
 
 											</div>
 										
-										</form>
 										<!-- END FORM-->
 									</div>
 								</div>
 								</div>
 
-
-			</div>
-
-
-
-
-
-
-						</div>
-
-
-
-
-
-
-
-
-
+							</div>
+							</div>
 
 						<!-- footer modal -->
 						<div class="modal-footer">
-							<button type="button" class="btn blue">Save changes</button>
+								<!-- <div class="form-actions fluid">
+												<div class="row">
+													<div class="col-md-offset-3 col-md-9">
+														<button type="submit" class="btn green">Save</button>
+														<button type="button" class="btn default">Cancel</button>
+													</div>
+												</div>
+											</div> -->
+							<button type="submit" class="btn blue">Save changes</button>
 							<button type="button" class="btn default" data-dismiss="modal">Close</button>
 						</div>
 						<!--end footer modal -->
+
+										</form>
 					</div>
 					<!-- /.modal-content -->
 				</div>
@@ -385,6 +375,11 @@
 				</ul>
 		
 			</div>
+			<?php if($this->session->flashdata('result') != false){ ?>
+								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
+								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+								          </div>
+								          <?php } ?>
 			<!-- END PAGE HEADER-->
 			<div class="row">
 				<div class="col-md-8">
@@ -402,27 +397,41 @@
 
 			<!-- header unta neh do -->
 			<hr>
+<!-- 
+				<?php 
+		//foreach ($rows as $r) : ?>
+	<h1><?php// echo $r->title; ?></h1>
+		<div><?php// echo $r->contents; ?></div>
+	<?php // endforeach; ?> -->
+
+
+					<?php 
+		foreach ($topics as $r) : ?>
 			<div class="row">
 				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-						<ul class="list-inline">
+					<!-- <img src="<?php// echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
+		 -->	<img src="<?php echo site_url('/topics/'.$r->topic_picture); ?>" alt="" class="img-responsive" width="160" height="208">
+		
+		 		<ul class="list-inline">
 										
 										<li>
 											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
+									
+											38 post 
 										</li>
 									</ul>
 				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
 				</div>
 				<div class="col-md-6">
 									<h3>
-									<a href="admin/forum_db/forum_page">
-									Character Education</a>
+									<a href="<?php echo site_url('admin/forum_db/forum_page')?>">
+								<!--title 	Character Education --><?php echo $r->title; ?>
+
+
+							</a>
 									</h3>
 									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
+									<!-- MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao -->								<?php echo $r->description; ?>
 									</p>
 									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_page')?>">
 									View <i class="m-icon-swapright m-icon-white"></i>
@@ -431,47 +440,7 @@
 				<div class="col-md-2">
 					<br>
 				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>"
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-
-			<hr>
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="admin/forum_db/forum_page">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_page')?>">
-									View <i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
+				<?php echo $r->date_post; ?>
 				</div>
 
 				<div class="col-md-2">
@@ -483,89 +452,7 @@
 
 			<hr>
 
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="admin/forum_db/forum_page">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_page')?>">
-									View<i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-				<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" 
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-			<hr>
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="admin/forum_db/forum_page">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_page')?>">
-									View <i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-				<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" 
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-			<hr>
-
-
-
-
-
+		<?php endforeach; ?> 
 
 
 </div>

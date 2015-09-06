@@ -8,7 +8,6 @@ class Teacher extends Admin_Controller {
         $this->load->model('familybg_m');
         $this->load->model('personalinfo_m');
         $this->load->model('pds');
-        $this->load->model('section_m');
        
     }
 
@@ -640,60 +639,18 @@ class Teacher extends Admin_Controller {
        $this->load->view('admin/components/page_head_teacher', $data); 
 
     }
-<<<<<<< HEAD
     public function mysubject() {
-=======
-        public function mysubject() {
-
->>>>>>> b15ecd90c46d07efff6c2e31a2cff7bb49ba205c
       $id = $this->uri->segment(4);
       $data['section'] = $this->uri->segment(3);
-      $data['section_id'] = $this->uri->segment(4);
+      $this->header(); // header of page
       $this->load->model('custom_m');
-      $section['section_rows'] = $this->section_m->get($id);
       $data['rows'] = $this->custom_m->getAll($id);
-      $section['rows'] = $this->section_m->get();
-      $this->load->view('admin/components/page_head_teacher',$section);
       $this->load->view('admin/teacher/newSubject', $data);
 
 
     }
 
-<<<<<<< HEAD
    
-=======
-     public function addnew(){
-
-
-      $this->header();
-      $section_id['s_id'] = $this->uri->segment(3);
-      $this->load->view('admin/teacher/newstudent', $section_id);
-
-    }
-
-    public function do_insert(){
-      $this->load->model('student_m');
-      $section_id = $this->input->post('section_id');
-      $id = $this->input->post('user_id');
-      $fname = $this->input->post('fname');
-      $lname = $this->input->post('lname');
-      $uname = $this->input->post('username');
-      $pass = $this->input->post('password');
-
-      $data = array(
-
-        'firstname' => $fname,
-        'lastname' => $lname,
-        'username' => $uname,
-        'password' => $pass,
-        'section_id' => $section_id,
-        'teacher_id' => $id
-
-        );
-      $this->student_m->save($data);
-      redirect('teacher/mysubject');
-    }
->>>>>>> b15ecd90c46d07efff6c2e31a2cff7bb49ba205c
 
     public function add_section(){
      

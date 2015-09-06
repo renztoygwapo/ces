@@ -10,7 +10,7 @@ class Events extends Frontend_Controller {
 
 
       $data['rows'] = $this->event_m->get();
-      $this->db->order_by('events.event_start', 'ASC'); // or 'DESC'
+      $this->db->order_by('events.id', 'desc'); // or 'DESC'
       $this->db->limit(1);
       $q = $this->db->get('events');
       $data['latest'] = $q->row();
