@@ -41,7 +41,7 @@
                 <div class="col-md-3 col-sm-3 blog-sidebar">
              
                   <!-- BEGIN RECENT NEWS -->                            
-                  <h2>Upcoming Events</h2>     
+                  <h2>Older Events</h2>     
                   <div class="recent-news margin-bottom-10">
                         <?php if(count($rows)): foreach($rows as $row): ?>
                     <div class="row margin-bottom-10">
@@ -49,7 +49,7 @@
                         <img class="img-responsive" alt="" src="/uploads/<?php echo $row->event_picture; ?>">                    
                       </div>
                       <div class="col-md-9 recent-news-inner">
-                        <h3><?php echo $row->event_title; ?></h3>
+                        <a href = "#"><h3><?php echo $row->event_title; ?></h3></a>
                         <p><?php echo $row->event_description; ?></p>
                       </div>                        
                     </div>

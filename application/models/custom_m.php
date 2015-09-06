@@ -80,6 +80,22 @@
 
   }
 
+    function view_topic($subject){
+      $this->db->select('*');
+      $this->db->from('topics');
+      $this->db->where('topic_category', $subject);
+
+      $q = $this->db->get();
+        if($q->num_rows() > 0) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+        }
+        return $data;
+      }
+
+
+  }
+
 }
 
 ?>
