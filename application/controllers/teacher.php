@@ -733,6 +733,8 @@ class Teacher extends Admin_Controller {
 
     }
 
+   
+
   public function insertSubject(){
     $rl = $this->input->post('mysubjectname');
     $ml = $this->input->post('timein');

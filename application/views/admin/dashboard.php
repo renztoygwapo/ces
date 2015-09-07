@@ -246,13 +246,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 1349
+								<?php echo $teachers; ?>
 							</div>
 							<div class="desc">
-								 Teacher
+								 Teachers
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('admin/home_admin/teacher_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -264,13 +264,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 12,5M$
+								 <?php echo $students; ?>
 							</div>
 							<div class="desc">
-								 Student
+								 Students
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('admin/home_admin/student_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -282,13 +282,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 549
+								<?php echo $alumni; ?>
 							</div>
 							<div class="desc">
 								 Alumni
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('admin/home_admin/alumni_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -300,19 +300,45 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 +89%
+								<?php echo $events; ?>
 							</div>
 							<div class="desc">
 								 Events
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('admin/home_admin/event_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
 				</div>
 			</div>
 			<!-- END DASHBOARD STATS -->
+		
+
+
+			<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="portlet box green-meadow calendar">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-gift"></i>Calendar
+							</div>
+						</div>
+						<div class="portlet-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<div id="calendar" class="has-toolbar">
+									</div>
+								</div>
+							</div>
+							<!-- END CALENDAR PORTLET-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END PAGE CONTENT-->
+
 
 		<!--- Portlet Start For Events -->
 

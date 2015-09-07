@@ -91,32 +91,8 @@
 				</div>
 			</div>
 			<!-- END DASHBOARD STATS -->
-		
-			<!-- BEGIN PAGE CONTENT-->
-			<div class="row">
-				<div class="col-md-12">
-					<div class="portlet box green-meadow calendar">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-gift"></i>Calendar
-							</div>
-						</div>
-						<div class="portlet-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<div id="calendar" class="has-toolbar">
-									</div>
-								</div>
-							</div>
-							<!-- END CALENDAR PORTLET-->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- END PAGE CONTENT-->
-
-	<!-- END CONTENT -->
 	
+
 </div>
 <!-- END CONTAINER -->
 <?php $this->load->view('admin/components/page_tail'); ?>
