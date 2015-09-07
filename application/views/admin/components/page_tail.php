@@ -1,3 +1,5 @@
+
+
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
@@ -83,7 +85,7 @@
 <script src="<?php echo site_url('/assets/admin/pages/scripts/tasks.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/form-dropzone.js'); ?>" type="text/javascript"></script>
 <script src="<?php echo site_url('/assets/admin/pages/scripts/components-pickers.js'); ?>" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
 
 <!-- tEST  -->
 
@@ -110,9 +112,9 @@ jQuery(document).ready(function() {
    Calendar.init();
    ComponentsPickers.init();
 });
-</script>
+  </script>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
 
     $("#gender input:checkbox").change(function() {
         if (this.checked) {
@@ -124,7 +126,7 @@ jQuery(document).ready(function() {
 
     </script>
 
-  </script>
+
 
     <script type="text/javascript">
 
@@ -137,11 +139,6 @@ jQuery(document).ready(function() {
 
 
     </script>
-
-
-
-
-
 
 <!-- END JAVASCRIPTS -->
 <script>

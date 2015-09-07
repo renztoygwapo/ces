@@ -49,6 +49,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- BEGIN PAGE STYLES -->
 <link href="<?php echo site_url('/assets/admin/pages/css/tasks.css'); ?>" rel="stylesheet" type="text/css"/>
+<link href="<?php echo site_url('/assets/global/plugins/fullcalendar/fullcalendar/fullcalendar.css'); ?>" rel="stylesheet" type="text/css"/>
+
 <!-- END PAGE STYLES -->
 <!-- BEGIN THEME STYLES -->
 <link href="<?php echo site_url('/assets/global/css/components.css'); ?>" rel="stylesheet" type="text/css"/>
