@@ -3,7 +3,8 @@
   <div class="row">
     <div class="row">
 
-     <!-- BEGIN SLIDER -->
+    
+    <!-- BEGIN SLIDER -->
     <div class="page-slider margin-bottom-40">
       <div class="fullwidthbanner-container revolution-slider">
         <div class="fullwidthabnner">
@@ -82,7 +83,7 @@
                 data-speed="700" 
                 data-start="1000" 
                 data-easing="easeOutExpo">
-                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/man-winner.png')?>" alt="Image 1">
+                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/student.jpg')?>" alt="Image 1">
               </div>
             </li>
 
@@ -137,14 +138,7 @@
                 data-easing="easeOutBack">
                 <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/iphone.png')?>" alt="Image 1">
               </div>
-              <div class="caption lfr slide_item_right" 
-                data-x="835" 
-                data-y="230" 
-                data-speed="1200" 
-                data-start="3000" 
-                data-easing="easeOutBack">
-                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/macbook.png')?>" alt="Image 1">
-              </div>
+          
               <div class="caption lft slide_item_right" 
                 data-x="865" 
                 data-y="45" 
