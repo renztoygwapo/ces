@@ -280,7 +280,7 @@
 							
 					
 								<td class="sorting_1">
-									 <?php echo $row->photo;?>
+									<img src="<?php echo $row->photo;?>"> 
 								</td>
 								<td>
 									<?php echo $row->firstname;?>

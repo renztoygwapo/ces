@@ -280,7 +280,17 @@
 							
 					
 								<td class="sorting_1">
-									 <?php echo $row->photo;?>
+									<div class="row">
+										<div class="col-md-2">
+											<img src="<?php echo $row->photo;?>" class="img-responsive" style="height: 28px;width: 36px;">
+										</div>
+
+										<div class="col-md-10">
+											 sdfsdf
+										</div>
+
+									</div>
+									
 								</td>
 								<td>
 									<?php echo $row->firstname;?>
