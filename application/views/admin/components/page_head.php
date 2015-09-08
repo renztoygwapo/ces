@@ -105,7 +105,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="<?php echo site_url('/assets/admin/layout/img/avatar3_small.jpg'); ?>"/>
+					<img alt="" class="img-circle hide1" src="<?php echo site_url('/profilepic/profile.png'); ?>"/>
 					<span class="username username-hide-on-mobile">
 					Bob </span>
 					<i class="fa fa-angle-down"></i>

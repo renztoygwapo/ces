@@ -19,6 +19,10 @@
 			</div>
 			<!-- END PAGE HEADER-->
 
+
+
+
+
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row profile">
 				<div class="col-md-12">
@@ -41,28 +45,10 @@
 									<div class="col-md-3">
 										<ul class="list-unstyled profile-nav">
 											<li>
-												<img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt="">
-												<a href="#" class="profile-edit">
-												edit </a>
+												<img src="<?php echo $student->photo ?> " class="img-responsive" alt="">
+												
 											</li>
-											<li>
-												<a href="#">
-												Projects </a>
-											</li>
-											<li>
-												<a href="#">
-												Messages <span>
-												3 </span>
-												</a>
-											</li>
-											<li>
-												<a href="#">
-												Friends </a>
-											</li>
-											<li>
-												<a href="#">
-												Settings </a>
-											</li>
+											
 										</ul>
 									</div>
 									<div class="col-md-9">
@@ -412,7 +398,7 @@
 												<p>
 													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
 												</p>
-												<form action="#" role="form">
+												<!-- <form action="#" role="form">
 													<div class="form-group">
 														<div class="fileinput fileinput-new" data-provides="fileinput">
 															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
@@ -440,7 +426,41 @@
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
-												</form>
+												</form> -->
+												          <form name="upload" id="upload" method="post" action="<?php echo site_url('upload_pic/uploadpic_student') ?>" enctype="multipart/form-data">
+
+													<div class="form-group">
+														<div class="fileinput fileinput-new" data-provides="fileinput">
+															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+																<img src="<?php echo $student->photo ?>" alt=""/>
+															</div>
+															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+															</div>
+															<div>
+																<span class="btn default btn-file">
+																<span class="fileinput-new">
+																Select image </span>
+																<span class="fileinput-exists">
+																Change 
+																</span>
+																<!-- <input type="file" name="profilepic"> -->
+																<input type="file" name="txtImage" size="20" />
+																</span>
+																<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
+																Remove </a>
+															</div>
+														</div>
+													
+													</div>
+													<div class="margin-top-10">
+													
+														<input class="btn green" type="submit" value="submit" />
+										
+														<a href="#" class="btn default">
+														Cancel </a>
+													</div>
+													<?php echo form_close(); ?>
+
 											</div>
 											<div id="tab_3-3" class="tab-pane">
 												<?php

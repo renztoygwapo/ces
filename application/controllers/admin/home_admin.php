@@ -22,7 +22,8 @@ class Home_admin extends Admin_Controller {
 		$query = $this->db->query('SELECT * FROM users where role = "alumni" ');
 		$data['alumni'] = $query->num_rows();
 
-
+   // UPDATE MyGuests SET lastname='Doe' WHERE id=2
+    
 		$query = $this->db->query('SELECT * FROM events');
 		$data['events'] = $query->num_rows();
 

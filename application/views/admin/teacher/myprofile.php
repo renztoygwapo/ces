@@ -18,7 +18,11 @@
 				
 			</div>
 			<!-- END PAGE HEADER-->
-	
+			<?php if($this->session->flashdata('result') != false){ ?>
+								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
+								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+								          </div>
+				 <?php } ?>
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row profile">
 				<div class="col-md-12">
@@ -41,7 +45,7 @@
 									<div class="col-md-3">
 										<ul class="list-unstyled profile-nav">
 											<li>
-												<img src="<?php echo  '../../assets/admin/pages/media/profile/profile-img.png' ?> " class="img-responsive" alt="">
+												<img src="<?php echo $teachers->photo ?> " class="img-responsive" alt="">
 											</li>
 											
 										</ul>
@@ -138,10 +142,9 @@
 													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
 												</p>
 												<!-- <form action="#" role="form"> -->
-												<?php
-									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
-													  echo form_open('teacher/change_pic/', $attributes);
-									             ?>
+											
+
+									             <form name="upload" id="upload" method="post" action="<?php echo site_url('upload_pic/uploadpic') ?>" enctype="multipart/form-data">
 
 													<div class="form-group">
 														<div class="fileinput fileinput-new" data-provides="fileinput">
@@ -157,7 +160,8 @@
 																<span class="fileinput-exists">
 																Change 
 																</span>
-																<input type="file" name="profilepic">
+																<!-- <input type="file" name="profilepic"> -->
+																<input type="file" name="txtImage" size="20" />
 																</span>
 																<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
 																Remove </a>
@@ -166,8 +170,9 @@
 													
 													</div>
 													<div class="margin-top-10">
-														<a href="#" class="btn green">
-														Submit </a>
+													
+														<input class="btn green" type="submit" value="submit" />
+										
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
