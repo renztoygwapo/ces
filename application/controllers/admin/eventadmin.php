@@ -6,11 +6,24 @@ class Eventadmin extends Admin_Controller {
         $this->load->helper('file');
         $this->load->helper(array('form', 'url'));
         $this->load->model('event_m');
+        $this->load->model('teacher_m');
+        $this->load->model('profile_m');
+        $this->load->model('familybg_m');
+        $this->load->model('personalinfo_m');
+        $this->load->model('admin_m');
+        $this->load->model('pds');
     }
+
+    public function getdata(){
+      $id = $this->session->userdata('id');
+      return $this->admin_m->get($id);
+    }
+
 
     public function index() {
      // $this->data['subview'] = 'admin/dashboard/index';
-      $this->load->view('admin/adminEvent');
+      $data['admin'] = $this->getdata();
+      $this->load->view('admin/adminEvent', $data);
 
     }
 
