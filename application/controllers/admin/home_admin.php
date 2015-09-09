@@ -7,6 +7,7 @@ class Home_admin extends Admin_Controller {
         $this->load->model('profile_m');
         $this->load->model('familybg_m');
         $this->load->model('personalinfo_m');
+        $this->load->model('admin_m');
         $this->load->model('pds');
     }
 
@@ -18,6 +19,13 @@ class Home_admin extends Admin_Controller {
 
 		$query = $this->db->query('SELECT * FROM users where role = "Student" ');
 		$data['students'] = $query->num_rows();
+    // $query = $this->db->query('SELECT * FROM users where role = "Admin" ');
+    // $data['admin'] = $query;
+
+      $id = $this->session->userdata('id');
+     // update query
+     //
+     $data['admin'] = $this->admin_m->get($id);
 
 		$query = $this->db->query('SELECT * FROM users where role = "alumni" ');
 		$data['alumni'] = $query->num_rows();
