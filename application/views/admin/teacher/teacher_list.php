@@ -103,7 +103,7 @@
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="index.html">Home</a>
+						<a href="<?php echo site_url('admin/home_admin/')?>">Home</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
@@ -165,7 +165,7 @@
 										</div>
 
 										<div class="col-md-10">
-											 sdfsdf
+											 
 										</div>
 
 									</div>
@@ -189,7 +189,8 @@
 						</div>
 					</div>
 			</div>
-
+	</div>
+		</div>
 
 
 
