@@ -40,9 +40,13 @@ class Teacher extends Admin_Controller {
     }
 
     public function teacher_list(){
+
+      $data['rows'] = $this->teacher_m->get();
+
      $this->header();
      $query = $this->db->query('SELECT * FROM users where role = "Teacher" ');
      $data['teachers'] = $query->result();
+
       //var_dump($data);
       $this->load->view('admin/teacher/teacher_list', $data);
 
