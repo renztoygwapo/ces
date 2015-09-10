@@ -24,13 +24,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 1349
+								<?php echo $teachers; ?>
 							</div>
 							<div class="desc">
 								 Teacher
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('teacher/teacher_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -42,13 +42,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 12,5M$
+								<?php echo $students; ?>
 							</div>
 							<div class="desc">
 								 Student
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('teacher/student_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -60,13 +60,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 549
+								 <?php echo $alumni; ?>
 							</div>
 							<div class="desc">
 								 Alumni
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('teacher/alumni_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -78,13 +78,13 @@
 						</div>
 						<div class="details">
 							<div class="number">
-								 +89%
+								<?php echo $sections; ?>
 							</div>
 							<div class="desc">
-								 Events
+								 Sections
 							</div>
 						</div>
-						<a class="more" href="#">
+						<a class="more" href="<?php echo site_url('teacher/section_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>

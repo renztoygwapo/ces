@@ -4,6 +4,8 @@ class Teacher extends Admin_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('teacher_m');
+        $this->load->model('student_m');
+        $this->load->model('section_m');
         $this->load->model('profile_m');
         $this->load->model('familybg_m');
         $this->load->model('personalinfo_m');
@@ -12,8 +14,28 @@ class Teacher extends Admin_Controller {
     }
 
     public function index() {
-       $this->header();
-       $this->load->view('admin/teacher/index');
+      $this->header();
+      $this->load->model('teacher_m');
+      $query = $this->db->query('SELECT * FROM users where role = "Teacher" ');
+      $data['teachers'] = $query->num_rows();
+
+      $id = $this->session->userdata('id');
+      $query = $this->db->query('SELECT * FROM students where teacher_id = '.$id.' ');
+      $data['students'] = $query->num_rows();
+      // $query = $this->db->query('SELECT * FROM users where role = "Admin" ');
+      // $data['admin'] = $query;
+
+      $id = $this->session->userdata('id');
+      // update query
+      $data['admin'] = $this->user_m->get($id);
+      $query = $this->db->query('SELECT * FROM users where role = "alumni" ');
+      $data['alumni'] = $query->num_rows();
+
+    // UPDATE MyGuests SET lastname='Doe' WHERE id=2
+    //$data['sections'] = $this->section_m->get();
+    $query = $this->db->query('SELECT * FROM section');
+    $data['sections'] = $query->num_rows();
+       $this->load->view('admin/teacher/index', $data);
 
     }
 
