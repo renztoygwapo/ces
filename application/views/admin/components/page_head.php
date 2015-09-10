@@ -100,7 +100,7 @@
 					<ul class="dropdown-menu">
 						<li>
 							<a href="<?php echo site_url('admin/home_admin/')?>">
-							<i class="icon-home"></i> Dashboaard </a>
+							<i class="icon-home"></i> Dashboard </a>
 						</li>
 						<li>
 							<a href="<?php echo site_url('admin/myprofile/')?>">
