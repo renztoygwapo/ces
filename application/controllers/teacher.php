@@ -39,6 +39,13 @@ class Teacher extends Admin_Controller {
 
     }
 
+    public function teacher_list(){
+      $data['rows'] = $this->teacher_m->get();
+      //var_dump($data);
+      $this->load->view('admin/teacher/teacher_list', $data);
+
+    }
+
     public function insert_pds() {
      $this->get_personal_info();
      $this->get_family_bacground();
