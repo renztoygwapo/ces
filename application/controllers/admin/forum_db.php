@@ -27,10 +27,11 @@ class Forum_db extends Admin_Controller {
     }
 
      public function forum_topic() {
+      $data['admin'] = $this->getdata();
       $data['section_name'] = $this->uri->segment(4)." ".$this->uri->segment(5)." ".$this->uri->segment(6)." ".$this->uri->segment(7);
       $data['insert_section'] = $this->uri->segment(4)."".$this->uri->segment(5)."".$this->uri->segment(6)."".$this->uri->segment(7);
-       $this->load->model('custom_m');
-      $data['topics'] = $this->custom_m->view_topic($data['section']);
+      $this->load->model('custom_m');
+      $data['topics'] = $this->custom_m->view_topic($data['section_name']);
       $this->load->view('admin/forum_topics', $data);
 
 
@@ -207,8 +208,9 @@ function upload_pic($_FILES) {
 
 
     public function forum_page() {
-    
-      $this->load->view('admin/forum_page');
+
+      $data['admin'] = $this->getdata();
+      $this->load->view('admin/forum_page' ,$data);
 
 
     }
