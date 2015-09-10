@@ -1,118 +1,6 @@
-<?php //$this->load->view('admin/components/page_head_teacher'); ?>
-
-<!-- BEGIN CONTAINER -->
-<div class="page-container">
-	<!-- BEGIN SIDEBAR -->
-	<div class="page-sidebar-wrapper">
-		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-		<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-		<div class="page-sidebar navbar-collapse collapse">
-			<!-- BEGIN SIDEBAR MENU -->
-			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
-				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				
-				<li  class="set active">
-					<a href="<?php echo site_url('admin/home_admin/')?>">
-					<i class="icon-home"></i>
-					<span class="title">Dashboard</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/myprofile/')?>" >
-					<i class="icon-user"></i>
-					<span class="title">My Profile</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/request/')?>" >
-					<i class="icon-docs"></i>
-					<span class="title">Request</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/rankings/')?>" >
-					<i class="icon-trophy"></i>
-					<span class="title">Rankings</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/reports/')?>" >
-					<i class="icon-bar-chart"></i>
-					<span class="title">Reports</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/forum_db/')?>" >
-					<i class="icon-users"></i>
-					<span class="title">Forums</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
-					<i class="icon-users"></i>
-					<span class="title">event</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-			</ul>
-			<!-- END SIDEBAR MENU -->
-		</div>
-	</div>
-	<!-- END SIDEBAR -->
 
 
 
-
-
-
-<!-- BEGIN CONTENT -->
-	<div class="page-content-wrapper">
-		<div class="page-content">
-			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			
-			<!-- /.modal -->
-			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			
-			<!-- BEGIN PAGE HEADER-->
-				<!-- BEGIN PAGE HEADER-->
-			<h3 class="page-title">
-			Users Request <small></small>
-			</h3>
-			<div class="page-bar">
-				<ul class="page-breadcrumb">
-					<li>
-						<i class="fa fa-home"></i>
-						<a href="<?php echo site_url('admin/home_admin/')?>">Home</a>
-						<i class="fa fa-angle-right"></i>
-					</li>
-					<li>
-						<a href="#"> Teacher List</a>
-					</li>
-				</ul>
-		
-			</div>
-			<!-- END PAGE HEADER-->
 
 
 			<!-- header unta neh do -->
@@ -153,7 +41,7 @@
 							</thead>
 							<tbody>
 					
-                  		 <?php if(count($rows)): foreach($rows as $row): ?>
+                  		 <?php if(count($teachers)): foreach($teachers as $teacher): ?>
 	
 							<tr role="row" class="odd">
 							
@@ -172,10 +60,10 @@
 									
 								</td>
 								<td>
-									<?php echo $row->firstname;?>
+									<?php echo $teacher->firstname;?>
 								</td>
 								<td>
-									<?php echo $row->lastname;?>
+									<?php echo $teacher->lastname;?>
 								</td>
 							
 							</tr>
