@@ -3,45 +3,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
 <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/uploadifive/uploadifive.css" />
 <script type="text/javascript" src="<?=base_url();?>assets/uploadifive/jquery.uploadifive.js" ></script>
-<script type="text/javascript">
-	
-	$(document).ready(function(){
-		
-		$('#upload_photo').uploadifive({
-			'buttonText' : 'Photo auswählen',
-		    'uploadScript' : base + 'admin/eventadmin/upload_pic',
-		    'fileType' : 'image/*',
-		    'fileSizeLimit' : '256MB',
-		    'removeCompleted' : false,
-		    'uploadLimit' : 50,
-		    'width':'100%',
-		    'onCancel'     : function() {
-	          //  alert('The file ' + file.name + ' was cancelled!');
-	            
-	           $("img[data-img='"+file.name+"']").remove();
-	  
-	        },
-		    'onUploadComplete' : function(file, data, response) {
-				var html = '<img data-img="'+file.name+'" class="img-responsive" style="float:left; margin:10px; max-width:300px;" src="'+base+'uploads/thumbs/'+data+'" />';	
-					//alert(file.name);
-				$('#image_here').prepend(html);
-				
-				//get current value of the input form with id photo
-				var current_val = $('#photo').val();
-				
-				//assign the current_val to the input with id photo
-				$('#photo').val(current_val+','+data);	
-
-               // console.log(data);
-
-		    },
-		  	 'formData'         : {'test' : '1'}
-		});
-		
-	});
-	
-</script>
-
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -51,31 +12,9 @@
 		<div class="page-sidebar navbar-collapse collapse">
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
-				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				<li class="sidebar-toggler-wrapper">
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler push-left">
-					</div>
-					<!-- END SIDEBAR TOGGLER BUTTON -->
-				</li>
+		
 				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-				<li class="sidebar-search-wrapper">
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
-					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-					<form class="sidebar-search " action="extra_search.html" method="POST">
-						<a href="javascript:;" class="remove">
-						<i class="icon-close"></i>
-						</a>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search...">
-							<span class="input-group-btn">
-							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-							</span>
-						</div>
-					</form>
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-				</li>
+				
 				<li>
 					<a href="<?php echo site_url('admin/home_admin/')?>" >
 					<i class="icon-home"></i>
@@ -92,14 +31,7 @@
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
 				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
@@ -271,6 +203,8 @@
 						<a href="#">User Profile</a>
 					</li>
 				</ul>
+
+			
 				<div class="page-toolbar">
 					<div class="btn-group pull-right">
 						<button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
@@ -299,7 +233,11 @@
 
 
 			<!-- header unta neh do -->
-
+				<?php if($this->session->flashdata('result') != false){ ?>
+								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
+								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
+								          </div>
+				 <?php } ?>
 
 			<!-- BEGIN PAGE CONTENT-->
 			<div class="row profile">
@@ -323,7 +261,8 @@
 									<div class="col-md-3">
 										<ul class="list-unstyled profile-nav">
 											<li>
-												<img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt="">
+												<!-- <img src="../../assets/admin/pages/media/profile/profile-img.png" class="img-responsive" alt=""> -->
+												<img src="<?php echo $admin->photo ?> " class="img-responsive" alt="">
 											</li>
 											
 										</ul>
@@ -419,59 +358,42 @@
 												<p>
 													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
 												</p>
-												<form action="#" role="form">
-													<div class="form-group">
-														
+												<!-- <form action="#" role="form"> -->
+											
 
+									             <form name="upload" id="upload" method="post" action="<?php echo site_url('upload_pic/uploadpicadmin') ?>" enctype="multipart/form-data">
+
+													<div class="form-group">
 														<div class="fileinput fileinput-new" data-provides="fileinput">
-															<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-																<img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""/>
-															</div>
+															
 															<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;">
+																<img src="<?php echo $admin->photo ?>"></img>
 															</div>
 															<div>
 																<span class="btn default btn-file">
 																<span class="fileinput-new">
 																Select image </span>
 																<span class="fileinput-exists">
-																Change </span>
-																<input type="file" name="...">
+																Change 
+																</span>
+																<!-- <input type="file" name="profilepic"> -->
+																<input type="file" name="txtImage" size="20" />
 																</span>
 																<a href="#" class="btn default fileinput-exists" data-dismiss="fileinput">
 																Remove </a>
 															</div>
 														</div>
-
-												<div class="fileinput fileinput-new" data-provides="fileinput">
-
-
-												<div class="fileinput-preview ileinput-exists thumbnail" data-trigger="fileinput" 
-												style="width: 200px; height: 150px; line-height: 150px;">
-											</div>
-												<div>
-													<span class="btn default btn-file">
-													<span class="fileinput-new">
-													Select image </span>
-													<span class="fileinput-exists">
-													Change </span>
-													<input type="hidden" name="photo" id="photo" >
-													<div> <input type="file" name = "userfile" required> </div>
-													</span>
-													<a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput">
-													Remove </a>
-												</div>
-											</div>
-
-
 													
 													</div>
 													<div class="margin-top-10">
-														<a href="#" class="btn green">
-														Submit </a>
+													
+														<input class="btn green" type="submit" value="submit" />
+										
 														<a href="#" class="btn default">
 														Cancel </a>
 													</div>
-												</form>
+													<?php echo form_close(); ?>
+												<!-- </form> -->
 											</div>
 											<div id="tab_3-3" class="tab-pane">
 												<?php

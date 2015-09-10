@@ -1,5 +1,4 @@
 <?php $this->load->view('admin/components/page_head'); ?>
-
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -240,7 +239,7 @@
 			<div class="row">
 				<div class="col-md-12 blog-page">
 					<div class="row">
-						<div class="col-md-9 article-block">
+						<div class="col-md-10 article-block">
 							<h3>Hello here will be some recent news..</h3>
 							<div class="blog-tag-data">
 								<img src="../../assets/admin/pages/media/gallery/item_img.jpg" class="img-responsive" alt="">
@@ -303,8 +302,6 @@
 									<p>
 										 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
 									</p>
-								
-								
 								</div>
 							</div>
 							<!--end media-->
@@ -339,81 +336,15 @@
 							</div>
 						</div>
 						<!--end col-md-9-->
-						<div class="col-md-3 blog-sidebar">
-				
 						
-							<div class="space20">
-							</div>
-							<h3>Top Entiries</h3>
-							<div class="top-news">
-								<a href="#" class="btn red">
-								<span>
-								Metronic News </span>
-								<em>Posted on: April 16, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Money, Business, Google </em>
-								<i class="fa fa-briefcase top-news-icon"></i>
-								</a>
-								<a href="#" class="btn green">
-								<span>
-								Top Week </span>
-								<em>Posted on: April 15, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Internet, Music, People </em>
-								<i class="fa fa-music top-news-icon"></i>
-								</a>
-								<a href="#" class="btn blue">
-								<span>
-								Gold Price Falls </span>
-								<em>Posted on: April 14, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								USA, Business, Apple </em>
-								<i class="fa fa-globe top-news-icon"></i>
-								</a>
-								<a href="#" class="btn yellow">
-								<span>
-								Study Abroad </span>
-								<em>Posted on: April 13, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Education, Students, Canada </em>
-								<i class="fa fa-book top-news-icon"></i>
-								</a>
-								<a href="#" class="btn purple">
-								<span>
-								Top Destinations </span>
-								<em>Posted on: April 12, 2013</em>
-								<em>
-								<i class="fa fa-tags"></i>
-								Places, Internet, Google Map </em>
-								<i class="fa fa-bolt top-news-icon"></i>
-								</a>
-							</div>
-							
-						
-						</div>
-						<!--end col-md-3-->
-					</div>
 				</div>
 			</div>
-
-
-
-
 			<!-- header unta neh do -->
-			
-
-
 			<hr>
+</div>
+</div>
 
-
-
-
-
-
+</div>
 
 </div>
 

@@ -5,6 +5,11 @@ class Myprofile extends Admin_Controller {
         parent::__construct();
         $this->load->model('admin_m');
         $this->load->model('profile_m');
+       $this->load->model('teacher_m');
+        $this->load->model('profile_m');
+        $this->load->model('familybg_m');
+        $this->load->model('personalinfo_m');
+        $this->load->model('pds');
     }
 
     

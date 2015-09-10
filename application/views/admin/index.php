@@ -78,37 +78,14 @@
                 data-speed="700" 
                 data-start="1000" 
                 data-easing="easeOutExpo">
-                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/man-winner.png')?>" alt="Image 1">
+                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/student.jpg')?>" alt="Image 1">
               </div>
             </li>
 
             <!-- THE SECOND SLIDE -->
             <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-delay="9400" data-thumb="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg')?>">                        
               <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/bg2.jpg')?>" alt="">
-              <div class="caption lfl slide_title slide_item_left"
-                data-x="30"
-                data-y="125"
-                data-speed="400"
-                data-start="3500"
-                data-easing="easeOutExpo">
-                Powerfull &amp; Clean
-              </div>
-              <div class="caption lfl slide_subtitle slide_item_left"
-                data-x="30"
-                data-y="200"
-                data-speed="400"
-                data-start="4000"
-                data-easing="easeOutExpo">
-                Responsive Admin &amp; Website Theme
-              </div>
-              <div class="caption lfl slide_desc slide_item_left"
-                data-x="30"
-                data-y="245"
-                data-speed="400"
-                data-start="4500"
-                data-easing="easeOutExpo">
-                Lorem ipsum dolor sit amet, consectetuer elit sed diam<br> nonummy amet euismod dolore.
-              </div>                        
+                                  
               <div class="caption lfr slide_item_right" 
                 data-x="635" 
                 data-y="105" 
@@ -133,14 +110,7 @@
                 data-easing="easeOutBack">
                 <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/iphone.png')?>" alt="Image 1">
               </div>
-              <div class="caption lfr slide_item_right" 
-                data-x="835" 
-                data-y="230" 
-                data-speed="1200" 
-                data-start="3000" 
-                data-easing="easeOutBack">
-                <img src="<?php echo site_url('/assets/frontend/pages/img/revolutionslider/macbook.png')?>" alt="Image 1">
-              </div>
+          
               <div class="caption lft slide_item_right" 
                 data-x="865" 
                 data-y="45" 
@@ -163,38 +133,7 @@
                         <li data-transition="fade" data-slotamount="8" data-masterspeed="700" data-delay="9400" data-thumb="../../assets/frontend/pages/img/revolutionslider/thumbs/thumb2.jpg">
                             <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
                             <img src="../../assets/frontend/pages/img/revolutionslider/bg4.jpg" alt="">                        
-                             <div class="caption lft slide_title"
-                                 data-x="30"
-                                 data-y="105"
-                                 data-speed="400"
-                                 data-start="1500"
-                                 data-easing="easeOutExpo">
-                                 What else included ?
-                            </div>
-                            <div class="caption lft slide_subtitle"
-                                 data-x="30"
-                                 data-y="180"
-                                 data-speed="400"
-                                 data-start="2000"
-                                 data-easing="easeOutExpo">
-                                 The Most Complete Admin Theme
-                            </div>
-                            <div class="caption lft slide_desc"
-                                 data-x="30"
-                                 data-y="225"
-                                 data-speed="400"
-                                 data-start="2500"
-                                 data-easing="easeOutExpo">
-                                 Lorem ipsum dolor sit amet, consectetuer elit sed diam<br> nonummy amet euismod dolore.
-                            </div>
-                            <a class="caption lft slide_btn btn red slide_item_left" href="http://www.keenthemes.com/preview/index.php?theme=metronic_admin" target="_blank" 
-                                 data-x="30"
-                                 data-y="300"
-                                 data-speed="400"
-                                 data-start="3000"
-                                 data-easing="easeOutExpo">
-                                 Learn More!
-                            </a>                        
+                                                    
                             <div class="caption lft start"  
                                  data-x="670" 
                                  data-y="55" 

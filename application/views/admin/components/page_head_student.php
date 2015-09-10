@@ -168,13 +168,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				<li class="sidebar-toggler-wrapper">
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler">
-						
-					</div>
-					<!-- END SIDEBAR TOGGLER BUTTON -->
-				</li>
+			
 				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
 				<li>
 					<a href="<?php echo site_url('student/')?>" >
