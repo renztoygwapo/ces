@@ -52,6 +52,41 @@ class Teacher extends Admin_Controller {
 
     }
 
+    public function section_list(){
+
+     $id = $this->session->userdata('id'); 
+     $this->header();
+     $query = $this->db->query('SELECT * FROM section where teacher_id = '.$id.' ');
+     $data['sections'] = $query->result();
+
+      //var_dump($data);
+      $this->load->view('admin/teacher/section_listdata', $data);
+
+    }
+
+      public function alumni_list(){
+
+      $data['rows'] = $this->teacher_m->get();
+
+     $this->header();
+     $query = $this->db->query('SELECT * FROM users where role = "Alumni" ');
+     $data['alumni'] = $query->result();
+      $this->load->view('admin/teacher/alumni_listdata', $data);
+
+    }
+
+    public function student_list(){
+
+     $id = $this->session->userdata('id');
+     
+     $this->header();
+     $query = $this->db->query('SELECT * FROM students where teacher_id = '.$id.' ');
+     $data['students'] = $query->result();
+
+      $this->load->view('admin/teacher/student_list_data', $data);
+
+    }
+
     public function insert_pds() {
      $this->get_personal_info();
      $this->get_family_bacground();
