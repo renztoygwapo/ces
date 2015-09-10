@@ -73,7 +73,7 @@
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
+			<a href="<?php echo site_url('admin/home_admin/')?>">
 			<img src="<?php echo site_url('/assets/admin/layout/img/logo.png'); ?>" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
@@ -99,37 +99,10 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="extra_profile.html">
+							<a href="<?php echo site_url('admin/home_admin/')?>">
 							<i class="icon-user"></i> My Profile </a>
 						</li>
-						<li>
-							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Calendar </a>
-						</li>
-						<li>
-							<a href="#">
-							<i class="icon-folder"></i> My Files <span class="badge badge-success">
-							7 </span>
-							</a>
-						</li>
-						<li class="divider">
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-cloud-upload"></i> Request </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-badge"></i> Rankings </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-folder-alt"></i> Reports </a>
-						</li>
-						<li>
-							<a href="login.html">
-							<i class="icon-book-open"></i> Forums </a>
-						</li>
+						
 						<li>
 							<a href="<?php echo site_url('admin/index/logout')?>" >
 							<i class="icon-key"></i> Log Out </a>
