@@ -40,8 +40,7 @@ class Teacher extends Admin_Controller {
     }
 
     public function teacher_list(){
-     $this->header();
-      $data['teachers'] = $this->teacher_m->get();
+      $data['rows'] = $this->teacher_m->get();
       //var_dump($data);
       $this->load->view('admin/teacher/teacher_list', $data);
 
