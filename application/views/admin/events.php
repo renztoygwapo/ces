@@ -205,7 +205,8 @@
                   <!-- BEGIN RECENT NEWS -->                            
                   <h2>Older Events</h2>     
                   <div class="recent-news margin-bottom-10">
-                        <?php if(count($rows)): foreach($rows as $row): ?>
+                        <?php if(count($rows)): 
+                      foreach($rows as $row): ?>
                     <div class="row margin-bottom-10">
                       <div class="col-md-3">
                         <img class="img-responsive" alt="" src="/uploads/<?php echo $row->event_picture; ?>">                    
