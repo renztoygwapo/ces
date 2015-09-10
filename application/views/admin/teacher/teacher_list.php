@@ -1,10 +1,5 @@
 
 
-
-
-
-			<!-- header unta neh do -->
-
 			<div class="row">
 
 				<div class="portlet box blue-hoki" style="display: block;">
@@ -49,7 +44,7 @@
 								<td class="sorting_1">
 									<div class="row">
 										<div class="col-md-2">
-											<img src="<?php echo $row->photo;?>" class="img-responsive" style="height: 28px;width: 36px;">
+											<img src="<?php echo $teacher->photo;?>" class="img-responsive" style="height: 28px;width: 36px;">
 										</div>
 
 										<div class="col-md-10">
