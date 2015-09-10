@@ -642,6 +642,7 @@ class Teacher extends Admin_Controller {
     public function mysubject() {
       $id = $this->uri->segment(4);
       $data['section'] = $this->uri->segment(3);
+        $data['section_id'] = $this->uri->segment(4);
       $this->header(); // header of page
       $this->load->model('custom_m');
       $data['rows'] = $this->custom_m->getAll($id);
@@ -672,6 +673,12 @@ class Teacher extends Admin_Controller {
     
       // $this->load->teacher_m();
       // $this->teacher_m->save($data);
+    }
+
+    public function addnew(){
+
+      echo "test";
+
     }
 
     public function change_pass(){
