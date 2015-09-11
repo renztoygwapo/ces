@@ -96,6 +96,26 @@
 
   }
 
+  function view_request(){
+      $this->db->select('*');
+      $this->db->from('users');
+      $this->db->join('request_tb', 'users.id = request_tb.user_id');
+     // $this->db->where('request_tb.user_id', 'users.id');
+
+      $q = $this->db->get();
+        if($q->num_rows() > 0) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+        }
+        return $data;
+      }
+
+
+  }
+
+  
+  
+
 }
 
 ?>
