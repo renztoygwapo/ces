@@ -19,7 +19,6 @@ class Home_admin extends Admin_Controller {
 
     public function index() {
      // $this->data['subview'] = 'admin/dashboard/index';
-    	$this->load->model('teacher_m');
      	$query = $this->db->query('SELECT * FROM users where role = "Teacher" ');
 		$data['teachers'] = $query->num_rows();
 
