@@ -96,6 +96,38 @@
 
   }
 
+    function topics($id){
+      $this->db->select('*');
+      $this->db->from('topics');
+      $this->db->where('id', $id);
+
+      $q = $this->db->get();
+        if($q->num_rows() > 0) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+        }
+        return $data;
+      }
+
+
+  }
+
+  function post_topic($id){
+      $this->db->select('*');
+      $this->db->from('forum_post');
+      $this->db->where('topic_id', $id);
+
+      $q = $this->db->get();
+        if($q->num_rows() > 0) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+        }
+        return $data;
+      }
+
+
+  }
+
   function view_request(){
       $this->db->select('*');
       $this->db->from('users');

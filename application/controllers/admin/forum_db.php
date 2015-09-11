@@ -208,9 +208,15 @@ function upload_pic($_FILES) {
 
 
     public function forum_page() {
-
+      //topic_picture
+      $id = $this->uri->segment(5);
+      $this->load->model('custom_m');
       $data['admin'] = $this->getdata();
-      $this->load->view('admin/forum_page' ,$data);
+      $data['topic'] =  $this->custom_m->topics($id);
+      $data['post_tp'] =  $this->custom_m->post_topic($id);
+
+    // var_dump($id);
+     $this->load->view('admin/forum_page' ,$data);
 
 
     }
