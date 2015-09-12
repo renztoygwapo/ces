@@ -731,7 +731,7 @@ class Teacher extends Admin_Controller {
             $data = array(
               'section_name' => $this->input->post('section_name'),
                'subject_name' => $this->input->post('subject'),
-                'school_yr' => $this->input->post('school_yr'),
+                'school_yr' => $this->input->post('school_yr')
 
               );
             $this->teacher_m->save($data);
@@ -743,12 +743,6 @@ class Teacher extends Admin_Controller {
     
       // $this->load->teacher_m();
       // $this->teacher_m->save($data);
-    }
-
-    public function addnew(){
-
-      echo "test";
-
     }
 
     public function change_pass(){
@@ -813,11 +807,23 @@ class Teacher extends Admin_Controller {
    
 
   public function insertSubject(){
-    $rl = $this->input->post('mysubjectname');
+    $rl = $this->input->post('mySubject');
     $ml = $this->input->post('timein');
     $scn = $this->input->post('timeout');
     $id = $this->input->post('section_id'); 
     $this->load->model('subject_m'); 
+
+    $data = array(
+      'subject_name' => $rl,
+      'time_in' => $ml,
+      'time_out' => $scn,
+      'section_id' => $id
+    );
+
+    $this->subject_m->save($data);
+     $this->session->set_flashdata('result', 'Subject Successfully Added!');
+      redirect('teacher/sections','refresh');
+
 
       
   }
