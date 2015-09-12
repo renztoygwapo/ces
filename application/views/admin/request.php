@@ -225,7 +225,7 @@
 									 Win 98+ / OSX.2+
 								</td>
 								<td>
-									<center> <button type="button" class="btn green " >View Request</button> </center>
+									<center> <button type="button" class="btn green " >View   Request</button> </center>
 								</td>
 								
 							</tr> -->
