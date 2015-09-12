@@ -28,14 +28,6 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
 					<span class="title">Request</span>

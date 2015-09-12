@@ -92,7 +92,7 @@
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="<?php echo $admin->photo; ?>"/>
+					<img alt="" class="img-circle hide1" src="<?php echo '../../'.$admin->photo; ?>"/>
 					<span class="username username-hide-on-mobile">
 					<?php echo $admin->firstname ?></span>
 					<i class="fa fa-angle-down"></i>

@@ -254,7 +254,7 @@
 														<div class="portlet-body">
 															<!-- <h4><a href = ""><?php //echo $r->event_title; ?> </a></h4> -->
 															<img class="img-responsive" src="<?php echo $admin->photo; ?>">
-															by: Admin		
+															by: <?php echo $admin->firstname; ?>		
 														</div>
 													</div>
 													<!-- END GRID PORTLET-->

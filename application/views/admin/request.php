@@ -1,17 +1,5 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -190,9 +178,10 @@
 								</td>
 								<td>
 							<?php 	if($row->req_file == "none") { ?>
-							<center> <button type="button" class="btn green " data-toggle="modal" data-target="#<?php echo $row->id; ?>" name = "reqName" value = "<?php echo $row->firstname.' '.$row->lastname;?>">View Request</button> </center>
+							<center> <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#<?php echo $row->id; ?>" name = "reqName" value = "<?php echo $row->firstname.' '.$row->lastname;?>" style="height: 25px;width: 109px;">View Request</button> </center>
 							
 							<?php 		} else { ?>
+							<center> <span class="label bg-green">Already Approved</span> </center>
 									<?php	} ?>
 
 								</td>
@@ -207,7 +196,6 @@
                  			   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                  				   	<h1 class="modal-title"><?php echo $row->firstname.' '.$row->lastname;?> Request </h1>
                		 			</div>
-
                 <div class="modal-body">
                     <h2> <?php echo $row->req_title; ?> </h2>
                     <p><?php echo $row->req_description; ?></p>
@@ -223,23 +211,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 									 <?php endforeach; ?>
                       		<?php endif; ?> 
 
@@ -254,7 +225,7 @@
 									 Win 98+ / OSX.2+
 								</td>
 								<td>
-									<center> <button type="button" class="btn green " >View Request</button> </center>
+									<center> <button type="button" class="btn green " >View   Request</button> </center>
 								</td>
 								
 							</tr> -->

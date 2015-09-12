@@ -12,6 +12,7 @@ class Forum_db extends Admin_Controller {
         $this->load->model('personalinfo_m');
         $this->load->model('admin_m');
         $this->load->model('pds');
+        $this->load->model('post_m');
     }
 
     public function getdata(){
@@ -92,46 +93,6 @@ class Forum_db extends Admin_Controller {
         }
      
 
-
-  //     $rules = $this->event_m->rules_admin;
-  //    $this->form_validation->set_rules($rules);
-  //    var_dump($this->form_validation->run());
-  //       if ($this->form_validation->run() == TRUE) {
-  //    // $data = array(
-  //    //  'event_title' => $this->input->post('event_title'),
-  //    //  'event_description' => $this->input->post('event_description'),
-  //    //  'event_start' => $this->input->post('event_start'),
-  //    //  'event_end' => $this->input->post('event_end'),
-  //    //  'event_picture' => $this->input->post('event_picture')
-  //    // );
-  //    //var_dump($event_picture);
-  //    $config['upload_path'] = './uploads/';
-    // $config['allowed_types'] = 'gif|jpg|png';
-    // $config['max_size']  = '100';
-    // $config['max_width']  = '1024';
-    // $config['max_height']  = '768';
-
-    // $this->load->library('upload', $config);
-
-    // if ( ! $this->upload->do_upload())
-    // {
-    //  $error = array('error' => $this->upload->display_errors());
-
-    //  $this->load->view('upload_form', $error);
-    // }
-    // else
-    // {
-    //  $data_pic = array('upload_data' => $this->upload->data());
-
-    //  $this->load->view('upload_success', $data_pic);
-    // }
-
-  //    // $this->event_m->save($data);
-  //    // $this->session->set_flashdata('result', 'Event Successfully Added!');
-  //    //    redirect('admin/eventadmin','refresh');
-   
-
-  //   }
 }
 
   function do_upload()
@@ -208,12 +169,37 @@ function upload_pic($_FILES) {
 
 
     public function forum_page() {
-
+      //topic_picture
+      $id = $this->uri->segment(5);
+      $this->load->model('custom_m');
       $data['admin'] = $this->getdata();
-      $this->load->view('admin/forum_page' ,$data);
+      $data['topic'] =  $this->custom_m->topics($id);
+      $data['post_tp'] =  $this->custom_m->post_topic($id);
+
+   // var_dump($data['post_tp']);
+     $this->load->view('admin/forum_page' ,$data);
 
 
     }
+
+     public function insert_comment(){
+    
+   // $firstname = $this->input->post('firstname');
+    
+
+    $data = array(
+       'name' => $this->input->post('name_post'),
+       'message' => $this->input->post('message') ,
+       'date_post' => $this->input->post('date_post') ,
+       'propic' => $this->input->post('photo'),
+       'topic_id' => $this->input->post('topic_id') ,
+   
+    );
+    $this->post_m->save($data);
+    //$this->session->set_flashdata('result', 'Successfully Registered!');
+    redirect('admin/forum_db/forum_page/'.$this->input->post('category').'/'.$this->input->post('topic_id'),'refresh');
+
+  }
 
 }
 

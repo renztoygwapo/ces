@@ -8,31 +8,7 @@
 		<div class="page-sidebar navbar-collapse collapse">
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
-				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				<li class="sidebar-toggler-wrapper">
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler push-left">
-					</div>
-					<!-- END SIDEBAR TOGGLER BUTTON -->
-				</li>
-				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-				<li class="sidebar-search-wrapper">
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
-					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-					<form class="sidebar-search " action="extra_search.html" method="POST">
-						<a href="javascript:;" class="remove">
-						<i class="icon-close"></i>
-						</a>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search...">
-							<span class="input-group-btn">
-							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-							</span>
-						</div>
-					</form>
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-				</li>
+				
 				<li>
 					<a href="<?php echo site_url('admin/home_admin/')?>">
 					<i class="icon-home"></i>
@@ -49,14 +25,7 @@
 				
 					</a>
 				</li>
-				<li >
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
 				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
@@ -132,94 +101,11 @@
 			</div>
 			<!-- /.modal -->
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<!-- BEGIN STYLE CUSTOMIZER -->
-			<div class="theme-panel hidden-xs hidden-sm">
-				<div class="toggler">
-				</div>
-				<div class="toggler-close">
-				</div>
-				<div class="theme-options">
-					<div class="theme-option theme-colors clearfix">
-						<span>
-						THEME COLOR </span>
-						<ul>
-							<li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default">
-							</li>
-							<li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue">
-							</li>
-							<li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue">
-							</li>
-							<li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey">
-							</li>
-							<li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light">
-							</li>
-							<li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2">
-							</li>
-						</ul>
-					</div>
-					<div class="theme-option">
-						<span>
-						Layout </span>
-						<select class="layout-option form-control input-small">
-							<option value="fluid" selected="selected">Fluid</option>
-							<option value="boxed">Boxed</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Header </span>
-						<select class="page-header-option form-control input-small">
-							<option value="fixed" selected="selected">Fixed</option>
-							<option value="default">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Mode</span>
-						<select class="sidebar-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Menu </span>
-						<select class="sidebar-menu-option form-control input-small">
-							<option value="accordion" selected="selected">Accordion</option>
-							<option value="hover">Hover</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Style </span>
-						<select class="sidebar-style-option form-control input-small">
-							<option value="default" selected="selected">Default</option>
-							<option value="light">Light</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Position </span>
-						<select class="sidebar-pos-option form-control input-small">
-							<option value="left" selected="selected">Left</option>
-							<option value="right">Right</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Footer </span>
-						<select class="page-footer-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<!-- END STYLE CUSTOMIZER -->
+			
 			<!-- BEGIN PAGE HEADER-->
 				<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Category Title <small>topics</small>
+			<?php echo $this->uri->segment(4).' '; ?><small>topics</small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -235,39 +121,28 @@
 		
 			</div>
 			<!-- END PAGE HEADER-->
-			
+
+
+			 <?php foreach ($topic as $t):?>
 			<div class="row">
 				<div class="col-md-12 blog-page">
 					<div class="row">
 						<div class="col-md-10 article-block">
-							<h3>Hello here will be some recent news..</h3>
+						
 							<div class="blog-tag-data">
-								<img src="../../assets/admin/pages/media/gallery/item_img.jpg" class="img-responsive" alt="">
+								<img src="<?php echo '../../../../topics/'.$t->topic_picture; ?>" class="img-responsive" alt="" style="height: 350px;">
 								<div class="row">
-									<div class="col-md-6">
-										<ul class="list-inline blog-tags">
-											<li>
-												<i class="fa fa-tags"></i>
-												<a href="#">
-												Technology </a>
-												<a href="#">
-												Education </a>
-												<a href="#">
-												Internet </a>
-											</li>
-										</ul>
-									</div>
 									<div class="col-md-6 blog-tag-data-inner">
 										<ul class="list-inline">
 											<li>
 												<i class="fa fa-calendar"></i>
-												<a href="#">
-												April 16, 2013 </a>
+										
+												<?php echo 'Date Post:'.$t->date_post; ?>
 											</li>
 											<li>
 												<i class="fa fa-comments"></i>
-												<a href="#">
-												38 Comments </a>
+											
+												<?php echo 'Post by:'.$admin->firstname; ?>
 											</li>
 										</ul>
 									</div>
@@ -275,64 +150,79 @@
 							</div>
 							<!--end news-tag-data-->
 							<div>
-								<p>
-									 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
-								</p>
+								
 								<blockquote class="hero">
 									<p>
-										 Lorem ipsum dolor sit amet, consectetur adipiscing elit posuere erat a ante.
+										<?php echo $t->title; ?></a>
 									</p>
-									<small>Someone famous <cite title="Source Title">Source Title</cite></small>
+									<small> <?php echo $t->description; ?></a></cite></small>
 								</blockquote>
-								<p>
-									 Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Eserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpa
-								</p>
+								
 							</div>
 							<hr>
+							<?php endforeach; 
+						 if(($post_tp ) == null) { ?>
+						 	<blockquote class="hero">
+									<p>
+										No user Comment.
+									</p>
+									
+								</blockquote>
+						 	
+						 <?php } else {?>
+
+							<h3>Comments</h3>
+							<?php foreach ($post_tp as $tp): ?>
 							<div class="media">
-								<h3>Comments</h3>
+								
 								<a href="#" class="pull-left">
-								<img alt="" src="../../assets/admin/pages/media/blog/9.jpg" class="media-object">
+								<img alt="" src="<?php echo '../../'.$tp->propic; ?>" class="media-object" style="height: 72px;">
 								</a>
 								<div class="media-body">
-									<h4 class="media-heading">Media heading <span>
-									5 hours ago
-									</span>
-									</h4>
+									<h2 class="media-heading"><?php echo $tp->name; ?> </h2> <small>Date post: <?php echo $tp->date_post; ?> </small>
+									
+									
 									<p>
-										 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+										<?php echo $tp->message; ?> 
 									</p>
 								</div>
 							</div>
 							<!--end media-->
 							<hr>
-							<div class="media">
-								<a href="#" class="pull-left">
-								<img alt="" src="../../assets/admin/pages/media/blog/6.jpg" class="media-object">
-								</a>
-								<div class="media-body">
-									<h4 class="media-heading">Media heading <span>
-									July 5,2013 
-									</span>
-									</h4>
-									<p>
-										 Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-									</p>
-								</div>
-							</div>
-							<!--end media-->
-							<hr>
+							<?php endforeach;?>
+							<?php } ?>	
+
+
+
 							<div class="post-comment">
 								<h3>Leave a Comment</h3>
-								<form role="form" action="#">
+
+
+								<form action="<?php echo site_url('admin/forum_db/insert_comment'); ?>" method="post">
+								<!-- <form role="form" action="#"> -->
 									<div class="form-group">
 										<label class="control-label">Message <span class="required">
 										* </span>
 										</label>
-										<textarea class="col-md-10 form-control" rows="8"></textarea>
+										<textarea class="col-md-10 form-control" rows="8" name = "message"></textarea>
+										<input type = "hidden" name = "name_post" value = "<?php echo $admin->firstname.' '.$admin->lastname;  ?>"></input>
+										<input type = "hidden" name = "photo" value = "<?php echo $admin->photo;  ?>"></input>
+										<input type = "hidden" name = "date_post" value = "<?php echo date("Y/m/d") ?>"></input>
+										<input type = "hidden" name = "topic_id" value = "<?php echo $this->uri->segment(5) ?>"></input>
+										<input type = "hidden" name = "category" value = "<?php echo $this->uri->segment(4) ?>"></input>
 									</div>
 									<button class="margin-top-20 btn blue" type="submit">Post a Comment</button>
+
 								</form>
+
+
+
+
+
+
+
+
+
 							</div>
 						</div>
 						<!--end col-md-9-->
@@ -342,6 +232,7 @@
 			<!-- header unta neh do -->
 			<hr>
 </div>
+
 </div>
 
 </div>

@@ -27,15 +27,6 @@
 				
 					</a>
 				</li>
-		
-				<li>
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
 				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
@@ -194,13 +185,13 @@
 								</div>
 								<div class="col-md-8 blog-article">
 									<h1>
-									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/Science/and/Health')?>">
+									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/ScienceandHealth')?>">
 									Science & Health </a>
 									</h1>
 									<p>
 										 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero consectetur adipiscing elit magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat. Pellentesque viverra vehicula sem ut volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus. Fusce condimentum eleifend enim a feugiat.
 									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/Science/and/Health')?>">
+									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/ScienceandHealth')?>">
 									View Topics <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 								</div>
@@ -214,13 +205,13 @@
 								</div>
 								<div class="col-md-8 blog-article">
 									<h3>
-									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/Heograpiya/Kasaysayan/at/Sibika')?>".>
+									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/HKS')?>".>
 									Heograpiya Kasaysayan at Sibika (HKS)</a>
 									</h3>
 									<p>
 										MITHIIN: Nagpapakita ng pagmamahal sa Diyos at sa kapwa; may pagmamalaki sa mga pambansang pagkakakilanlan; nagtatamasa ng mga karapatan at gumaganap ng mga tungkulin bilang Pilipino; may positibong saloobin tungo sa paggawa; may kakayahan sa pangangalaga sa kapaligiran; at may kasanayang makatugon sa mga hamon ng pagbabago sa daigdig.
 									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/Heograpiya/Kasaysayan/at/Sibika')?>">
+									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/HKS')?>">
 									View Topics <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 								</div>
@@ -234,13 +225,13 @@
 								</div>
 								<div class="col-md-8 blog-article">
 									<h3>
-									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/Edukasyong/Pantahanan/at/Pangkabuhayan')?>">
+									<a href="<?php echo site_url('admin/forum_db/forum_topic'.'/EPP')?>">
 									Edukasyong Pantahanan at Pangkabuhayan (EPP)</a>
 									</h3>
 									<p>
 									MITHIIN: Pagkatapos ng ikaanim na baitang inaasahang makakamit ng bawat batang magaaral sa Edukasyong Pantahanan at Pangkabuhayan (EPP) angmgakaalaman, kasanayan, at wastongsaloobinsakamalayanngindibiduwalnakakayanan, pagpahalagangsarilingkultura, positibongpananawsalikasnayaman, makaagham at makabagongteknolohiya, at praktikalnapag-gamitngsiningparasapagtugonsapangangailangangpansarili, pang-pamilya at pam-pamayananbilangisangproduktibong entrepreneur namamamayantungosamaunlad at kasiyasiyangpamumuhay.
 									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/Edukasyong/Pantahanan/at/Pangkabuhayan')?>">
+									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/EPP')?>">
 									View Topics <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 								</div>
@@ -302,7 +293,7 @@
 									You may wish to address your concern or query to a member of staff or the person in charge of the service you are attending. 
 									Any member of staff will assist you with queries or problems and if they can’t resolve the problem they will find someone who can. 
 									</p>
-									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/Concern/And/Queries')?>">
+									<a class="btn blue" href="<?php echo site_url('admin/forum_db/forum_topic'.'/CAQ')?>">
 									View Topics <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 								</div>
