@@ -25,14 +25,7 @@
 				
 					</a>
 				</li>
-				<li >
-					<a href="<?php echo site_url('admin/myfiles/')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
 				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
@@ -128,6 +121,8 @@
 		
 			</div>
 			<!-- END PAGE HEADER-->
+
+
 			 <?php foreach ($topic as $t):?>
 			<div class="row">
 				<div class="col-md-12 blog-page">
@@ -165,9 +160,19 @@
 								
 							</div>
 							<hr>
-							<?php endforeach;?>
+							<?php endforeach; 
+						 if(($post_tp ) == null) { ?>
+						 	<blockquote class="hero">
+									<p>
+										No user Comment.
+									</p>
+									
+								</blockquote>
+						 	
+						 <?php } else {?>
+
 							<h3>Comments</h3>
-							<?php foreach ($post_tp as $tp):?>
+							<?php foreach ($post_tp as $tp): ?>
 							<div class="media">
 								
 								<a href="#" class="pull-left">
@@ -185,7 +190,7 @@
 							<!--end media-->
 							<hr>
 							<?php endforeach;?>
-							
+							<?php } ?>	
 
 
 
@@ -193,16 +198,18 @@
 								<h3>Leave a Comment</h3>
 
 
-
-								<form role="form" action="#">
+								<form action="<?php echo site_url('admin/forum_db/insert_comment'); ?>" method="post">
+								<!-- <form role="form" action="#"> -->
 									<div class="form-group">
 										<label class="control-label">Message <span class="required">
 										* </span>
 										</label>
 										<textarea class="col-md-10 form-control" rows="8" name = "message"></textarea>
-										<input type = "hidden" name = "" value = ""></input>
-										<input type = "hidden" name = "" value = ""></input>
-										<input type = "hidden" name = "" value = ""></input>
+										<input type = "hidden" name = "name_post" value = "<?php echo $admin->firstname.' '.$admin->lastname;  ?>"></input>
+										<input type = "hidden" name = "photo" value = "<?php echo $admin->photo;  ?>"></input>
+										<input type = "hidden" name = "date_post" value = "<?php echo date("Y/m/d") ?>"></input>
+										<input type = "hidden" name = "topic_id" value = "<?php echo $this->uri->segment(5) ?>"></input>
+										<input type = "hidden" name = "category" value = "<?php echo $this->uri->segment(4) ?>"></input>
 									</div>
 									<button class="margin-top-20 btn blue" type="submit">Post a Comment</button>
 

@@ -239,6 +239,15 @@
 	<h1><?php// echo $r->title; ?></h1>
 		<div><?php// echo $r->contents; ?></div>
 	<?php // endforeach; ?> -->
+	<?php if(($topics ) == null) { ?>
+						 	<blockquote class="hero">
+									<p>
+										No Topic to discuss.
+									</p>
+									
+								</blockquote>
+						 	
+						 <?php } else {?>
 
 
 					<?php 
@@ -251,9 +260,7 @@
 		 		<ul class="list-inline">
 										
 										<li>
-											<i class="fa fa-comments"></i>
-									
-											38 post 
+											
 										</li>
 									</ul>
 				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
@@ -288,7 +295,7 @@
 
 		<?php endforeach; ?> 
 			
-		
+			<?php } ?>	
 
 
 </div>

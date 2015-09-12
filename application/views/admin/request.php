@@ -181,7 +181,7 @@
 							<center> <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#<?php echo $row->id; ?>" name = "reqName" value = "<?php echo $row->firstname.' '.$row->lastname;?>" style="height: 25px;width: 109px;">View Request</button> </center>
 							
 							<?php 		} else { ?>
-							<center> <span class="label bg-green">Request Confirm</span> </center>
+							<center> <span class="label bg-green">Already Approved</span> </center>
 									<?php	} ?>
 
 								</td>
