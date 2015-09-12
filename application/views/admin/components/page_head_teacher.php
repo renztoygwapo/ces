@@ -95,7 +95,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
+			<a href="<?php echo site_url('teacher/')?>">
 			<img src="<?php echo site_url('/assets/admin/layout/img/logo.png'); ?> " alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 
-					<img alt="" class="img-circle hide1" src="<?php echo site_url('/assets/admin/pages/media/profile/profile-img.png'); ?>"/>
+					<img alt="" class="img-circle hide1" src="<?php echo '../../'.$teacher->photo; ?>"/>
 					<span class="username username-hide-on-mobile">
 					<?php $user_id = $this->session->userdata('id'); ?>
 					<?php echo $this->session->userdata('username'); ?></span>
@@ -167,15 +167,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="page-sidebar navbar-collapse collapse">
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
-				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				<li class="sidebar-toggler-wrapper">
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler push-left">
-					</div>
-					<!-- END SIDEBAR TOGGLER BUTTON -->
-				</li>
-				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-			
+				
 
 
 				<li>
@@ -296,7 +288,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Add Student Form</h4>
+							<h4 class="modal-title">Add Subject Form</h4>
 						</div>
 						<div class="modal-body">
 
@@ -310,7 +302,11 @@ License: You must have a valid license purchased only from themeforest(the above
 										<button class="close" data-close="alert"></button>
 										Your form validation is successful!
 									</div>
-								
+
+								<div class="for-group">
+									<input type = "hidden" name= "subject_teacher" value = "<?php echo  $this->uri->segment(3); ?>"></input>
+									<input type = "hidden" name= "subject_id" value = "<?php echo  $this->uri->segment(4); ?>"></input>
+								</div>	
 								<div class="form-group">
 										<label class="control-label col-md-3">Subject<span class="required" aria-required="true">
 										* </span>
