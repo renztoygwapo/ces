@@ -4,6 +4,7 @@ class Teacher extends Admin_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('teacher_m');
+        $this->load->model('admin_m');
         $this->load->model('student_m');
         $this->load->model('section_m');
         $this->load->model('profile_m');
@@ -13,6 +14,11 @@ class Teacher extends Admin_Controller {
        
     }
 
+    public function getdata(){
+      $id = $this->session->userdata('id');
+      return $this->admin_m->get($id);
+    }
+
     public function index() {
       $this->header();
       $this->load->model('teacher_m');
@@ -20,7 +26,7 @@ class Teacher extends Admin_Controller {
       $data['teachers'] = $query->num_rows();
 
       $id = $this->session->userdata('id');
-      $query = $this->db->query('SELECT * FROM students where teacher_id = '.$id.' ');
+      $query = $this->db->query('SELECT * FROM students where section_id = '.$id.' ');
       $data['students'] = $query->num_rows();
       // $query = $this->db->query('SELECT * FROM users where role = "Admin" ');
       // $data['admin'] = $query;
@@ -80,7 +86,7 @@ class Teacher extends Admin_Controller {
      $id = $this->session->userdata('id');
      
      $this->header();
-     $query = $this->db->query('SELECT * FROM students where teacher_id = '.$id.' ');
+     $query = $this->db->query('SELECT * FROM students where section_id = '.$id.' ');
      $data['students'] = $query->result();
 
       $this->load->view('admin/teacher/student_list_data', $data);
@@ -704,15 +710,20 @@ class Teacher extends Admin_Controller {
 
     }
         public function header() {
+     $data['teacher'] = $this->getdata();
       $this->load->model('section_m');
-      $data['rows'] = $this->section_m->get();
+      $id = $this->session->userdata('id');
+      $query = $this->db->query('SELECT * FROM section where teacher_id = '.$id.' ');
+      $data['rows'] = $query->result();
        $this->load->view('admin/components/page_head_teacher', $data); 
 
     }
     public function mysubject() {
       $id = $this->uri->segment(4);
       $data['section'] = $this->uri->segment(3);
-        $data['section_id'] = $this->uri->segment(4);
+      $data['section_id'] = $this->uri->segment(4);
+      $query = $this->db->query('SELECT * FROM students where section_id = '.$id.' ');
+      $data['students'] = $query->result();
       $this->header(); // header of page
       $this->load->model('custom_m');
       $data['rows'] = $this->custom_m->getAll($id);
@@ -810,23 +821,59 @@ class Teacher extends Admin_Controller {
     $rl = $this->input->post('mySubject');
     $ml = $this->input->post('timein');
     $scn = $this->input->post('timeout');
-    $id = $this->input->post('section_id'); 
-    $this->load->model('subject_m'); 
-
+    $id = $this->input->post('subject_id'); 
+    $this->load->model('subject_m');
+    $subject = $this->input->post('subject_teacher');
+    $subject_id = $this->input->post('subject_id');
+   // $subject_id = 
     $data = array(
       'subject_name' => $rl,
       'time_in' => $ml,
       'time_out' => $scn,
       'section_id' => $id
     );
-
+      // var_dump($subject);
     $this->subject_m->save($data);
      $this->session->set_flashdata('result', 'Subject Successfully Added!');
-      redirect('teacher/sections','refresh');
+   
+    redirect('teacher/mysubject/'.$subject.'/'.$subject_id,'refresh');
 
 
       
   }
+
+  //insertStudent
+  public function insertStudent(){
+    //$rl = $this->input->post('mySubject');
+
+    $subject = $this->input->post('subject_teacher');
+    $subject_id = $this->input->post('section_id');
+   // $subject_id = 
+    $data = array(
+      'firstname' => $this->input->post('firstname'),
+      'lastname' => $this->input->post('lastname'),
+      'gender' => ' ',
+      'address' => ' ',
+      'birthday' => ' ',
+      'aboutme' => ' ',
+      'photo' => $this->input->post('photo'),
+      'username' => $this->input->post('username'),
+      'password' => $this->input->post('password'),
+      'section_id' => $subject_id
+    );
+       //var_dump($subject_id);
+    $this->student_m->save($data);
+     $this->session->set_flashdata('result', 'Subject Successfully Added!');
+   
+    redirect('teacher/mysubject/'.$subject.'/'.$subject_id,'refresh');
+
+
+      
+  }
+
+
+
+
 
 
 

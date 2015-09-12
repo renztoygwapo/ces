@@ -149,15 +149,15 @@
 								</tr>
 								</thead>
 								<tbody>
-								<?php if(count($rows)): foreach($rows as $row): ?>
+								<?php if(count($students)): foreach($students as $stdnt): ?>
 									<tr>
 									
-										<td><?php echo $row->subject_name; ?></td>
-										<td> <?php echo $row->time_in; ?> </td>
-										<td><?php echo $row->time_out; ?></td>
+										<td><?php echo $stdnt->firstname.' '.$stdnt->lastname; ?></td>
+										<td> <?php echo $stdnt->username; ?> </td>
+										<td><?php echo $stdnt->password; ?></td>
 										<?php endforeach; ?>	
 										<?php else: ?>
-											<td colspan="3">We could not find any subject.</td>
+											<td colspan="3">We could not find any student.</td>
 										
 									</tr>		
 								<?php endif; ?>	
@@ -173,7 +173,7 @@
 					<!-- END SAMPLE TABLE PORTLET-->
 				</div>
 				</div>
-
+</div>
 				
 
 	
@@ -186,19 +186,19 @@
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Enrollment Form</h4>
+							<h4 class="modal-title">Enrollment Form <?php echo $section; ?></h4>
 						</div>
 						<div class="modal-body">
 							
-					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+					<form action="<?php echo site_url('teacher/insertStudent'); ?>" id="form_sample_1" class="form-horizontal" method="POST">
 								<div class="form-body">
 								
 									<div class="form-group">
-										<label class="control-label col-md-2">First Name <?php echo $section; ?><span class="required" aria-required="true">
+										<label class="control-label col-md-2">First Name <span class="required" aria-required="true">
 										* </span>
 										</label>
 										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
+											<input type="text" name="firstname" data-required="1" class="form-control">
 										</div>
 									</div>
 
@@ -207,7 +207,7 @@
 										* </span>
 										</label>
 										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
+											<input type="text" name="lastname" data-required="1" class="form-control">
 										</div>
 									</div>
 
@@ -216,7 +216,7 @@
 										* </span>
 										</label>
 										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
+											<input type="text" name="username" data-required="1" class="form-control">
 										</div>
 									</div>
 
@@ -225,20 +225,24 @@
 										* </span>
 										</label>
 										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
+											<input type="text" name="password" data-required="1" class="form-control">
+											<input type="hidden" name="photo" value = "../../images/upload/1d9c2f99fe953fc3f3a2eb17cf0ea3d8.png" class="form-control">
+											<input type = "hidden" name= "section_id" value = "<?php echo  $this->uri->segment(4); ?>"></input>
+											<input type = "hidden" name= "subject_teacher" value = "<?php echo  $this->uri->segment(3); ?>"></input>
 										</div>
 									</div>				
 								</div>
-							</form>
+							
 
 
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn blue">Submit</button>
+							<button type="submit" class="btn blue">Submit</button>
 							<button type="button" class="btn default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 					<!-- /.modal-content -->
+					</form>
 				</div>
 				<!-- /.modal-dialog -->
 			</div>
