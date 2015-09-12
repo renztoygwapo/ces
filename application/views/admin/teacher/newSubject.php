@@ -126,7 +126,7 @@
 						<div class="portlet-body">
 							<div class="row">
 							<div class="col-md-12">	
-							<a href="<?php echo site_url('teacher/addnew'); ?>/<?php echo $section_id; ?>" data-toggle="modal" class="btn default btn-xs green">
+							<a href="#addstudent" data-toggle="modal" class="btn default btn-xs green">
 							<i class="fa fa-edit"></i> Enroll New Student</a>
 							</div>
 							</div>
@@ -176,6 +176,70 @@
 
 				
 
-				</div>
+	
 
 <?php $this->load->view('admin/components/page_tail'); ?>
+
+		<!-- add student  -->
+			<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Enrollment Form</h4>
+						</div>
+						<div class="modal-body">
+							
+					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
+								<div class="form-body">
+								
+									<div class="form-group">
+										<label class="control-label col-md-2">First Name <?php echo $section; ?><span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-2">Last Name <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-2">Username <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="control-label col-md-2">Password <span class="required" aria-required="true">
+										* </span>
+										</label>
+										<div class="col-md-8">
+											<input type="text" name="name" data-required="1" class="form-control">
+										</div>
+									</div>				
+								</div>
+							</form>
+
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Submit</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- end add student  -->

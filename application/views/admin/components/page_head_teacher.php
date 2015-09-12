@@ -275,7 +275,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Modal ticcctle</h4>
+							<h4 class="modal-title">Modal title</h4>
 						</div>
 						<div class="modal-body">
 							 Widget settings form goes here
@@ -300,7 +300,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</div>
 						<div class="modal-body">
 
-					<form action="<?php echo site_url('teacher/add_section'); ?>" id="form_sample_1" class="form-horizontal" method="POST">
+					<form action="<?php echo site_url('teacher/insertSubject'); ?>" id="form_sample_1" class="form-horizontal" method="POST">
 								<div class="form-body">
 									<div class="alert alert-danger display-hide">
 										<button class="close" data-close="alert"></button>
@@ -336,16 +336,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name ="myTimein" required>
-											<!-- <select class="form-control" name="select"> -->
-												<!-- <option value="">Select...</option>
-												<option value="Filipino">Filipino</option>
-												<option value="English">English</option>
-												<option value="Mathematics">Mathematics</option>
-												<option value="Science & Health">Science & Health</option>
-												<option value="HKS">HKS</option>
-												<option value="EPP">EPP</option>
-												<option value="MSEP">MSEP</option> -->
+											<select class="form-control" name ="timein" required>
 												<option value="8:00am">8:00am</option>
 												<option value="9:00am">9:00am</option>
 												<option value="10:00am">10:00am</option>
@@ -367,16 +358,7 @@ License: You must have a valid license purchased only from themeforest(the above
 										* </span>
 										</label>
 										<div class="col-md-4">
-											<select class="form-control" name ="myTimeout" required>
-											<!-- <select class="form-control" name="select"> -->
-												<!-- <option value="">Select...</option>
-												<option value="Filipino">Filipino</option>
-												<option value="English">English</option>
-												<option value="Mathematics">Mathematics</option>
-												<option value="Science & Health">Science & Health</option>
-												<option value="HKS">HKS</option>
-												<option value="EPP">EPP</option>
-												<option value="MSEP">MSEP</option> -->
+											<select class="form-control" name ="timeout" required>
 												<option value="8:00am">8:00am</option>
 												<option value="9:00am">9:00am</option>
 												<option value="10:00am">10:00am</option>
@@ -390,11 +372,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</select>
 										</div>
 									</div>		
-								
-									
-								
-							
-								
+		
 								
 								</div>
 						
@@ -502,69 +480,6 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- end add section  -->
 
 
-			<!-- add student  -->
-			<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-lg">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-							<h4 class="modal-title">Enrollment Form</h4>
-						</div>
-						<div class="modal-body">
-							
-					<form action="#" id="form_sample_1" class="form-horizontal" novalidate="novalidate">
-								<div class="form-body">
-								
-									<div class="form-group">
-										<label class="control-label col-md-2">First Name <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-2">Last Name <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-2">Username <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
-										</div>
-									</div>
-
-									<div class="form-group">
-										<label class="control-label col-md-2">Password <span class="required" aria-required="true">
-										* </span>
-										</label>
-										<div class="col-md-8">
-											<input type="text" name="name" data-required="1" class="form-control">
-										</div>
-									</div>				
-								</div>
-							</form>
-
-
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn blue">Submit</button>
-							<button type="button" class="btn default" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-					<!-- /.modal-content -->
-				</div>
-				<!-- /.modal-dialog -->
-			</div>
-			<!-- end add student  -->
 
 
 
