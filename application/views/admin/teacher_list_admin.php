@@ -116,7 +116,7 @@
 			<!-- BEGIN PAGE HEADER-->
 				<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Student <small>List</small>
+			Teacher <small>List</small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -126,7 +126,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#"> Student List</a>
+						<a href="#"> Teacher List</a>
 					</li>
 				</ul>
 		

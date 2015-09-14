@@ -116,7 +116,7 @@
 			<!-- BEGIN PAGE HEADER-->
 				<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Student <small>List</small>
+			Section <small>List</small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -126,7 +126,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#"> Student List</a>
+						<a href="#"> Section List</a>
 					</li>
 				</ul>
 		
@@ -165,18 +165,19 @@
 								<th class="sorting_asc" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
 									 Rendering engine
 								: activate to sort column ascending" style="width: 120px;">
-									 Photo
+									 Teacher
+								</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+									 Rendering engine
+								: activate to sort column ascending" style="width: 120px;">
+									 Grade Level
 								</th>
 								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
 									 Browser
 								: activate to sort column ascending" style="width: 159px;">
-									 First Name
+									 Section Name
 								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
-									 Platform(s)
-								: activate to sort column ascending" style="width: 143px;">
-									 Last Name
-								</th>
+								
 							</tr>
 							</thead>
 							<tbody>
@@ -185,15 +186,14 @@
 	
 							<tr role="row" class="odd">
 							
-					
-								<td class="sorting_1">
-									<img src="<?php echo $row->photo;?>" style="width:20px;"> 
+								<td>
+									<?php echo $row->firstname;?> <?php echo $row->lastname;?>
 								</td>
 								<td>
-									<?php echo $row->firstname;?>
+									<?php echo $row->grade_level;?>
 								</td>
 								<td>
-									<?php echo $row->lastname;?>
+									<?php echo $row->section_name;?>
 								</td>
 							
 							</tr>
