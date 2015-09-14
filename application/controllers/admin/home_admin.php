@@ -78,7 +78,7 @@ class Home_admin extends Admin_Controller {
        $data['rows'] = $query->result();
        
      	//$data['rows'] = $this->db->query('SELECT * FROM users where role = "Teacher" ');
-      $this->load->view('admin/section/section_list', $data);
+      $this->load->view('admin/section/teacher_list', $data);
 
     }
 

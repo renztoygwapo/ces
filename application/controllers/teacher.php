@@ -10,6 +10,7 @@ class Teacher extends Admin_Controller {
         $this->load->model('profile_m');
         $this->load->model('familybg_m');
         $this->load->model('personalinfo_m');
+        $this->load->model('grade_m');
         $this->load->model('pds');
        
     }
@@ -756,6 +757,29 @@ class Teacher extends Admin_Controller {
       // $this->teacher_m->save($data);
     }
 
+
+    public function addgrade(){
+      $this->header();
+      $data['student_id'] = $this->uri->segment(3);
+      $this->load->view('admin/teacher/grades',$data);
+    }
+
+    public function insertGrade(){
+//          $rl = $this->input->post('myrole');
+    $this->load->model('grade_m');
+    $stid = $this->input->post('student_id'); 
+    $data = array(
+       'student_id' => $this->input->post('student_id') ,
+       'grading_period' =>$this->input->post('period') ,
+       'grade_rating' => $this->input->post('rating') ,
+       'subject_name' => $this->input->post('subject_name')
+    );
+    $this->grade_m->save($data);
+    $this->session->set_flashdata('result', 'Grade Successfully Added!');
+    redirect('/teacher/addgrade/'.$stid.'','refresh');
+
+    }
+
     public function change_pass(){
 
     $pass = $this->input->post('current_password');
@@ -859,6 +883,7 @@ class Teacher extends Admin_Controller {
       'photo' => $this->input->post('photo'),
       'username' => $this->input->post('username'),
       'password' => $this->input->post('password'),
+      'teacher_id' => $this->input->post('teacher_id'),
       'section_id' => $subject_id
     );
        //var_dump($subject_id);

@@ -243,13 +243,13 @@
           </div>
           <?php } ?>
 
-            <h1>Login as Student</h1>
+            <h1>Login as Alumni</h1>
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
                 <?php
                   $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
-				  echo form_open('', $attributes);
+          echo form_open('', $attributes);
                   ?>
 
                     <div class="form-group">
@@ -297,7 +297,7 @@
 
                   </div>
                   <div class="form-info">
-                    <h2>Login  for Alumni <a href="<?php echo site_url('login/alumni')?>"><em>here</em></a></h2>
+                    <h2>Login  for Student <a href="<?php echo site_url('login/')?>"><em>here</em></a></h2>
 
                   </div>
 
