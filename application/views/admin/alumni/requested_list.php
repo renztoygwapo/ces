@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/components/page_head_alumni'); ?>
 	<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Request<small> list</small>
+			Request<small></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -47,6 +47,11 @@
 								: activate to sort column ascending" style="width: 143px;">
 									 Date Requested
 								</th>
+								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
+									 Platform(s)
+								: activate to sort column ascending" style="width: 143px;">
+									 Status
+								</th>
 								
 
 								
@@ -54,7 +59,7 @@
 							</tr>
 							</thead>
 						<tbody>
-					<?php foreach($request as $row): ?>
+					<?php foreach($alumnis as $row): ?>
 							<tr role="row" class="odd">
 								<td class="sorting_1">
 									<?php echo $row->req_title; ?>
@@ -64,6 +69,9 @@
 								</td>
 								<td>
 									 <?php echo $row->req_date; ?>
+								</td>
+								<td>
+									<a href="#" class="btn default green">Approved</a>
 								</td>
 							</tr>
 						<?php endforeach; ?>

@@ -11,6 +11,7 @@ class Student extends Admin_Controller {
         $this->load->model('section_m');
         $this->load->model('profile_m');
         $this->load->model('familybg_m');
+         $this->load->model('grade_m');
         $this->load->model('personalinfo_m');
         $this->load->model('pds');
     }
@@ -108,9 +109,26 @@ class Student extends Admin_Controller {
 
       $id = $this->session->userdata('id');
       $data['student'] = $this->student_m->get($id);
-      $this->load->view('admin/student/grades',$data);
+       $query = $this->db->query('SELECT * FROM grade where student_id = '.$id.'' );
+     $data['grades'] = $query->result();
+
+
+
+
+      //var_dump($data['grades']);
+
+
+
+
+
+
+
+     $this->load->view('admin/student/grades',$data);
 
     }
+
+
+
 
 
 

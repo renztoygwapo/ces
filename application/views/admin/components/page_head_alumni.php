@@ -81,7 +81,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<div class="page-header-inner">
 		<!-- BEGIN LOGO -->
 		<div class="page-logo">
-			<a href="index.html">
+			<a href="<?php echo site_url('alumni/')?>">
 			<img src="../../assets/admin/layout/img/logo.png" alt="logo" class="logo-default"/>
 			</a>
 			<div class="menu-toggler sidebar-toggler hide">
@@ -100,44 +100,30 @@ License: You must have a valid license purchased only from themeforest(the above
 				<!-- BEGIN USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" class="img-circle hide1" src="../../assets/admin/layout/img/avatar3_small.jpg"/>
+					<img alt="" class="img-circle hide1" src="<?php echo $alumni->photo ?>"/>
 					<span class="username username-hide-on-mobile">
-					<?php echo $this->session->userdata('username'); ?> </span>
+					<?php echo $alumni->firstname.' '.$alumni->lastname; ?> </span>
 					<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="dropdown-menu">
 						<li>
-							<a href="extra_profile.html">
+							<a href="<?php echo site_url('alumni/')?>">
+							<i class="icon-home"></i> Dashboard </a>
+						</li>
+						<li>
+							<a href="page_calendar.html">
 							<i class="icon-user"></i> My Profile </a>
 						</li>
 						<li>
 							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Calendar </a>
+							<i class="icon-calendar"></i> My Request </a>
 						</li>
-						<li>
-							<a href="#">
-							<i class="icon-folder"></i> My Files <span class="badge badge-success">
-							7 </span>
-							</a>
-						</li>
+						
 						<li class="divider">
 						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-cloud-upload"></i> Request </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-badge"></i> Rankings </a>
-						</li>
-						<li>
-							<a href="extra_lock.html">
-							<i class="icon-folder-alt"></i> Reports </a>
-						</li>
-						<li>
-							<a href="login.html">
-							<i class="icon-book-open"></i> Forums </a>
-						</li>
+						
+						
+						
 						<li>
 							<a href="<?php echo site_url('alumni/logout')?>" >
 							<i class="icon-key"></i> Log Out </a>
@@ -168,30 +154,7 @@ License: You must have a valid license purchased only from themeforest(the above
 			<!-- BEGIN SIDEBAR MENU -->
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
-				<li class="sidebar-toggler-wrapper">
-					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-					<div class="sidebar-toggler push-left">
-					</div>
-					<!-- END SIDEBAR TOGGLER BUTTON -->
-				</li>
-				<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
-				<li class="sidebar-search-wrapper">
-					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-					<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
-					<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
-					<form class="sidebar-search " action="extra_search.html" method="POST">
-						<a href="javascript:;" class="remove">
-						<i class="icon-close"></i>
-						</a>
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search...">
-							<span class="input-group-btn">
-							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
-							</span>
-						</div>
-					</form>
-					<!-- END RESPONSIVE QUICK SEARCH FORM -->
-				</li>
+				
 				<li>
 					<a href="<?php echo site_url('alumni/')?>" >
 					<i class="icon-home"></i>
@@ -208,14 +171,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li>
-					<a href="<?php echo site_url('alumni/myfiles')?>" >
-					<i class="icon-briefcase"></i>
-					<span class="title">My Files</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
 				<li>
 					<a href="<?php echo site_url('alumni/request')?>" >
 					<i class="icon-docs"></i>
@@ -224,38 +180,10 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li >
-					<a href="<?php echo site_url('alumni/rankings')?>" >
-					<i class="icon-trophy"></i>
-					<span class="title">Rankings</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('alumni/reports')?>" >
-					<i class="icon-bar-chart"></i>
-					<span class="title">Reports</span>
-					<span class="selected"></span>
 				
-					</a>
-				</li>
-					<li>
-					<a href="<?php echo site_url('alumni/events')?>" >
-					<i class="icon-notebook"></i>
-					<span class="title">Events</span>
-					<span class="selected"></span>
+					
 				
-					</a>
-				</li>
-				<li>
-					<a href="<?php echo site_url('alumni/forum')?>" >
-					<i class="icon-users"></i>
-					<span class="title">Forums</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
 			</ul>
 			<!-- END SIDEBAR MENU -->
 		</div>
@@ -288,88 +216,4 @@ License: You must have a valid license purchased only from themeforest(the above
 			</div>
 			<!-- /.modal -->
 			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-			<!-- BEGIN STYLE CUSTOMIZER -->
-			<div class="theme-panel hidden-xs hidden-sm">
-				<div class="toggler">
-				</div>
-				<div class="toggler-close">
-				</div>
-				<div class="theme-options">
-					<div class="theme-option theme-colors clearfix">
-						<span>
-						THEME COLOR </span>
-						<ul>
-							<li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default">
-							</li>
-							<li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue">
-							</li>
-							<li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue">
-							</li>
-							<li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey">
-							</li>
-							<li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light">
-							</li>
-							<li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2">
-							</li>
-						</ul>
-					</div>
-					<div class="theme-option">
-						<span>
-						Layout </span>
-						<select class="layout-option form-control input-small">
-							<option value="fluid" selected="selected">Fluid</option>
-							<option value="boxed">Boxed</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Header </span>
-						<select class="page-header-option form-control input-small">
-							<option value="fixed" selected="selected">Fixed</option>
-							<option value="default">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Mode</span>
-						<select class="sidebar-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Menu </span>
-						<select class="sidebar-menu-option form-control input-small">
-							<option value="accordion" selected="selected">Accordion</option>
-							<option value="hover">Hover</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Style </span>
-						<select class="sidebar-style-option form-control input-small">
-							<option value="default" selected="selected">Default</option>
-							<option value="light">Light</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Sidebar Position </span>
-						<select class="sidebar-pos-option form-control input-small">
-							<option value="left" selected="selected">Left</option>
-							<option value="right">Right</option>
-						</select>
-					</div>
-					<div class="theme-option">
-						<span>
-						Footer </span>
-						<select class="page-footer-option form-control input-small">
-							<option value="fixed">Fixed</option>
-							<option value="default" selected="selected">Default</option>
-						</select>
-					</div>
-				</div>
-			</div>
-			<!-- END STYLE CUSTOMIZER -->
-		
+			
