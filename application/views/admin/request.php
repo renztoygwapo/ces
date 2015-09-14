@@ -177,7 +177,7 @@
 									<?php echo $row->req_date; ?>
 								</td>
 								<td>
-							<?php 	if($row->req_file == "none") { ?>
+							<?php 	if($row->approved == 0) { ?>
 							<center> <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#<?php echo $row->id; ?>" name = "reqName" value = "<?php echo $row->firstname.' '.$row->lastname;?>" style="height: 25px;width: 109px;">View Request</button> </center>
 							
 							<?php 		} else { ?>
@@ -189,8 +189,11 @@
 							</tr>
 
 
-							<div id="<?php echo $row->id; ?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+				<div id="<?php echo $row->id; ?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
       			  		<div class="modal-dialog modal-lg">
+
+      			  	 <form class="form-horizontal" action="<?php echo site_url('admin/request/updateRequest'); ?>" method="post">
+
             				<div class="modal-content">
                				 	<div class="modal-header">
                  			   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -200,6 +203,10 @@
                     <h2> <?php echo $row->req_title; ?> </h2>
                     <p><?php echo $row->req_description; ?></p>
                     <small>Date:<?php echo $row->req_date; ?></small>
+                    <p><?php echo $row->req_description; ?></p>
+                    <p><?php //echo $row->id; ?></p>
+                    <input type="hidden" name="request_id" value = "<?php echo $row->id; ?>"></input>
+
                 	
 
                 </div>
@@ -209,7 +216,9 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        				</div>
+    			</div>
 
 									 <?php endforeach; ?>
                       		<?php endif; ?> 

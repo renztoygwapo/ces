@@ -71,7 +71,7 @@
 									 <?php echo $row->req_date; ?>
 								</td>
 								<td>
-									<a href="#" class="btn default green">Approved</a>
+									<span class="label bg-green">Approved</span>
 								</td>
 							</tr>
 						<?php endforeach; ?>
