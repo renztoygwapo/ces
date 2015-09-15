@@ -27,12 +27,20 @@
 								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
 								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
 								          </div>
-								          <?php } ?>		
+								          <?php } ?>
+
+												<div class="form-group">
+													<label class="col-md-3 control-label">Year Graduated</label>
+													<div class="col-md-4">
+														<input type="text"  class="form-control" name="year_graduated" placeholder="for example: 2000,20001,2002,2003 ... etc">
+													</div>
+												</div>
+
 												<div class="form-group">
 													<label class="col-md-3 control-label">Request Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<input type="text" class="form-control" name ="title" placeholder="Type of Request" autofocus>
+															<input type="text" class="form-control" name ="title" placeholder="Form 137 , Good Moral or Others" autofocus>
 															<input type="hidden" class="form-control" name ="request_file" value="none">
 															<input type="hidden" class="form-control" name ="date_now" value = "<?php echo date("Y/m/d");  ?>">
 															<input type="hidden" class="form-control" name ="user_id" value = "<?php echo $alumni->id; ?>">

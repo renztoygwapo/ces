@@ -46,6 +46,10 @@
 									 Platform(s)
 								: activate to sort column ascending" style="width: 143px;">
 									 Date Requested
+								</th><th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
+									 Platform(s)
+								: activate to sort column ascending" style="width: 143px;">
+									 Status
 								</th>
 								
 
@@ -64,6 +68,16 @@
 								</td>
 								<td>
 									 <?php echo $row->req_date; ?>
+								</td>
+								<td>
+										<?php 
+										if($row->req_file == 'approved'){ ?>
+											 <span class="label bg-green"><?php echo $row->req_file; ?></span>
+									<?php } else { ?>		
+											 <span class="label bg-blue">on process</span>
+									<?php } ?>
+
+									
 								</td>
 							</tr>
 						<?php endforeach; ?>

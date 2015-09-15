@@ -20,7 +20,7 @@ class Alumni extends Admin_Controller {
      // $this->data['subview'] = 'admin/dashboard/index';
       $id = $this->session->userdata('id');
        $data['alumni'] = $this->user_m->get($id);
-       $query = $this->db->query('SELECT * FROM request_tb where approved = 1 ');
+       $query = $this->db->query('SELECT * FROM request_tb where user_id = '.$id.' and req_file = "approved" ');
        $data['approved'] = $query->num_rows();
 
       $this->load->view('admin/alumni/index', $data);
@@ -45,13 +45,14 @@ class Alumni extends Admin_Controller {
           $id = $this->session->userdata('id');
        $data['alumni'] = $this->user_m->get($id);
       // $data['request'] = $this->custom_m->getRequest($id);
-       $query = $this->db->where('approved',0);
+       //$query = $this->db->where('req_file','approved');
        $query = $this->db->where('user_id',$id);
        $data['request'] = $this->request_m->get();
        //var_dump($data['request']);
      $this->load->view('admin/alumni/request', $data);
 
     }
+
     public function alumni_request(){
 
        $id = $this->session->userdata('id');
@@ -70,7 +71,8 @@ class Alumni extends Admin_Controller {
 
        $id = $this->session->userdata('id');
        $data['alumni'] = $this->user_m->get($id);
-       $query = $this->db->where('approved',1);
+       $query = $this->db->where('user_id',$id);
+       $query = $this->db->where('req_file','approved');
        $data['alumnis'] = $this->request_m->get();
        $this->load->view('admin/alumni/requested_list',$data);
 
@@ -88,6 +90,7 @@ class Alumni extends Admin_Controller {
      
      // $this->load->view('admin/alumni/events');
         $data = array(
+              'year_graduated' => $this->input->post('year_graduated'),
               'req_title' => $this->input->post('title'),
               'req_description' => $this->input->post('request_description'),
               'req_date' => $this->input->post('date_now'),
@@ -96,7 +99,7 @@ class Alumni extends Admin_Controller {
               );
            $this->request_m->save($data);
             $this->session->set_flashdata('result', 'Request Successfully Sent to Admin!');
-            redirect('alumni/','refresh');
+            redirect('alumni/alumni_request','refresh');
 
     }
 

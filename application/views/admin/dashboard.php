@@ -241,7 +241,7 @@
 																 <?php echo $r->event_description; ?>
 															</p>
 															<p>
-															> Posted on <?php echo $r->event_start; ?></h4>
+															Posted on <?php echo $r->event_start; ?></h4>
 															</p>		
 														</div>
 													</div>

@@ -20,4 +20,18 @@ class Event_m extends MY_Model
   );
 
 
+      function get_latest() {
+     $q = $this->db->get('events');
+     
+     // $q = $this->db->order_by("id", "desc");
+
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+  }
+
+
 }

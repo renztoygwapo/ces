@@ -20,7 +20,9 @@
 			<!-- END PAGE HEADER-->
 
 			<div class="row">
-
+				<div class="alert alert-warning">
+					Note: You can get your requested file to the Registrar Office now. 
+				</div>
 				<div class="portlet box blue-hoki" style="display: block;">
 						<div class="portlet-title" style="display: block;">
 							<div class="caption">

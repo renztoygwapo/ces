@@ -174,111 +174,79 @@
               <div class="row mix-grid thumbnails">
                                       <div class="col-md-6 col-sm-6 mix category_1 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img1.jpg" class="fancybox-button">
                                            <img alt="" src="../../assets/frontend/pages/img/carmen/img1.jpg" class="img-responsive">
-                                           <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                              <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img1.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>
-                                           </div>           
+                                             </a>
                                         </div>                       
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_2 mix_all" style="display: block; opacity: 1;">
                                            <div class="mix-inner">
+                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img2.jpg" class=" fancybox-button">
                                               <img alt="" src="../../assets/frontend/pages/img/carmen/img2.jpg" class="img-responsive">
-                                              <div class="mix-details">
-                                                 <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                            
-                                                 <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img2.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>
+                                              </a>
                                               </div>               
-                                           </div>                    
-                                      </div>
+                                      </div>                    
+                                     
                                       <div class="col-md-6 col-sm-6 mix category_3 mix_all" style="display: block; opacity: 1;">
                                            <div class="mix-inner">
+                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img3.jpg" class="fancybox-button">
                                               <img alt="" src="../../assets/frontend/pages/img/carmen/img3.jpg" class="img-responsive">
-                                              <div class="mix-details">
-                                                 <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                              
-                                                 <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img3.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>
-                                              </div>              
+                                            </a>
+                                                          
                                           </div>      
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
                                            <div class="mix-inner">
+                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img4.jpg" class="fancybox-button">
                                              <img alt="" src="../../assets/frontend/pages/img/carmen/img4.jpg" class="img-responsive">
-                                             <div class="mix-details">
-                                                 <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                            
-                                                 <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img4.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                             </div>                  
+                                           </a>
+                                                        
                                           </div>                      
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_2 category_1 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img5.jpg" class="fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img5.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                            
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img5.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                          </div>     
+                                        </a>
+                                               
                                           </div>                                   
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img6.jpg" class="fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img6.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                                  
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img6.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                          </div>     
+                                        </a>
+                                              
                                           </div>                                   
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_2 category_3 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img7.jpg" class=" fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img7.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                                  
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img7.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                          </div>    
+                                        </a>
                                           </div>                                    
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img8.jpg" class=" fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img8.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                                  
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img8.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                          </div>   
+                                        </a>
+                                            
                                           </div>                                     
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_3 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img9.jpg" class="fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img9.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                              <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                                  
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img9.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>                            
-                                          </div>    
+                                        </a>
+                                            
                                           </div>                                    
                                       </div>
                                       <div class="col-md-6 col-sm-6 mix category_1 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
+                                           <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img10.jpg" class=" fancybox-button">
                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img10.jpg" class="img-responsive">
-                                          <div class="mix-details">
-                                             <h4>Cascusamus et iusto odio</h4>
-                                                 <p>At vero eos et accusamus et iusto odio digniss imos duc sasdimus qui sint blanditiis prae sentium voluptatum deleniti atque corrupti quos dolores.</p>
-                                                   
-                                              <a data-rel="fancybox-button" title="Project Name" href="../../assets/frontend/pages/img/carmen/img10.jpg" class="mix-preview fancybox-button"><i class="fa fa-search"></i></a>
-                                          </div> 
+                                        </a>
                                           </div>                                       
                                       </div>
                                   </div>

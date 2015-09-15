@@ -28,11 +28,14 @@ class Forum_db extends Admin_Controller {
     }
 
      public function forum_topic() {
+
       $data['admin'] = $this->getdata();
+
       $data['section_name'] = $this->uri->segment(4)." ".$this->uri->segment(5)." ".$this->uri->segment(6)." ".$this->uri->segment(7);
       $data['insert_section'] = $this->uri->segment(4)."".$this->uri->segment(5)."".$this->uri->segment(6)."".$this->uri->segment(7);
       $this->load->model('custom_m');
       $data['topics'] = $this->custom_m->view_topic($data['section_name']);
+      
       $this->load->view('admin/forum_topics', $data);
 
 
@@ -48,7 +51,7 @@ class Forum_db extends Admin_Controller {
 
 
      public function event_add(){
-
+      $id = $this->session->userdata('id');
 
        $rules = $this->forum_m->rules_admin;
       $this->form_validation->set_rules($rules);
@@ -75,12 +78,13 @@ class Forum_db extends Admin_Controller {
 
             }else{
               $data = array(
+
         'title' => $this->input->post('title'),
         'description' => $this->input->post('description'),
         'topic_picture' => $folder_name.'/'.$file_name,
         'date_post' => date("Y/m/d"),
         'topic_category' => $this->input->post('subject'),
-        'user_id' => '1'
+        'user_id' => $id
 
         // 'date_post' => $this->input->post('event_start'),
         // 'user_id' => $this->input->post('event_end'),

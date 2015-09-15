@@ -205,17 +205,31 @@
                   <!-- BEGIN RECENT NEWS -->                            
                   <h2>Older Events</h2>     
                   <div class="recent-news margin-bottom-10">
-                        <?php if(count($rows)): 
-                      foreach($rows as $row): ?>
-                    <div class="row margin-bottom-10">
+                        <?php if(count($display_events)): 
+                      foreach($display_events as $row): ?>
+
+                     <?php if($row->id == $latest->id ) { ?>
+
+
+
+
+                     <?php } else { ?>
+                     <div class="row margin-bottom-10">
                       <div class="col-md-3">
                         <img class="img-responsive" alt="" src="/uploads/<?php echo $row->event_picture; ?>">                    
                       </div>
                       <div class="col-md-9 recent-news-inner">
-                        <a href = "#"><h3><?php echo $row->event_title; ?></h3></a>
+                        <!-- <a href = "#"> -->
+                          <h3><?php echo $row->event_title; ?></h3>
+                       <!--  </a> -->
                         <p><?php echo $row->event_description; ?></p>
                       </div>                        
                     </div>
+                      <?php } ?>
+                    
+
+
+
                             <?php endforeach; ?>
                       <?php endif; ?> 
                
