@@ -188,7 +188,7 @@
 								 Sections
 							</div>
 						</div>
-						<a class="more" href="<?php echo site_url('admin/home_admin/event_list/'); ?>">
+						<a class="more" href="<?php echo site_url('admin/home_admin/section_list/'); ?>">
 						View more <i class="m-icon-swapright m-icon-white"></i>
 						</a>
 					</div>
@@ -241,7 +241,7 @@
 																 <?php echo $r->event_description; ?>
 															</p>
 															<p>
-															> Posted on <?php echo $r->event_start; ?></h4>
+															Posted on <?php echo $r->event_start; ?></h4>
 															</p>		
 														</div>
 													</div>

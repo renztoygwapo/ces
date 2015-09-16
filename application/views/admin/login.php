@@ -243,7 +243,7 @@
           </div>
           <?php } ?>
 
-            <h1>Login</h1>
+            <h1>Login as Student</h1>
             <div class="content-form-page">
               <div class="row">
                 <div class="col-md-7 col-sm-7">
@@ -292,7 +292,17 @@
                     <p>Regular student  - You may ask to your teacher for your account</p>
 
                   </div>
+                  <div class="form-info">
+                    <h2>Login for Teacher  <a href="<?php echo site_url('login/teacher')?>"><em> here</em> </a></h2>
+
+                  </div>
+                  <div class="form-info">
+                    <h2>Login  for Alumni <a href="<?php echo site_url('login/alumni')?>"><em>here</em></a></h2>
+
+                  </div>
+
                 </div>
+
               </div>
             </div>
           </div>

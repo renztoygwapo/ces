@@ -5,22 +5,73 @@ class Student_m extends MY_Model
 	protected $_table_name = 'students';
 	protected $_order_by = 'id';
 
-  // public $rules_admin = array(
-  //   'section_name' => array(
-  //     'field' => 'section_name', 
-  //     'rules' => 'trim|required|xss_clean'
-  //       ), 
-  //     'subject_name' => array(
-  //     'field' => 'subject', 
-  //     'rules' => 'trim|required|xss_clean'
-  //   ),
-  //    'school_yr' => array(
-  //     'field' => 'school_yr',  
-  //     'rules' => 'trim|required|xss_clean'
-  //   ), 
-      
-  // );
+public $rules = array(
+    'username' => array(
+      'field' => 'username', 
+      'label' => 'Username', 
+      'rules' => 'trim|required|xss_clean'
+    ), 
+    'password' => array(
+      'field' => 'password', 
+      'label' => 'Password', 
+      'rules' => 'trim|required'
+    )
+  );
+
+  function __construct ()
+  {
+    parent::__construct();
+  }
+
+  public function login()
+  {
+    $user = $this->get_by(array(
+      'username' => $this->input->post('username'),
+      'password' => $this->hash($this->input->post('password')),
+    ), TRUE);
+    
+    if (count($user)) {
+      // Log in user
+      $data = array(
+        'username' => $user->username,
+        'id' => $user->id,
+        'loggedin' => TRUE,
+      );
+      $this->session->set_userdata($data);
+    }
+  }
+
+  
+  public function checkrole(){
+
+    $username = $this->input->post('username');
+    $password = $this->input->post('password');
+
+    $user = $this->get_by(array(
+      'username' => $this->input->post('username'),
+      'password' => $this->hash($this->input->post('password')),
+    ), TRUE);
 
 
+    if(count($user)){
+      return $user->role;
+    }
+
+  }
+
+
+  public function logout ()
+  {
+    $this->session->sess_destroy();
+  }
+  public function loggedin ()
+  {
+    return (bool) $this->session->userdata('loggedin');
+  }
+
+  public function hash($string)
+  {
+    return hash('sha512', $string . config_item('encryption_key'));
+  }
 
 }

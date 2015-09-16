@@ -11,7 +11,7 @@
 			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
 				<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
 				
-				<li>
+				<li  class="set active">
 					<a href="<?php echo site_url('admin/home_admin/')?>">
 					<i class="icon-home"></i>
 					<span class="title">Dashboard</span>
@@ -27,7 +27,15 @@
 				
 					</a>
 				</li>
-				<li class="set active">
+				<li>
+					<a href="<?php echo site_url('admin/myfiles/')?>" >
+					<i class="icon-briefcase"></i>
+					<span class="title">My Files</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
+				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
 					<span class="title">Request</span>
@@ -101,20 +109,24 @@
 				</div>
 				<!-- /.modal-dialog -->
 			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
 			
+			<!-- BEGIN PAGE HEADER-->
 				<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Users Request <small></small>
+			Section <small>List</small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
 					<li>
 						<i class="fa fa-home"></i>
-						<a href="<?php echo site_url('admin/home_admin/')?>">Home</a>
+						<a href="<?php echo site_url('admin/home_admin'); ?>">Home</a>
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#"> Users Request</a>
+						<a href="#"> Section List</a>
 					</li>
 				</ul>
 		
@@ -129,133 +141,74 @@
 				<div class="portlet box blue-hoki" style="display: block;">
 						<div class="portlet-title" style="display: block;">
 							<div class="caption">
-								<i class="fa fa-globe"></i>List Of User Request
+								<i class="fa fa-globe"></i> List
 							</div>
 							<div class="tools">
 							</div>
 						</div>
 						<div class="portlet-body">
 							<div id="sample_1_wrapper" class="dataTables_wrapper no-footer">
-														<div class="table-scrollable">
-															<table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_1" role="grid" aria-describedby="sample_1_info">
+								<div class="row" style="display: block;">
+									<div class="col-md-12">
+										<div class="btn-group tabletools-dropdown-on-portlet" style="display: block;">
+														<a class="btn btn-sm default DTTT_button_print" id="ToolTables_sample_1_3" title="View print view">
+															<span>Print</span>
+														</a>
+													</div>
+												</div>
+								</div>
+											
+						<div class="table-scrollable">
+					<table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_1" role="grid" aria-describedby="sample_1_info">
 							<thead>
-							<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+							<tr role="row">
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
 									 Rendering engine
 								: activate to sort column ascending" style="width: 120px;">
-									 Name
-								</th><th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
+									 Teacher
+								</th>
+								<th class="sorting_asc" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+									 Rendering engine
+								: activate to sort column ascending" style="width: 120px;">
+									 Grade Level
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
 									 Browser
 								: activate to sort column ascending" style="width: 159px;">
-									 Request Title
-								</th><th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
-									 Platform(s)
-								: activate to sort column ascending" style="width: 143px;">
-									 Date Request
+									 Section Name
 								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
-									 Platform(s)
-								: activate to sort column ascending" style="width: 143px;">
-									Year Graduated
-								</th>
-								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
-									 Engine version
-								: activate to sort column ascending" style="width: 100px;"><center>
-									 Action</center>
-								</th>
-
+								
 							</tr>
 							</thead>
 							<tbody>
-							
-								<?php if(count($rows)): foreach($rows as $row): ?>
+					
+                  		 <?php if(count($rows)): foreach($rows as $row): ?>
 	
 							<tr role="row" class="odd">
 							
-					
-								<td class="sorting_1">
-									<?php echo $row->firstname.' '.$row->lastname;?>
+								<td>
+									<?php echo $row->firstname;?> <?php echo $row->lastname;?>
 								</td>
 								<td>
-									<?php echo $row->title; ?>
+									<?php echo $row->grade_level;?>
 								</td>
 								<td>
-									<?php echo $row->request_date; ?>
-								</td>
-								<td>
-									<?php echo $row->year_grad; ?>
-								</td>
-								<td>
-							<?php 	if($row->files == 'none') { ?>
-							<center> <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#<?php echo $row->request_id; ?>" name = "reqName" value = "<?php echo $row->firstname.' '.$row->lastname;?>" style="height: 25px;width: 109px;">View Request</button> </center>
-							
-							<?php 		} else { ?>
-							<center> <span class="label bg-green">Already Approved</span> </center>
-									<?php	} ?>
-
+									<?php echo $row->section_name;?>
 								</td>
 							
 							</tr>
-
-
-				<div id="<?php echo $row->request_id; ?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
-      			  		<div class="modal-dialog modal-lg">
-
-      			  	 <form class="form-horizontal" action="<?php echo site_url('admin/request/updateRequest'); ?>" method="post">
-
-            				<div class="modal-content">
-               				 	<div class="modal-header">
-                 			   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                 				   	<h1 class="modal-title"><?php echo $row->firstname.' '.$row->lastname;?> Request </h1>
-               		 			</div>
-                <div class="modal-body">
-                    <h2> <?php echo $row->title; ?> </h2>
-                    <p><?php echo $row->description; ?></p>
-                    <small>Date:<?php echo $row->request_date; ?></small>
-                    <p><?php echo $row->description; ?></p>
-                    
-                    <input type="hidden" name="req" value = "<?php echo $row->request_id; ?>"></input>
-
-                	
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Approved</button>
-                </div>
-            </div>
-        </form>
-        </div>
-
-        				</div>
-    			</div>
-
 									 <?php endforeach; ?>
                       		<?php endif; ?> 
-
-							<!-- <tr role="row" class="odd">
-								<td class="sorting_1">
-									 Gecko
-								</td>
-								<td>
-									 Netscape Navigator 9
-								</td>
-								<td>
-									 Win 98+ / OSX.2+
-								</td>
-								<td>
-									<center> <button type="button" class="btn green " >View   Request</button> </center>
-								</td>
-								
-							</tr> -->
-							
+					
 						</tbody>
 							</table>
 						</div>
-					</div>
+
 						</div>
 					</div>
 			</div>
-			</div>
+				</div>
+					</div>
 
 
 

@@ -254,13 +254,13 @@ class Upload_pic extends Frontend_Controller {
                             $id = $this->session->userdata('id');
                             // update query
                             //
-                             $query = $this->db->query('UPDATE users SET photo = "../../images/upload/'.$data['file1'].'" WHERE id ='.$id.'');
+                             $query = $this->db->query('UPDATE students SET photo = "../../images/upload/'.$data['file1'].'" WHERE id ='.$id.'');
                              $data['events'] = $query;
                              //$this->load->view('admin/admin_layout_main', $data);
                              
                             $this->session->set_flashdata('result', 'Profile Successfully Updated!');
                             // $this->load->view('admin/teacher/myprofile', $data);
-                               redirect('admin/myprofile','refresh');
+                               redirect('student/profile','refresh');
 
 
 
