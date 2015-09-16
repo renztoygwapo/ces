@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/components/page_head_alumni'); ?>
 	<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Request<small> list</small>
+			Request<small></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -20,7 +20,9 @@
 			<!-- END PAGE HEADER-->
 
 			<div class="row">
-
+				<div class="alert alert-warning">
+					Note: You can get your requested file to the Registrar Office now. 
+				</div>
 				<div class="portlet box blue-hoki" style="display: block;">
 						<div class="portlet-title" style="display: block;">
 							<div class="caption">
@@ -46,7 +48,8 @@
 									 Platform(s)
 								: activate to sort column ascending" style="width: 143px;">
 									 Date Requested
-								</th><th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
+								</th>
+								<th class="sorting" tabindex="0" aria-controls="sample_1" rowspan="1" colspan="1" aria-label="
 									 Platform(s)
 								: activate to sort column ascending" style="width: 143px;">
 									 Status
@@ -58,7 +61,7 @@
 							</tr>
 							</thead>
 						<tbody>
-					<?php foreach($request as $row): ?>
+					<?php foreach($alumnis as $row): ?>
 							<tr role="row" class="odd">
 								<td class="sorting_1">
 									<?php echo $row->req_title; ?>
@@ -70,14 +73,7 @@
 									 <?php echo $row->req_date; ?>
 								</td>
 								<td>
-										<?php 
-										if($row->req_file == 'approved'){ ?>
-											 <span class="label bg-green"><?php echo $row->req_file; ?></span>
-									<?php } else { ?>		
-											 <span class="label bg-blue">on process</span>
-									<?php } ?>
-
-									
+									<span class="label bg-green">Approved</span>
 								</td>
 							</tr>
 						<?php endforeach; ?>

@@ -140,7 +140,7 @@
 									<p>
 									MITHIIN: Pagkatapos ng ikaanim na baitang inaasahang makakamit ng bawat batang magaaral sa Edukasyong Pantahanan at Pangkabuhayan (EPP) angmgakaalaman, kasanayan, at wastongsaloobinsakamalayanngindibiduwalnakakayanan, pagpahalagangsarilingkultura, positibongpananawsalikasnayaman, makaagham at makabagongteknolohiya, at praktikalnapag-gamitngsiningparasapagtugonsapangangailangangpansarili, pang-pamilya at pam-pamayananbilangisangproduktibong entrepreneur namamamayantungosamaunlad at kasiyasiyangpamumuhay.
 									</p>
-									<a class="btn blue" href="<?php echo site_url('forum/topic'.'/Edukasyong/Pantahanan/at/Pangkabuhayan')?>">
+									<a class="btn blue" href="<?php echo site_url('forum/topic'.'/EPP')?>">
 									View Topics <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 								</div>
@@ -153,7 +153,7 @@
 								</div>
 								<div class="col-md-8 blog-article">
 									<h3>
-									<a href="<?php echo site_url('forum/topic'.'/Musika,/Sining/at/Edukasyon/sa/Pagpapalakas/ng/Katawan')?>">
+									<a href="<?php echo site_url('forum/topic'.'/MSEP')?>">
 									Musika, Sining at Edukasyon sa Pagpapalakas ng Katawan (MSEP)</a>
 									</h3>
 									<p>
@@ -194,7 +194,7 @@
 								</div>
 								<div class="col-md-8 blog-article">
 									<h3>
-									<a href="<?php echo site_url('forum/topic'.'/Concern/And/Queries')?>">
+									<a href="<?php echo site_url('forum/topic'.'/CAQ')?>">
 									Concern & Queries</a>
 									</h3>
 									<p>

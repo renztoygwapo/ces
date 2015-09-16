@@ -18,172 +18,64 @@
 
 			<!-- header unta neh do -->
 			<hr>
+
+			<?php if(($topics ) == null) { ?>
+						 	<blockquote class="hero">
+									<p>
+										No Topic to discuss.
+									</p>
+									
+								</blockquote>
+						 	
+						 <?php } else { ?>
+
+
+					<?php 
+		foreach ($topics as $r) : ?>
 			<div class="row">
 				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-						<ul class="list-inline">
+					<!-- <img src="<?php// echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
+		 -->	<img src="<?php echo site_url('/topics/'.$r->tpicture); ?>" alt="" class="img-responsive" width="160" height="208">
+		
+		 		<ul class="list-inline">
 										
 										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
+											
 										</li>
 									</ul>
 				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
 				</div>
 				<div class="col-md-6">
 									<h3>
-									<a href="<?php echo site_url('forum/topic_page')?>">
-									I. Introduksyon:</a>
+									<a href="<?php echo site_url('forum/topic_page').'/'.$r->id.'/'.$r->user_id;  ?>">
+						<?php echo $r->title; ?>
+							</a>
 									</h3>
 									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
+									<!-- MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao -->								<?php echo $r->description; ?>
 									</p>
-									<a class="btn blue" href="<?php echo site_url('forum/topic_page')?>">
+									<a class="btn blue" href="<?php echo site_url('forum/topic_page').'/'.$r->id.'/'.$r->user_id;  ?>">
 									View <i class="m-icon-swapright m-icon-white"></i>
 									</a>
 				</div>
 				<div class="col-md-2">
 					<br>
 				<i class="fa fa-calendar"></i>
-				April 16, 2013
+				<?php echo $r->post; ?>
 				</div>
 
 				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>"
+					<img src="<?php echo '../'.$r->user_photo; ?>"
 				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-
-			<hr>
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="<?php echo site_url('forum/topic_page')?>">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('forum/topic_page')?>">
-									View <i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>"
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
+				<h4><?php echo $r->firstname.' '.$r->lastname ?></h4>
 				</div>
 			</div>
 
 			<hr>
 
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="<?php echo site_url('forum/topic_page')?>">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('forum/topic_page')?>">
-									View<i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-				<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" 
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-			<hr>
-			<div class="row">
-				<div class="col-md-2">
-					<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" alt="" class="img-responsive" width="160" height="208">
-					<ul class="list-inline">
-										
-										<li>
-											<i class="fa fa-comments"></i>
-											<a href="#">
-											38 Comments </a>
-										</li>
-									</ul>
-				<!-- <img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">  -->
-				</div>
-				<div class="col-md-6">
-									<h3>
-									<a href="<?php echo site_url('forum/topic_page')?>">
-									Character Education</a>
-									</h3>
-									<p>
-									MITHIIN: PagkataposngIkaanimnaBaitang, inaasahangmalilinangsamga mag-aaralangpagigingMaka-Diyos, Makatao, Makabansa at Makakalikasantungosapagpapahalagasadangalngtao
-
-									</p>
-									<a class="btn blue" href="<?php echo site_url('forum/topic_page')?>">
-									View <i class="m-icon-swapright m-icon-white"></i>
-									</a>
-				</div>
-				<div class="col-md-2">
-					<br>
-				<i class="fa fa-calendar"></i>
-				April 16, 2013
-				</div>
-
-				<div class="col-md-2">
-				<img src="<?php echo site_url('/assets/admin/pages/media/gallery/image5.jpg '); ?>" 
-				alt="" class="img-responsive" width="110" height="208">
-				<h4>Raven Fuentes</h4>
-				</div>
-			</div>
-			<hr>
-
-
-
-
-
-
-
+		<?php endforeach; ?> 
+			
+			<?php } ?>	
 </div>
 		
 		</div>

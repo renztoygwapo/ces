@@ -146,6 +146,9 @@
 									<th>
 										Password
 									</th>
+									<th>
+										Action
+									</th>
 								</tr>
 								</thead>
 								<tbody>
@@ -155,6 +158,7 @@
 										<td><?php echo $stdnt->firstname.' '.$stdnt->lastname; ?></td>
 										<td> <?php echo $stdnt->username; ?> </td>
 										<td><?php echo $stdnt->password; ?></td>
+										<td><a href="<?php echo site_url('teacher/addgrade'); ?>/<?php echo $stdnt->id; ?>" class="btn default btn-xs green">Add Grade</a></td>
 										<?php endforeach; ?>	
 										<?php else: ?>
 											<td colspan="3">We could not find any student.</td>
@@ -226,6 +230,7 @@
 										</label>
 										<div class="col-md-8">
 											<input type="text" name="password" data-required="1" class="form-control">
+											<input type="hidden" name="teacher_id" value="<?php echo $this->session->userdata('id'); ?>">
 											<input type="hidden" name="photo" value = "../../images/upload/1d9c2f99fe953fc3f3a2eb17cf0ea3d8.png" class="form-control">
 											<input type = "hidden" name= "section_id" value = "<?php echo  $this->uri->segment(4); ?>"></input>
 											<input type = "hidden" name= "subject_teacher" value = "<?php echo  $this->uri->segment(3); ?>"></input>

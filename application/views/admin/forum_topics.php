@@ -247,7 +247,7 @@
 									
 								</blockquote>
 						 	
-						 <?php } else {?>
+						 <?php } else { ?>
 
 
 					<?php 
