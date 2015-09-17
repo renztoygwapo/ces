@@ -74,7 +74,7 @@ class Home_admin extends Admin_Controller {
      // $this->db->where('role', 'advisory');
      // $data['rows'] = $this->section_m->get();
 
-       $query = $this->db->query('SELECT section.*,users.* FROM section,users where section.role = "advisory" and section.teacher_id = users.id');
+       $query = $this->db->query('SELECT section.*,users.* FROM section,users where section.teacher_id = users.id');
        $data['rows'] = $query->result();
        
      	//$data['rows'] = $this->db->query('SELECT * FROM users where role = "Teacher" ');
