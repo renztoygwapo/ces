@@ -15,6 +15,9 @@ class Rankings extends Admin_Controller {
      // $this->data['subview'] = 'admin/dashboard/index';
       $id = $this->session->userdata('id');
       $data['admin'] = $this->admin_m->get($id);
+
+      $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+      $data['count_request'] = $query->num_rows();
       $this->load->view('admin/rankings', $data);
 
     }

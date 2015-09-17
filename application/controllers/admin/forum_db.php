@@ -23,6 +23,8 @@ class Forum_db extends Admin_Controller {
     public function index() {
      // $this->data['subview'] = 'admin/dashboard/index';
       $data['admin'] = $this->getdata();
+      $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+      $data['count_request'] = $query->num_rows();
       $this->load->view('admin/forum_db' ,$data);
 
     }

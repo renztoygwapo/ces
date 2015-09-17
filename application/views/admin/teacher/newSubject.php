@@ -158,9 +158,28 @@
 										<td><?php echo $stdnt->firstname.' '.$stdnt->lastname; ?></td>
 										<td> <?php echo $stdnt->username; ?> </td>
 										<td><?php echo $stdnt->password; ?></td>
-										<td><a href="<?php echo site_url('teacher/addgrade'); ?>/<?php echo $stdnt->id; ?>" class="btn default btn-xs green">Add Grade</a></td>
+										<td><a href="<?php echo site_url('teacher/addgrade'); ?>/<?php echo $stdnt->id; ?>" class="btn default btn-xs green">Add Grade</a>
+											<!-- <a href="<?php //echo site_url('teacher/addgrade'); ?>/<?php// echo $stdnt->id; ?>" class="btn default btn-xs blue"> -->
+												<a href="<?php echo site_url('teacher/student_grades/').'/'.$stdnt->id.'/'.$stdnt->firstname.'/'.$stdnt->lastname; ?>" data-toggle="modal" class="btn default btn-xs blue" name = "<?php echo "student".$stdnt->id;?>" value = "<?php echo "student".$stdnt->id;?>">
+												View Grade</a>
+
+										</td>
+									</tr>
+
+
+		</div>
+	</div>
+			<!-- end view grade student  -->
+
+
+
+
+
+
 										<?php endforeach; ?>	
+
 										<?php else: ?>
+									<tr>
 											<td colspan="3">We could not find any student.</td>
 										
 									</tr>		
@@ -178,13 +197,9 @@
 				</div>
 				</div>
 </div>
-				
 
-	
 
-<?php $this->load->view('admin/components/page_tail'); ?>
-
-		<!-- add student  -->
+<!-- add student  -->
 			<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg">
 					<div class="modal-content">
@@ -251,4 +266,14 @@
 				</div>
 				<!-- /.modal-dialog -->
 			</div>
+			</div>
+	</div>
 			<!-- end add student  -->
+
+
+
+	
+
+<?php $this->load->view('admin/components/page_tail'); ?>
+
+		

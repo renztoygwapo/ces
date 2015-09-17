@@ -30,7 +30,7 @@
 				<li>
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
-					<span class="title">Request</span>
+					<span class="title">Request <span class="badge badge-default"><?php echo $count_request; ?></span></span>
 					<span class="selected"></span>
 				
 					</a>
