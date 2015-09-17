@@ -152,7 +152,7 @@
 									 Name
 								</th>
 								<th>
-									Generate Reports
+									Generate Personal Data Sheet
 								</th>
 							</tr>
 							</thead>
@@ -163,12 +163,10 @@
 									 <?php echo ''.$s->firstname.' '.$s->lastname; ?>
 								</td>
 								<td>
-									 <a href="#addstudent" data-toggle="modal" class="btn default btn-xs green">
-							<i class="fa fa-edit"></i> Form-137</a>
-							<a href="#addstudent" data-toggle="modal" class="btn default btn-xs red">
-							<i class="fa fa-edit"></i> Form-138</a>
-							<a href="<?php echo site_url('admin/reports/goodmoral/'); ?>" class="btn default btn-xs blue">
-							<i class="fa fa-edit"></i> Good Moral</a>
+									 <a href="<?php echo site_url('admin/reports/teachers_pds/').'/'.$s->id ?>" data-toggle="modal" class="btn default btn-xs green">
+							<i class="fa fa-edit"></i> Personal Data Sheet</a>
+							
+							
 
 								</td>
 							</tr>

@@ -84,6 +84,39 @@ class Reports extends Admin_Controller {
         $this->load->view('/admin/reports/goodmoral_view', $data);
     }
 
+      function studentgoodmoral() {
+        $this->load->helper('pdf_helper');
+        /*
+          ---- ---- ---- ----
+          your code here
+          ---- ---- ---- ----
+         */
+        $data['id'] = $this->uri->segment(4);
+        $id = $this->uri->segment(4);
+        $query = $this->db->query('SELECT * FROM students where id = '.$id.' ');
+        $data['user'] = $query->result();
+        
+
+        $this->load->view('/admin/reports/goodmoral_view', $data);
+    }
+
+    function teachers_pds() {
+        $data['admin'] = $this->getdata();
+        $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+        $data['count_request'] = $query->num_rows();
+        $data['alumni'] = $this->custom_m->getAllalumni();
+
+
+
+        $this->load->view('/admin/reports/teacher_pds', $data);
+    }
+
+
+    function get(){
+
+      
+    }
+
 
 
 }
