@@ -70,7 +70,7 @@
 				
 					</a>
 				</li>
-				<li class="active">
+				<li class="start">
 					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
 					<i class="icon-users"></i>
 					<span class="title">Event</span>
@@ -78,7 +78,7 @@
 				
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="<?php echo site_url('admin/gallery/')?>" >
 					<i class="icon-list"></i>
 					<span class="title">Gallery</span>
@@ -131,7 +131,7 @@
 				<div class="portlet box blue-hoki">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>Create an Event
+											<i class="fa fa-gift"></i>Create an GAllery
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -147,7 +147,7 @@
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
 										<?php $att = array('class' => 'form-horizontal'); ?>
-                                    <?= form_open_multipart('admin/eventadmin/event_add', $att) ?>
+                                    <?= form_open_multipart('admin/gallery/gallery_add', $att) ?>
 											<div class="form-body">		
 											<?php if($this->session->flashdata('result') != false){ ?>
 								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
@@ -155,43 +155,34 @@
 								          </div>
 								          <?php } ?>		
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Title</label>
+													<label class="col-md-3 control-label">Gallery Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<input type="text" class="form-control" name ="event_title" placeholder="Title of Event">
+															<input type="text" class="form-control" name ="title" placeholder="Title of Event">
 														</div>
 													</div>
 
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Description</label>
+													<label class="col-md-3 control-label">Gallery Description</label>
 													<div class="col-md-4">
-														<textarea name="event_description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
+														<textarea name="description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
 													</div>
 													
 
 												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label">Date Start</label>
+														<div class="form-group">
+													<label class="col-md-3 control-label">Date</label>
 													<div class="col-md-4">
-														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
-															<input type="date" class="form-control" name ="event_start" placeholder="Right icon">
-														</div>
+														<input type="date" class="form-control" name ="date" placeholder="Date Happened">
 													</div>
+													
+
 												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label">Date End</label>
-													<div class="col-md-4">
-														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
-															<input type="date" class="form-control" name ="event_end" placeholder="Right icon">
-														</div>
-													</div>
-												</div>
+										
 
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Picture</label>
+													<label class="col-md-3 control-label">Picture</label>
 											<div class="col-md-9">
 											<div class="fileinput fileinput-new" data-provides="fileinput">
 												<div class="fileinput-preview thumbnail" data-trigger="fileinput" 
@@ -227,7 +218,76 @@
 									</div>
 								</div>
 
+
+								<div class="row">
+									<div class="col-md-12">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+					<div class="portlet box blue-hoki">
+						<div class="portlet-title">
+							<div class="caption">
+								<i class="fa fa-globe"></i>Gallery List
+							</div>
+							<div class="tools">
+							</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-striped table-bordered table-hover" id="sample_1">
+							<thead>
+							<tr>
+								<th>
+									 Gallery Title
+								</th>
+								<th>
+									 GAllery Description
+								</th>
+								<th>
+									 Date
+								</th>
+								<th>
+									Photos
+								</th>
+								<th>
+									Action
+								</th>
+							</tr>
+							</thead>
+							<tbody>
+						
+								<?php foreach ($galleries as $s) : ?>
+							<tr>
+
+								<td>
+									<?php echo $s->title; ?>
+								</td>
+								<td>
+									 <?php echo $s->description; ?>
+								</td>
+								<td>
+									 <?php echo $s->date; ?>
+								</td>
+								<td>
+									 <img src="/uploads/<?php echo $s->photo; ?>" style="width:40px; border-radius:5px;"/>
+								</td>
+								<td>
+									 <a href="<?php echo site_url('admin/gallery/edit_gallery').'/'.$s->id; ?>">Edit</a> | <a href="<?php echo site_url('admin/gallery/delete_gallery').'/'.$s->id; ?>" onclick="return confirm('Are you sure you want to delete this Gallery?');">Delete</a>
+								</td>
+							
+							</tr>
+							
+							<?php endforeach; ?>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- END EXAMPLE TABLE PORTLET-->
+				
+				
+				</div>
 								</div>
+
+								</div>
+
+								
 			</div>
 			</div>
 <?php $this->load->view('admin/components/page_tail'); ?>

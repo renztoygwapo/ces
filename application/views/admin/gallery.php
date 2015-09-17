@@ -172,83 +172,23 @@
             <div class="content-page">
                 <div class="filter-v1">
               <div class="row mix-grid thumbnails">
+
+                <?php  foreach($galleries as $row):  ?>
+              
                                       <div class="col-md-6 col-sm-6 mix category_1 mix_all" style="display: block; opacity: 1;">
                                         <div class="mix-inner">
-                                          <a title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img1.jpg" class="fancybox-button">
-                                           <img alt="" src="../../assets/frontend/pages/img/carmen/img1.jpg" class="img-responsive">
+                                          <a title="<?php echo $row->title; ?>" href="/uploads/<?php echo $row->photo; ?>" class="fancybox-button">
+                                           <img alt="" src="/uploads/<?php echo $row->photo; ?>" class="img-responsive">
                                              </a>
-                                        </div>                       
+                                        </div> 
+                                        <div class="alert alert-info">
+                                          <h3><?php echo $row->description; ?></h3>
+                                          <h5><?php echo $row->description; ?></h5>
+                                          <p><?php echo $row->date; ?></p>
+                                        </div>                      
                                       </div>
-                                      <div class="col-md-6 col-sm-6 mix category_2 mix_all" style="display: block; opacity: 1;">
-                                           <div class="mix-inner">
-                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img2.jpg" class=" fancybox-button">
-                                              <img alt="" src="../../assets/frontend/pages/img/carmen/img2.jpg" class="img-responsive">
-                                              </a>
-                                              </div>               
-                                      </div>                    
-                                     
-                                      <div class="col-md-6 col-sm-6 mix category_3 mix_all" style="display: block; opacity: 1;">
-                                           <div class="mix-inner">
-                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img3.jpg" class="fancybox-button">
-                                              <img alt="" src="../../assets/frontend/pages/img/carmen/img3.jpg" class="img-responsive">
-                                            </a>
-                                                          
-                                          </div>      
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
-                                           <div class="mix-inner">
-                                            <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img4.jpg" class="fancybox-button">
-                                             <img alt="" src="../../assets/frontend/pages/img/carmen/img4.jpg" class="img-responsive">
-                                           </a>
-                                                        
-                                          </div>                      
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_2 category_1 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img5.jpg" class="fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img5.jpg" class="img-responsive">
-                                        </a>
-                                               
-                                          </div>                                   
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img6.jpg" class="fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img6.jpg" class="img-responsive">
-                                        </a>
-                                              
-                                          </div>                                   
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_2 category_3 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img7.jpg" class=" fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img7.jpg" class="img-responsive">
-                                        </a>
-                                          </div>                                    
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_1 category_2 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img8.jpg" class=" fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img8.jpg" class="img-responsive">
-                                        </a>
-                                            
-                                          </div>                                     
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_3 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                          <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img9.jpg" class="fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img9.jpg" class="img-responsive">
-                                        </a>
-                                            
-                                          </div>                                    
-                                      </div>
-                                      <div class="col-md-6 col-sm-6 mix category_1 mix_all" style="display: block; opacity: 1;">
-                                        <div class="mix-inner">
-                                           <a data-rel="fancybox-button" title="Founding Anniversary" href="../../assets/frontend/pages/img/carmen/img10.jpg" class=" fancybox-button">
-                                          <img alt="" src="../../assets/frontend/pages/img/carmen/img10.jpg" class="img-responsive">
-                                        </a>
-                                          </div>                                       
-                                      </div>
+                                        <?php endforeach; ?>
+                                  
                                   </div>
               </div>
             </div>

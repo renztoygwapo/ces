@@ -36,7 +36,7 @@
 					</a>
 				</li>
 				<li >
-					<a href="<?php echo site_url('admin/rankings/')?>" >
+					<a href="<?php echo site_url('admin/rankings/select_year')?>" >
 					<i class="icon-trophy"></i>
 					<span class="title">Rankings</span>
 					<span class="selected"></span>
@@ -68,8 +68,8 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
-					<i class="icon-users"></i>
+					<a href="<?php echo site_url('admin/gallery/')?>" >
+					<i class="icon-list"></i>
 					<span class="title">Gallery</span>
 					<span class="selected"></span>
 				

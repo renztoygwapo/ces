@@ -70,7 +70,7 @@
 				
 					</a>
 				</li>
-				<li class="active">
+				<li class="start">
 					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
 					<i class="icon-users"></i>
 					<span class="title">Event</span>
@@ -78,7 +78,7 @@
 				
 					</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href="<?php echo site_url('admin/gallery/')?>" >
 					<i class="icon-list"></i>
 					<span class="title">Gallery</span>
@@ -131,7 +131,7 @@
 				<div class="portlet box blue-hoki">
 									<div class="portlet-title">
 										<div class="caption">
-											<i class="fa fa-gift"></i>Create an Event
+											<i class="fa fa-gift"></i>Create an GAllery
 										</div>
 										<div class="tools">
 											<a href="javascript:;" class="collapse">
@@ -147,51 +147,45 @@
 									<div class="portlet-body form">
 										<!-- BEGIN FORM-->
 										<?php $att = array('class' => 'form-horizontal'); ?>
-                                    <?= form_open_multipart('admin/eventadmin/event_add', $att) ?>
+                                    <?= form_open_multipart('admin/gallery/gallery_add', $att) ?>
 											<div class="form-body">		
 											<?php if($this->session->flashdata('result') != false){ ?>
 								          <div id="prefix_419624997860" class="Metronic-alerts alert alert-success fade in">
 								          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
 								          </div>
-								          <?php } ?>		
+								          <?php } ?>	
+
+								          <?php foreach ($galleries as $gal) : ?>	
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Title</label>
+													<label class="col-md-3 control-label">Gallery Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<input type="text" class="form-control" name ="event_title" placeholder="Title of Event">
-														</div>
+															<input type="text" class="form-control" name ="title" value="<?php echo $gal->title; ?>">
+															<input type="hidden" class="form-control" name ="id" value="<?php echo $gal->id; ?>">
+															</div>
 													</div>
 
 												</div>
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Description</label>
+													<label class="col-md-3 control-label">Gallery Description</label>
 													<div class="col-md-4">
-														<textarea name="event_description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
+														<textarea name="description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;" ><?php echo $gal->description; ?></textarea>
 													</div>
 													
 
 												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label">Date Start</label>
+														<div class="form-group">
+													<label class="col-md-3 control-label">Date</label>
 													<div class="col-md-4">
-														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
-															<input type="date" class="form-control" name ="event_start" placeholder="Right icon">
-														</div>
+														<input type="date" class="form-control" name ="date" placeholder="Date Happened" value="<?php echo $gal->date; ?>">
 													</div>
+													
+
 												</div>
-												<div class="form-group">
-													<label class="col-md-3 control-label">Date End</label>
-													<div class="col-md-4">
-														<div class="input-icon right">
-															<i class="fa fa-calendar"></i>
-															<input type="date" class="form-control" name ="event_end" placeholder="Right icon">
-														</div>
-													</div>
-												</div>
+										
 
 												<div class="form-group">
-													<label class="col-md-3 control-label">Event Picture</label>
+													<label class="col-md-3 control-label">Picture</label>
 											<div class="col-md-9">
 											<div class="fileinput fileinput-new" data-provides="fileinput">
 												<div class="fileinput-preview thumbnail" data-trigger="fileinput" 
@@ -204,7 +198,7 @@
 													<span class="fileinput-exists">
 													Change </span>
 													<input type="hidden" name="photo" id="photo" >
-													<input type="file" name = "userfile" required>
+													<input type="file" name = "userfile" required value="/uploads/<?php echo $gal->photo; ?>">
 													</span>
 													<a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput">
 													Remove </a>
@@ -222,12 +216,17 @@
 													</div>
 												</div>
 											</div>
+											<?php endforeach; ?>
 										</form>
 										<!-- END FORM-->
 									</div>
 								</div>
 
+
+
 								</div>
+
+								
 			</div>
 			</div>
 <?php $this->load->view('admin/components/page_tail'); ?>

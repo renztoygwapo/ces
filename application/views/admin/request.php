@@ -62,7 +62,15 @@
 				<li>
 					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
 					<i class="icon-users"></i>
-					<span class="title">event</span>
+					<span class="title">Event</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('admin/gallery/')?>" >
+					<i class="icon-list"></i>
+					<span class="title">Gallery</span>
 					<span class="selected"></span>
 				
 					</a>
