@@ -28,7 +28,14 @@ $obj_pdf->AddPage('L');
 ob_start();
 
 foreach ($user as $u) {
-    $data = '<img src="/assets/frontend/onepage/img/partners/cisco.png" style="width:20px;"/> '.$u->firstname.' ';
+    $data = '<div align="center"><img src="/good_moral_img/logo.png" style="width:20px;"/><img src="/good_moral_img/logo.png" style="width:20px;"/>
+
+
+
+
+
+
+    </div> '.$u->firstname.' ';
 }
 
 
