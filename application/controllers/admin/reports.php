@@ -149,6 +149,7 @@ class Reports extends Admin_Controller {
         $data['work_exp'] = $this->custom_m->get_work_experience($id);
         $data['voluntary'] = $this->custom_m->get_voluntary_work($id);
         $data['training'] = $this->custom_m->get_training_programs($id);
+        $data['other_information'] = $this->custom_m->get_other_information($id);
         $data['child'] = $this->custom_m->get_child($id);
 
         //var_dump($id);

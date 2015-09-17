@@ -1008,7 +1008,7 @@
 
 									</div>
 									<div class="col-md-2">
-										<input type="text" class="form-control" placeholder="" name = "elem_honor_recieve" value = "<?php echo $e->honors_receive ;?>"></input>
+										<input type="text" class="form-control" placeholder="" name = "elem_honor_recieve" value = "<?php echo $e->inclusive_from ;?>"></input>
 									</div>
 
 									
@@ -1063,8 +1063,7 @@
 									
 								</div>
 								<hr>
-
-								<?php if($civil_srvc == null){ ?>
+											<?php if($civil_srvc == null){ ?>
 			
 			<div class="row">
 									<div class="col-md-3">
@@ -1273,8 +1272,14 @@
 
 							<?php endforeach; ?>
 							<?php  } ?>
-								
 
+
+
+
+								
+								
+								
+								
 								
 								
 
@@ -1324,7 +1329,12 @@
 								</div>
 								<hr>
 
-								<div class="row">
+								
+
+								
+											<?php if($work_exp == null){ ?>
+			
+							<div class="row">
 									<small><div class="col-md-2">
 										<div class="row">
 											<div class="col-md-6">
@@ -1438,7 +1448,227 @@
 										</div>
 									</small>
 									
-								</div>		
+								</div>
+			
+
+							<?php } else { ?>
+							<?php foreach ($work_exp as $we) : ?>
+											
+							<div class="row">
+									<small><div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_from3" value = "<?php echo $we->inclusive_dates_from ;?>"></input>
+											</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name = "inclusive_to3" value = "<?php echo $we->inclusive_dates_to ;?>"></input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "position_title3" value = "<?php echo $we->position_title ;?>"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "department3" value = "<?php echo $we->department ;?>"></input>
+									</div>
+									<small>
+										<div class="col-md-4">
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "monthly_salary3" value = "<?php echo $we->mothly_salary ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "salary_grade3" value = "<?php echo $we->salary_grade ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "status_of_appointment3" value = "<?php echo $we->status_of_appointment ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "gov_service3" value = "<?php echo $we->gov_service ;?>"></input>
+											</div>
+										</div>
+									</small>
+									
+								</div>
+
+							<?php endforeach; ?>
+							<?php  } ?>
+
+
+
+
+								
+								
+
+
+
+					<?php if($work_exp == null){ ?>
+			
+							<div class="row">
+									<small><div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_from1"></input>
+											</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name = "inclusive_to1"></input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "position_title1"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "department1"></input>
+									</div>
+									<small>
+										<div class="col-md-4">
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "monthly_salary1"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "salary_grade1"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "status_of_appointment1"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "gov_service1"></input>
+											</div>
+										</div>
+									</small>
+									
+								</div>
+
+								<div class="row">
+									<small><div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_from2"></input>
+											</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name = "inclusive_to2"></input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "position_title2"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "department2"></input>
+									</div>
+									<small>
+										<div class="col-md-4">
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "monthly_salary2"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "salary_grade2"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "status_of_appointment2"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "gov_service2"></input>
+											</div>
+										</div>
+									</small>
+									
+								</div>
+								<div class="row">
+									<small><div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_from3"></input>
+											</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name = "inclusive_to3"></input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "position_title3"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "department3"></input>
+									</div>
+									<small>
+										<div class="col-md-4">
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "monthly_salary3"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "salary_grade3"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "status_of_appointment3"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "gov_service3"></input>
+											</div>
+										</div>
+									</small>
+									
+								</div>
+			
+
+							<?php } else { ?>
+							<?php foreach ($work_exp as $we) : ?>
+											
+							<div class="row">
+									<small><div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_from3" value = "<?php echo $we->inclusive_dates_from ;?>"></input>
+											</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name = "inclusive_to3" value = "<?php echo $we->inclusive_dates_to ;?>"></input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "position_title3" value = "<?php echo $we->position_title ;?>"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name = "department3" value = "<?php echo $we->department ;?>"></input>
+									</div>
+									<small>
+										<div class="col-md-4">
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "monthly_salary3" value = "<?php echo $we->mothly_salary ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "salary_grade3" value = "<?php echo $we->salary_grade ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "status_of_appointment3" value = "<?php echo $we->status_of_appointment ;?>"></input>
+											</div>
+											<div class="col-md-3">
+												<input type="text" class="form-control" placeholder="" name = "gov_service3" value = "<?php echo $we->gov_service ;?>"></input>
+											</div>
+										</div>
+									</small>
+									
+								</div>
+
+							<?php endforeach; ?>
+							<?php  } ?>
+								
+									
 							</div>				
 					</div>
 					<div class="portlet box blue-hoki">
@@ -1476,9 +1706,10 @@
 									</div>
 								</div>
 								<hr>
-								<div class="row">
+									<?php if($voluntary == null){ ?>
+							<div class="row">
 									<div class="col-md-5">
-												<input type="text" class="form-control" placeholder="" name ="name_organization1"> </input>
+												<input type="text" class="form-control" placeholder="" name ="name_organization1" > </input>
 									</div>
 									<small>
 										<div class="col-md-2">
@@ -1575,7 +1806,50 @@
 									<div class="col-md-3">
 										<input type="text" class="form-control" placeholder="" name ="nature_of_work4"> </input>
 									</div>
-								</div>		
+								</div>
+
+								
+								
+
+							<?php } else { ?>
+							<?php foreach ($voluntary as $v) : ?>
+								
+								<div class="row">
+									<div class="col-md-5">
+												<input type="text" class="form-control" placeholder="" name ="name_organization4" value = "<?php echo $v->name_of_organization ;?>"> </input>
+									</div>
+									<small>
+										<div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6">
+											<input type="text" class="form-control" placeholder="" name ="inclusive_date_from4" value = "<?php echo $v->inclusive_form ;?>"> </input>
+										</div>
+									
+											<div class="col-md-6">
+												<input type="text" class="form-control" placeholder="" name ="inclusive_date_to4" value = "<?php echo $v->inclusive_to ;?>"> </input>
+											</div>
+										</div>
+
+									</div>
+									</small>
+									<div class="col-md-2">
+										<input type="text" class="form-control" placeholder="" name ="numbers_of_hours4" value = "<?php echo $v->number_of_hours ;?>"> </input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="" name ="nature_of_work4" value = "<?php echo $v->position ;?>"> </input>
+									</div>
+								</div>
+
+
+
+
+
+
+							<?php endforeach; ?>
+							<?php  } ?>
+
+
+		
 
 							</div>				
 					</div>
