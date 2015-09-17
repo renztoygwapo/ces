@@ -96,9 +96,10 @@
 									<div class="col-md-9">
 										<div class="tab-content">
 											<div id="tab_1-1" class="tab-pane active">
-											
+											<div class = "row">
+												<div class="col-md-12">
 												<?php
-									                  $attributes = array('class' => 'form-horizontal form-without-legend', 'role' => 'form');
+									                  $attributes = array('class' => '', 'role' => 'form');
 													  echo form_open('student/update_profile/', $attributes);
 									                  ?>
 													<div class="form-group">
@@ -138,10 +139,12 @@
 													</div>
 												<?php echo form_close(); ?>
 											</div>
+											</div>
+										</div>
+									
+
 											<div id="tab_2-2" class="tab-pane">
-												<p>
-													 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-												</p>
+												
 										
 												   <form name="upload" id="upload" method="post" action="<?php echo site_url('upload_pic/uploadpic_student') ?>" enctype="multipart/form-data">
 
