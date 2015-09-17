@@ -89,7 +89,7 @@ define ('K_BLANK_IMAGE', '');
 /**
  * Page format.
  */
-define ('PDF_PAGE_FORMAT', 'letter');
+define ('PDF_PAGE_FORMAT', 'LETTER');
 
 /**
  * Page orientation (P=portrait, L=landscape).
@@ -124,32 +124,32 @@ define ('PDF_UNIT', 'mm');
 /**
  * Header margin.
  */
-define ('PDF_MARGIN_HEADER', 1);
+define ('PDF_MARGIN_HEADER', 15);
 
 /**
  * Footer margin.
  */
-define ('PDF_MARGIN_FOOTER', 1);
+define ('PDF_MARGIN_FOOTER', 15);
 
 /**
  * Top margin.
  */
-define ('PDF_MARGIN_TOP', 1);
+define ('PDF_MARGIN_TOP', 15);
 
 /**
  * Bottom margin.
  */
-define ('PDF_MARGIN_BOTTOM', 1);
+define ('PDF_MARGIN_BOTTOM', 15);
 
 /**
  * Left margin.
  */
-define ('PDF_MARGIN_LEFT', 1);
+define ('PDF_MARGIN_LEFT', 15);
 
 /**
  * Right margin.
  */
-define ('PDF_MARGIN_RIGHT', 1);
+define ('PDF_MARGIN_RIGHT', 15);
 
 /**
  * Default main font name.
@@ -159,7 +159,7 @@ define ('PDF_FONT_NAME_MAIN', 'helvetica');
 /**
  * Default main font size.
  */
-define ('PDF_FONT_SIZE_MAIN', 10);
+define ('PDF_FONT_SIZE_MAIN', 5);
 
 /**
  * Default data font name.
