@@ -181,7 +181,11 @@
                                            <img alt="" src="/uploads/<?php echo $row->photo; ?>" class="img-responsive">
                                              </a>
                                         </div> 
-                                        <p><?php echo $row->description; ?></p>                      
+                                        <div class="alert alert-info">
+                                          <h3><?php echo $row->description; ?></h3>
+                                          <h5><?php echo $row->description; ?></h5>
+                                          <p><?php echo $row->date; ?></p>
+                                        </div>                      
                                       </div>
                                         <?php endforeach; ?>
                                   

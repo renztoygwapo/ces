@@ -1,4 +1,9 @@
 <?php $this->load->view('admin/components/page_head'); ?>
+<style type="text/css">
+	.tabletools-dropdown-on-portlet{
+		display: none;
+	}
+</style>
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
@@ -76,7 +81,15 @@
 				<li>
 					<a href="<?php echo site_url('admin/Eventadmin/')?>" >
 					<i class="icon-users"></i>
-					<span class="title">event</span>
+					<span class="title">Event</span>
+					<span class="selected"></span>
+				
+					</a>
+				</li>
+				<li>
+					<a href="<?php echo site_url('admin/gallery/')?>" >
+					<i class="icon-list"></i>
+					<span class="title">Gallery</span>
 					<span class="selected"></span>
 				
 					</a>
@@ -145,6 +158,7 @@
 							</div>
 						</div>
 						<div class="portlet-body">
+							<button class="btn btn-default green" onclick="window.print(); " style="float:right;">Print</button>
 							<table class="table table-striped table-bordered table-hover" id="sample_1">
 							<thead>
 							<tr>
@@ -197,7 +211,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
 	<div class="page-footer-inner">
-		 2014 &copy; Metronic by keenthemes.
+		 2016 &copy; CArmen Elementary School.
 	</div>
 	<div class="page-footer-tools">
 		<span class="go-top">
