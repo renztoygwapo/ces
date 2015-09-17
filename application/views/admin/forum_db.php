@@ -44,7 +44,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="<?php echo site_url('admin/reports/')?>" >
+					<a href="<?php echo site_url('admin/reports/reports_students/')?>">
 					<i class="icon-bar-chart"></i>
 					<span class="title">Reports</span>
 					<span class="selected"></span>
