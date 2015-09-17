@@ -35,7 +35,7 @@
 					</a>
 				</li>
 				<li class="active" >
-					<a href="<?php echo site_url('admin/rankings/select_year')?>" >
+					<a href="<?php echo site_url('admin/reports/reports_students/')?>" >
 					<i class="icon-trophy"></i>
 					<span class="title">Rankings</span>
 					<span class="selected"></span>
@@ -114,78 +114,35 @@
 			
 			<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Reports<small> student</small>
+			Rankings<small> student</small>
 			</h3>
-			<div class="page-bar">
-				<ul class="page-breadcrumb">
-					<li>
-						<i class="fa fa-home"></i>
-						<a href="<?php echo site_url('admin/home_admin/')?>">Home</a>
-						<i class="fa fa-angle-right"></i>
-					</li>
-					<li>
-						<a href="#">Reports</a>
-						<i class="fa fa-angle-right"></i>
-					</li>
-					
-				</ul>
-				
-			</div>
-			<!-- END PAGE HEADER-->
-			<!-- BEGIN PAGE CONTENT-->
+
 			<div class="row">
-				<div class="col-md-12">
-					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box blue-hoki">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-globe"></i>Student Rankings
-							</div>
-							<div class="tools">
-							</div>
-						</div>
-						<div class="portlet-body">
-							<table class="table table-striped table-bordered table-hover" id="sample_1">
-							<thead>
-							<tr>
-								<th>
-									 Ranking
-								</th>
-								<th>
-									 Student Name
-								</th>
-								<th>
-									Grade
-								</th>
-							</tr>
-							</thead>
-							<tbody>
-						
-								<?php foreach ($students as $s) : ?>
-							<tr>
-								<td>
-									 <h3><i class="icon-trophy" style="color:green;"> Rank #<?php echo $count[0]++; ?></i></h3>
-								</td>
-								<td>
-									 <?php echo ''.$s->firstname.' '.$s->lastname; ?>
-								</td>
-								<td>
-									 <?php echo $s->grade_rating; ?>
-								</td>
-							
-							</tr>
-							
-							<?php endforeach; ?>
-							</tbody>
-							</table>
-						</div>
+				<div class="col-md-4 col-md-offset-3">
+					<form class="form" action="<?php echo site_url('admin/rankings'); ?>" method="post">
+					<div class="form-group">
+						<label class="control-label">Year Level</label>
+														
+							<select class="form-control" name="year_level" required="">
+								<option value="">Select Year Level</option>
+								<option value="Grade 1">Grade 1</option>
+								<option value="Grade 2">Grade 2</option>
+								<option value="Grade 3">Grade 3</option>
+								<option value="Grade 4">Grade 4</option>
+								<option value="Grade 5">Grade 5</option>
+								<option value="Grade 6">Grade 6</option>
+							</select>
 					</div>
-					<!-- END EXAMPLE TABLE PORTLET-->
-				
-				
+					<div class="form-group">
+						<label class="control-label"></label>
+							<input type="submit" value="Submit" class="btn btn-default green">
+					</div>
+				</form>
 				</div>
 			</div>
-			<!-- END PAGE CONTENT-->
+
+
+
 
 
 		</div>
