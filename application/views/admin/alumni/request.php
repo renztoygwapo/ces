@@ -72,14 +72,52 @@
 								<td>
 										<?php 
 										if($row->req_file == 'approved'){ ?>
-											 <span class="label bg-green"><?php echo $row->req_file; ?></span>
+											 <span class="label bg-green" style=" margin-right: 0px; padding-right: 10px; padding-left: 10px; "><?php echo $row->req_file; ?></span>
+											 <!-- <span class="label bg-green"><a href ="#" style="color: #FFFFFF;">View Message</a></span> -->
+											 <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#VIEWMESSAGE<?php echo $row->id; ?>" name = "reqName" value = "" style="padding-top: 6px; padding-bottom: 5px;">View Message</button> 
 									<?php } else { ?>		
 											 <span class="label bg-blue">on process</span>
+											<!--  <span class="label bg-blue"><a href ="#" style="color: #FFFFFF;">View Message</a></span> -->
+											  <button type="button" class="btn label bg-blue " data-toggle="modal" data-target="#VIEWMESSAGE<?php echo $row->id; ?>" name = "reqName" value = "" style="padding-top: 6px; padding-bottom: 5px;">View Message</button> 
 									<?php } ?>
 
 									
 								</td>
 							</tr>
+
+							<div id="VIEWMESSAGE<?php echo $row->id; ?>" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog">
+      			  		<div class="modal-dialog modal-lg">
+
+      			  	 <form class="form-horizontal" action="<?php echo site_url('admin/request/updateRequest'); ?>" method="post">
+
+            				<div class="modal-content">
+               				 	<div class="modal-header">
+               				 		<h1>Message</h1>
+                 			   			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 				   
+               		 			</div>
+                <div class="modal-body">
+                   <p><?php echo $row->msg_status; ?> </p>
+                	
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   
+                </div>
+            </div>
+       
+        </div>
+
+        				</div>
+
+
+
+
+
+
+
+
 						<?php endforeach; ?>
 						</tbody>
 							</table>

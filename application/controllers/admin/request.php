@@ -27,6 +27,8 @@ FROM request_tb JOIN users
 ON request_tb.user_id=users.id order by req_date DESC');
        $data['rows'] = $query->result();
        //var_dump($data['rows']);
+       $q = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+       $data['count_request'] = $q->num_rows();
       $this->load->view('admin/request', $data);
 
     }

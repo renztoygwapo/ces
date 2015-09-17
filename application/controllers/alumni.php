@@ -95,6 +95,7 @@ class Alumni extends Admin_Controller {
               'req_description' => $this->input->post('request_description'),
               'req_date' => $this->input->post('date_now'),
               'req_file' => $this->input->post('request_file'),
+              'msg_status' => $this->input->post('msg'),
               'user_id' => $this->input->post('user_id')
               );
            $this->request_m->save($data);

@@ -28,11 +28,13 @@ class Student extends Admin_Controller {
     }
 
     public function index() {
-
-      
+      $id = $this->session->userdata('id');
+      $data['grades'] = $this->grades($id);
+     // var_dump($data['grades']);
       $id = $this->session->userdata('id');
       $data['student'] = $this->student_m->get($id);
-      $this->load->view('admin/student/index', $data);
+
+      $this->load->view('admin/student/index2', $data);
 
     }
 
@@ -106,25 +108,19 @@ class Student extends Admin_Controller {
       }
 
     }
-    public function grades(){
+    public function grades($id){
 
-      $id = $this->session->userdata('id');
+      
       $data['student'] = $this->student_m->get($id);
        $query = $this->db->query('SELECT * FROM grade where student_id = '.$id.'' );
-     $data['grades'] = $query->result();
+     //$data['grades'] = $query->result();
 
 
-
+     return $query->result();
 
       //var_dump($data['grades']);
 
-
-
-
-
-
-
-     $this->load->view('admin/student/grades',$data);
+     //$this->load->view('admin/student/grades',$data);
 
     }
 

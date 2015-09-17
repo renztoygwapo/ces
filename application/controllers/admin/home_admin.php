@@ -25,8 +25,8 @@ class Home_admin extends Admin_Controller {
 
 		$query = $this->db->query('SELECT * FROM users where role = "Student" ');
 		$data['students'] = $query->num_rows();
-    // $query = $this->db->query('SELECT * FROM users where role = "Admin" ');
-    // $data['admin'] = $query;
+    $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+    $data['count_request'] = $query->num_rows();
 
       $id = $this->session->userdata('id');
      // update query

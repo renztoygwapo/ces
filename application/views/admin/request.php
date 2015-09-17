@@ -30,7 +30,7 @@
 				<li class="set active">
 					<a href="<?php echo site_url('admin/request/')?>" >
 					<i class="icon-docs"></i>
-					<span class="title">Request</span>
+					<span class="title">Request <span class="badge badge-default"><?php echo $count_request; ?></span></span>
 					<span class="selected"></span>
 				
 					</a>
@@ -211,10 +211,25 @@
                     <h2> <?php echo $row->title; ?> </h2>
                     <p><?php echo $row->description; ?></p>
                     <small>Date:<?php echo $row->request_date; ?></small>
-                    <p><?php echo $row->description; ?></p>
+                    
                     
                     <input type="hidden" name="req" value = "<?php echo $row->request_id; ?>"></input>
+                    <div class="post-comment">
+                <h3>Leave a Comment</h3>
 
+
+                <!-- <form role="form" action="#"> -->
+                  <div class="form-group">
+                    <label class="control-label">Message <span class="required">
+                    * </span>
+                    </label>
+                    <textarea class="col-md-10 form-control" rows="8" name="message"></textarea>
+                   
+                  </div>
+                  
+
+             
+              </div>
                 	
 
                 </div>

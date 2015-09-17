@@ -20,6 +20,8 @@ class Reports extends Admin_Controller {
      // $this->data['subview'] = 'admin/dashboard/index';
       
       $data['admin'] = $this->getdata();
+      $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
+      $data['count_request'] = $query->num_rows();
       $this->load->view('admin/reports' ,$data);
 
     }

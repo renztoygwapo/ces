@@ -116,7 +116,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						</li>
 						<li>
 							<a href="page_calendar.html">
-							<i class="icon-calendar"></i> My Request </a>
+							<i class="icon-calendar"></i> Request List </a>
 						</li>
 						
 						<li class="divider">

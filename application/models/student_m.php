@@ -27,7 +27,7 @@ public $rules = array(
   {
     $user = $this->get_by(array(
       'username' => $this->input->post('username'),
-      'password' => $this->hash($this->input->post('password')),
+      'password' => $this->input->post('password'),
     ), TRUE);
     
     if (count($user)) {
