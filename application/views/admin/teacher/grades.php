@@ -73,6 +73,7 @@
 												<option value="English">English</option>
 												<option value="Mathematics">Mathematics</option>
 												<option value="Science & Health">Science & Health</option>
+												<option value="Makabayan">Makabayan</option>
 												<option value="HKS">HKS</option>
 												<option value="EPP">EPP</option>
 												<option value="MSEP">MSEP</option>

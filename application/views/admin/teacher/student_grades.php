@@ -503,23 +503,108 @@
 							</tr>
 							<tr role="row" class="odd">
 								<td class=" _1">
-									 MAKABAYAN
+									 Makabayan
+								</td>
+								<td>
+						<?php 
+						foreach ($grades as $grds) : 
+
+							$Subject = $grds->subject_name;
+							$period = $grds->grading_period;
+							$rate = $grds->grade_rating;
+
+							if($Subject == 'Makabayan' && $period == 'First Grading'){
+								echo  "<center>".$rate."</center>";
+							}
+										 ?>
+
+					
+									<?php endforeach; ?>
+
+								</td>
+
+
+								<td>
+									<?php 
+						foreach ($grades as $grds) : 
+
+							$Subject = $grds->subject_name;
+							$period = $grds->grading_period;
+							$rate = $grds->grade_rating;
+
+							if($Subject == 'Makabayan' && $period == 'Second Grading'){
+								echo  "<center>".$rate."</center>";
+							}
+										 ?>
+
+					
+									<?php endforeach; ?>
+									 
+								</td>
+
+
+								<td>
+									<?php 
+						foreach ($grades as $grds) : 
+
+							$Subject = $grds->subject_name;
+							$period = $grds->grading_period;
+							$rate = $grds->grade_rating;
+
+							if($Subject == 'Makabayan' && $period == 'Third Grading'){
+								echo  "<center>".$rate."</center>";
+							}
+										 ?>
+
+					
+									<?php endforeach; ?> 
+								</td>
+
+
+
+
+								<td>
+
+									<?php 
+						foreach ($grades as $grds) : 
+
+							$Subject = $grds->subject_name;
+							$period = $grds->grading_period;
+							$rate = $grds->grade_rating;
+
+							if($Subject == 'Makabayan' && $period == 'Fourth Grading'){
+								echo  "<center>".$rate."</center>";
+							}
+										 ?>
+
+					
+									<?php endforeach; ?> 
+									
+
+
+
 								</td>
 								<td>
 									
-								</td>
-								<td>
+
+									<?php 
+						foreach ($grades as $grds) : 
+
+							$Subject = $grds->subject_name;
+							$period = $grds->grading_period;
+							$rate = $grds->grade_rating;
+
+							if($Subject == 'Makabayan' && $period == 'Final Rating'){
+								echo  "<center>".$rate."</center>";
+							}
+										 ?>
+
+					
+									<?php endforeach; ?> 
 									 
+
 								</td>
-								<td class="center">
-									 
-								</td>
-								<td>
-										
-								</td>
-								<td>
-									 
-								</td>
+								
 								
 							</tr>
 							<tr role="row" class="odd">

@@ -102,7 +102,7 @@ class Student extends Admin_Controller {
               'lastname' => $this->input->post('lastname')
               );
        
-            $this->profile_m->save($data,$id);
+            $this->student_m->save($data,$id);
             $this->session->set_flashdata('result', 'Profile Successfully Updated!');
             redirect('student/profile','refresh');
       }

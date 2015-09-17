@@ -53,9 +53,9 @@
 									<div class="col-md-9">
 										<div class="row">
 											<div class="col-md-8 profile-info">
-												<h1>Raven Fuentes</h1>
+												<h1><?php echo $teachers->firstname.' '.$teachers->lastname; ?></h1>
 												<p>
-													 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt laoreet dolore magna aliquam tincidunt erat volutpat laoreet dolore magna aliquam tincidunt erat volutpat.
+														<?php echo $teachers->aboutme; ?>	 
 												</p>
 										
 											</div>

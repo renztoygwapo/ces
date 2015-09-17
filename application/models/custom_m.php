@@ -41,11 +41,11 @@
     //  $sql = "SELECT title, author, contents FROM data WHERE id = ? AND author = ?";
     //  $q = $this->db->query($sql, array(2, 'mark'));
     //    if($q->num_rows() > 0) {
-   //     foreach ($q->result() as $row) {
-   //       $data[] = $row;
-   //     }
-   //     return $data;
-   //   }
+    //    foreach ($q->result() as $row) {
+    //      $data[] = $row;
+    //    }
+    //    return $data;
+    //  }
 
     // }
     //SELECT * FROM `subject` JOIN section ON section.id = subject.section_id WHERE section.id = 2
@@ -65,6 +65,37 @@
       }
 
     }
+
+        function getAllstudents() {
+     $q = $this->db->query("SELECT * FROM students");
+     if ($q->num_rows() > 0 ) {
+       foreach ($q->result() as $row) {
+         $data[] = $row;
+     }
+     return $data;
+   }
+  }
+
+
+        function getAllteacher() {
+     $q = $this->db->query("SELECT * FROM users where role ='Teacher'");
+     if ($q->num_rows() > 0 ) {
+       foreach ($q->result() as $row) {
+         $data[] = $row;
+     }
+     return $data;
+   }
+  }
+
+    function getAllalumni() {
+     $q = $this->db->query("SELECT * FROM users where role ='Alumni'");
+     if ($q->num_rows() > 0 ) {
+       foreach ($q->result() as $row) {
+         $data[] = $row;
+     }
+     return $data;
+   }
+  }
 
     
 
