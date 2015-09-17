@@ -249,6 +249,7 @@
     $title = "approved";
     $data = array(
                'req_file' => $title,
+               'msg_status' => $this->input->post('message')
             );
       $this->db->where('id', $id);
       $this->db->update('request_tb', $data); 

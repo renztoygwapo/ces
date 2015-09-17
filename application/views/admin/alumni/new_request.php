@@ -42,6 +42,7 @@
 														<div class="input-icon right">
 															<input type="text" class="form-control" name ="title" placeholder="Form 137 , Good Moral or Others" autofocus>
 															<input type="hidden" class="form-control" name ="request_file" value="none">
+															<input type="hidden" class="form-control" name ="msg" value="On process request...">
 															<input type="hidden" class="form-control" name ="date_now" value = "<?php echo date("Y/m/d");  ?>">
 															<input type="hidden" class="form-control" name ="user_id" value = "<?php echo $alumni->id; ?>">
 														</div>

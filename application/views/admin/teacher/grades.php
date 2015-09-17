@@ -43,6 +43,7 @@
 												<option value="Second Grading">Second Grading</option>
 												<option value="Third Grading">Third Grading</option>
 												<option value="Fourth Grading">Fourth Grading</option>
+												<option value="Average">Average</option>
 											
 											</select>
 										</div>
@@ -75,6 +76,7 @@
 												<option value="HKS">HKS</option>
 												<option value="EPP">EPP</option>
 												<option value="MSEP">MSEP</option>
+												<option value="CE">Character Education</option>
 											
 											</select>
 										</div>
