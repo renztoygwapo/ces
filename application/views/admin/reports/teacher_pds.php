@@ -1,5 +1,6 @@
 <?php $this->load->view('admin/components/page_head'); ?>
 <!-- BEGIN CONTAINER -->
+
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->
 	<!-- BEGIN SIDEBAR -->
@@ -141,11 +142,7 @@
 	 <small><h6 class="page-title" >
 			CS FORM 212(Revised 2005) </small>
 			</h6>
-			<?php if($this->session->flashdata('result') != false){ ?>
-          <div id="prefix_419624997860" class="Metronic-alerts alert alert-info fade in">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button><?php  echo $this->session->flashdata('result'); ?>
-          </div>
-          <?php } ?>
+			
 		<center>
 
 		<h3 class="page-title" >
@@ -163,8 +160,10 @@
 				</ul>
 			</div>
 
-			<form class="form-horizontal" action="<?php echo site_url('teacher/insert_pds'); ?>" method="post">
-			<!-- END PAGE HEADER-->
+
+			<?php if($personal == null){ ?>
+
+
 			<div class="portlet box blue-hoki">
 						<div class="portlet-title">
 							<div class="caption">
@@ -184,8 +183,8 @@
 							
 								<div class="row">
 									<div class="col-md-3">
-										<input type="text" class = "form-control" placeholder="SURENAME" name = "surename"></input>
-										<input type="hidden" class = "form-control" name = "user_id" value="<?php echo $this->session->userdata('id'); ?>"></input>
+										<input type="text" class = "form-control" placeholder="SURENAME" name = "surename" value = ""></input>
+										<input type="hidden" class = "form-control" name = "user_id" value=""></input>
 									</div>
 								
 									<div class="col-md-3">
@@ -201,7 +200,7 @@
 								</div>
 						
 							<hr>
-						
+					
 								<div class="row">
 									<div class="col-md-3">
 										<input type="text" class="form-control" placeholder="DATE OF BIRTH(mm/dd/yyyy)" name = "dateofbirth"></input>
@@ -235,69 +234,233 @@
 											
 									</div>
 	
-								</div>					
+								</div>
+
+
+			<?php } else { ?>
+
+			<?php foreach ($personal as $s) : ?>
+			<!-- END PAGE HEADER-->
+			<div class="portlet box blue-hoki">
+						<div class="portlet-title">
+							<div class="caption">
+								I. PERSONAL INFORMATION
+							</div>
+							<div class="tools">
+								<a href="" class="collapse" data-original-title="" title="">
+								</a>
+								<a href="" class="reload" data-original-title="" title="">
+								</a>
+								<a href="" class="remove" data-original-title="" title="">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							<hr>
+							
+								<div class="row">
+									<div class="col-md-3">
+										<input type="text" class = "form-control" placeholder="SURENAME" name = "surename" value = "<?php echo $s->surename; ?>"></input>
+										<input type="hidden" class = "form-control" name = "user_id" value=""></input>
+									</div>
+								
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="FIRSTNAME" name = "firstname" value = "<?php echo $s->firstname; ?>"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="MIDDLE NAME" name = "middlename" value = "<?php echo $s->mname; ?>"></input>
+									</div>
+
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="NAME EXTENSION (e.g. Jr., Sr.) " name = "extend" value = "<?php echo $s->exname; ?>"></input>
+									</div>
+								</div>
+						
+							<hr>
+					
+								<div class="row">
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="DATE OF BIRTH(mm/dd/yyyy)" name = "dateofbirth" value = "<?php echo $s->birthdate; ?>"></input>
+									</div>
+									<div class="col-md-3">
+										<input type="text" class="form-control" placeholder="PLACE OF BIRTH" name = "place_of_birth" value = "<?php echo $s->birthplace; ?>"></input>
+									</div>
+									<div class="col-md-3">
+									
+									<label>SEX</label><br>
+											<label>
+									<div id="gender">
+									<?php if( $s->sex == 'Male'){ ?> 
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Male" checked> </input> Male </span> </label>
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Female"></input> Female</span> </label>
+										<?php } else { ?>
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Male" > </input> Male </span> </label>
+
+										<label><span class=""><input type="checkbox" id="gender" name = "gender" value = "Female" checked></input> Female</span> </label>
+									<?php } ?>
+
+									</div>		
+									
+									</div>
+									<div class="col-md-3">
+										
+											<center></center><label>CIVIL SATATUS</label> </center><br>
+									<div id="status">
+									<?php if($s->civilstatus == 'Single'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" checked></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed"></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated"></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled"></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
+
+									<?php } ?>
+
+									<?php if($s->civilstatus == 'Widowed'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" ></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed" checked></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated"></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled"></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
+
+									<?php } ?>
+
+									<?php if($s->civilstatus == 'Married'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" ></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed" ></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married" checked></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated"></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled"></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
+
+									<?php } ?>
+
+									<?php if($s->civilstatus == 'Separated'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" ></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed" ></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated" checked></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled"></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
+
+									<?php } ?>
+
+									<?php if($s->civilstatus == 'Annulled'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" ></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed" ></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated" ></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled" checked></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others"></input></span>Others</label>	
+
+									<?php } ?>
+
+									<?php if($s->civilstatus == 'Others'){ ?>
+
+											<label><span class=""><input type="checkbox" id="status" name = "status" value = "Single" ></input>Single</span></label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Widowed" ></input></span>Widowed</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Married"></input></span>Married</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Separated" ></input></span>Separated</label>
+										<br>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Annulled" ></input></span>Annulled</label>
+										<label><span class=""><input type="checkbox" id="status" name = "status" value = "Others" checked></input></span>Others</label>	
+
+									<?php } ?>
+										
+									</div>
+											
+									</div>
+	
+								</div>
+
+						
+							
 							<hr>
 						
 								<div class="row">
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="CITIZENSHIP" name = "citizenship">	</input>			
+										<input type="text" class="form-control" placeholder="CITIZENSHIP" name = "citizenship" value = "<?php echo $s->citizenship;?>" >	</input>			
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="HEIGHT(m)" name = "height"></input>
+										<input type="text" class="form-control" placeholder="HEIGHT(m)" name = "height" value = "<?php echo $s->height;?>" ></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="WEIGHT(KG)" name = "weight"></input>
+										<input type="text" class="form-control" placeholder="WEIGHT(KG)" name = "weight" value = "<?php echo $s->weight;?>" ></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="BLOOD TYPE" name = "blood_type"></input>
+										<input type="text" class="form-control" placeholder="BLOOD TYPE" name = "blood_type" value = "<?php echo $s->bloodtype;?>" ></input>
 									</div>
 								</div>
 								<hr>
 								<div class="row">
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="GSIS ID NO." name = "gsis"></input>				
+										<input type="text" class="form-control" placeholder="GSIS ID NO." name = "gsis" value = "<?php echo $s->gsis;?>"></input>				
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="PAGIBIG ID NO." name = "pagibig"></input>
+										<input type="text" class="form-control" placeholder="PAGIBIG ID NO." name = "pagibig" value = "<?php echo $s->pagibig;?>"></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="PHILHEALTH NO." name = "philhealth"></input>
+										<input type="text" class="form-control" placeholder="PHILHEALTH NO." name = "philhealth" value = "<?php echo $s->philhealth;?>"></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="SSS NO." name = "sss"></input>
+										<input type="text" class="form-control" placeholder="SSS NO." name = "sss" value = "<?php echo $s->sss;?>"></input>
 									</div>
 								</div>
 								<hr>
 								<div class="row">
 									<div class="col-md-7">
-										<input type="text" class="form-control" placeholder=" RESIDENTIAL ADDRESS" name = "residential_address"></input>				
+										<input type="text" class="form-control" placeholder=" RESIDENTIAL ADDRESS" name = "residential_address" value = "<?php echo $s->residential_adress;?>"></input>				
 									</div>
 									<div class="col-md-2">
-										<input type="text" class="form-control" placeholder="ZIP CODE" name = "zip_code"></input>
+										<input type="text" class="form-control" placeholder="ZIP CODE" name = "zip_code" value = "<?php echo $s->zip_code;?>"></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="TELEPHONE NO." name = "tel"> </input>
+										<input type="text" class="form-control" placeholder="TELEPHONE NO." name = "tel" value = "<?php echo $s->telephone;?>"> </input>
 									</div>
 								</div>
 								<hr>
 								<div class="row">
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="E-MAIL ADDRESS (if any)" name = "email">	</input>			
+										<input type="text" class="form-control" placeholder="E-MAIL ADDRESS (if any)" name = "email" value = "<?php echo $s->email;?>">	</input>			
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="CELLPHONE NO. (if any)" name = "cellphone"></input>
+										<input type="text" class="form-control" placeholder="CELLPHONE NO. (if any)" name = "cellphone" value = "<?php echo $s->cellphone;?>"></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="AGENCY EMPLOYEE NO." name = "agency"></input>
+										<input type="text" class="form-control" placeholder="AGENCY EMPLOYEE NO." name = "agency" value = "<?php echo $s->Agency_employee_no;?>"></input>
 									</div>
 									<div class="col-md-3">
-										<input type="text" class="form-control" placeholder="TIN" name = "tin"></input>
+										<input type="text" class="form-control" placeholder="TIN" name = "tin" 
+										value = "<?php echo $s->tin;?>"></input>
 									</div>
 								</div>
 
 							</div>
 
 						</div>
+							<?php endforeach; ?>	
+
+
+			<?php  } ?>
+
+				<?php if($family_bg == null){ ?>
 
 						<div class="portlet box blue-hoki">
 						<div class="portlet-title">
@@ -400,6 +563,117 @@
 								</div>
 								</div>
 
+
+
+			<?php } else { ?>
+
+			<?php foreach ($family_bg as $fb) : ?>
+
+				<div class="portlet box blue-hoki">
+						<div class="portlet-title">
+							<div class="caption">
+								II. FAMILY BACKGROUND
+							</div>
+							<div class="tools">
+								<a href="" class="collapse" data-original-title="" title="">
+								</a>
+								<a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title="">
+								</a>
+								<a href="" class="reload" data-original-title="" title="">
+								</a>
+								<a href="" class="remove" data-original-title="" title="">
+								</a>
+							</div>
+						</div>
+						<div class="portlet-body">
+							
+								
+								<div class="row">
+									<div class="col-md-6">
+										<h4>SPOUSE'S</h4>
+								<div class="row">
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="SURENAME" name = "spouse_sn" value = "<?php echo $fb->spouse_sn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="FIRSTNAME" name = "spouse_fn" value = "<?php echo $fb->spouse_fn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="MIDDLE NAME" name = "spouse_mn" value = "<?php echo $fb->spouse_mn ?>"></input>
+									</div>
+								</div>
+						
+								<div class="row">
+										<div class="col-md-12">
+											<hr>
+										</div>
+	
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="OCCUPATION" name = "occupation" value = "<?php echo $fb->spouse_occupation ?>"></input>
+									</div>
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="EMPLOYER/BUS. NAME" name = "employer_name" value = "<?php echo $fb->spouse_emp_bus_name ?>"></input>
+									</div>
+								</div>
+						
+								<div class="row">
+										<div class="col-md-12">
+											<hr>
+										</div>
+											
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="BUSINESS ADDRESS" name = "bus_address" value = "<?php echo $fb->spouse_bus_add ?>"></input>
+									</div>
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="TELEPHONE NO." name = "telephone" value = "<?php echo $fb->spouse_tel_number ?>"></input>
+									</div>
+								</div>				
+								<div class="row">
+										<div class="col-md-12">
+											<hr>
+										</div>
+								</div>
+
+								<h4>FATHERS'S</h4>
+								<div class="row">
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="SURENAME" name = "father_sn" value = "<?php echo $fb->father_sn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="FIRSTNAME" name = "father_fn " value = "<?php echo $fb->father_fn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="MIDDLE NAME" name = "father_mn" value = "<?php echo $fb->father_mn ?>"></input>
+									</div>
+								</div>
+								<div class="row">
+										<div class="col-md-12">
+											<hr>
+										</div>
+								</div>
+								<h4>MOTHER'S</h4>
+								<div class="row">
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="SURENAME" name = "mother_sn" value = "<?php echo $fb->mother_sn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="FIRSTNAME" name = "mother_fn" value = "<?php echo $fb->mother_fn ?>"></input>
+									</div>
+									<div class="col-md-4">
+										<input type="text" class="form-control" placeholder="MIDDLE NAME" name = "mother_mn" value = "<?php echo $fb->mother_mn ?>"></input>
+									</div>
+								</div>
+								</div>
+
+			<?php endforeach; ?>	
+
+			<?php  } ?>
+
 								<div class="col-md-6">
 									
 									<div class="row">
@@ -411,31 +685,49 @@
 								</div>
 								<div class="row">
 									<div class="col-md-7">
-										<h6> FULLNAME </h6> 
-											<input type="text" class="form-control" placeholder="" name = "fn1"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn2"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn3"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn4"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn5"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn6"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn7"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn8"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn9"></input>
-											<input type="text" class="form-control" placeholder="" name = "fn10"></input>
+										<h6> FULLNAME </h6>
+										<?php if($child == null){ ?>
+										<input type="text" class="form-control" placeholder="" name = "bd1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "bd1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										
+
+
+										<?php } else { ?>
+										<?php foreach ($child as $c) : ?>
+										<input type="text" class="form-control" placeholder="" name = "bd1" value ="<?php echo $c->full_name;?>"></input>
+										<?php endforeach; ?>
+										<?php  } ?>
+											
 									</div>
 									<div class="col-md-5">
 										<h6> BIRTHDAY(mm/dd/yyyy) </h6> 
-											<input type="text" class="form-control" placeholder="" name = "bd1"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd2"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd3"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd4"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd5"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd6"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd7"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd8"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd9"></input>
-											<input type="text" class="form-control" placeholder="" name = "bd10"></input>
-											<input type="hidden" class="form-control" placeholder="" name = "user_id" value="<?php echo $this->session->userdata('id'); ?>"></input>
+										<?php if($child == null){ ?>
+										<input type="text" class="form-control" placeholder="" name = "bd1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										<input type="text" class="form-control" placeholder="" name = "bd1"></input>
+										<input type="text" class="form-control" placeholder="" name = "fn1"></input>
+										
+
+
+										<?php } else { ?>
+										<?php foreach ($child as $c) : ?>
+										<input type="text" class="form-control" placeholder="" name = "bd1" value ="<?php echo $c->bday;?>"></input>
+										<?php endforeach; ?>
+										<?php  } ?>
 									</div>
 
 								</div>
@@ -496,8 +788,8 @@
 
 									
 								</div>
-						
-							<div class="row">
+								<?php if($educ_bg == null){ ?>
+									<div class="row">
 									<div class="col-md-2">
 										<input type="hidden" class="form-control" placeholder="" name = "elementary" value = "elementary"></input> ELEMENTARY
 									</div>
@@ -683,6 +975,50 @@
 										<input type="text" class="form-control" placeholder="" name = "graduate_studies_honor_recieve"></input>
 									</div>				
 								</div>
+
+								<?php } else { ?>
+							<?php foreach ($educ_bg as $e) : ?>
+
+								<div class="row">
+									<div class="col-md-2">
+										<input type="hidden" class="form-control" placeholder="" name = "elementary" value = "elementary"></input> <?php echo $e->level ;?>
+									</div>
+									<div class="col-md-2">
+										<input type="text" class="form-control" placeholder="" name = "elem_school_name" value = "<?php echo $e->school_nm ;?>"></input>
+									</div>
+									<div class="col-md-2">
+										<input type="text" class="form-control" placeholder="" name = "elem_degree_course"  value = "<?php echo $e->course_degree ;?>"></input>
+									</div>
+									<div class="col-md-2">
+										<div class="row">
+											<div class="col-md-6"><input type="text" class="form-control" placeholder="" name = "elem_yr_grad" value = "<?php echo $e->year_grad ;?>"></input></div>
+
+											<div class="col-md-6"><input type="text" class="form-control" placeholder="" name = "elem_high_grade" value = "<?php echo $e->high_level ;?>"></input></div>
+
+										</div>
+										
+									</div>
+									<div class="col-md-2">
+										
+										<div class="row">
+											<div class="col-md-6"><input type="text" class="form-control" placeholder="" name = "elem_inclusive_from" value = "<?php echo $e->inclusive_from ;?>"></input></div>
+									
+											<div class="col-md-6"><input type="text" class="form-control" placeholder="" name = "elem_inclusive_to" value = "<?php echo $e->inclusive_to ;?>"></input></div>
+										</div>
+
+									</div>
+									<div class="col-md-2">
+										<input type="text" class="form-control" placeholder="" name = "elem_honor_recieve" value = "<?php echo $e->honors_receive ;?>"></input>
+									</div>
+
+									
+							</div>
+								<hr>
+
+								<?php endforeach; ?>
+								<?php  } ?>
+
+							
 							</div>
 
 						
@@ -727,7 +1063,10 @@
 									
 								</div>
 								<hr>
-								<div class="row">
+
+								<?php if($civil_srvc == null){ ?>
+			
+			<div class="row">
 									<div class="col-md-3">
 										<input type="text" class="form-control" placeholder="" name="career_service1"></input>
 									</div>
@@ -753,7 +1092,7 @@
 
 									</div>
 									</small>
-									
+											
 								</div>
 								<div class="row">
 									<div class="col-md-3">
@@ -811,6 +1150,8 @@
 									</small>
 									
 								</div>
+
+
 								<div class="row">
 									<div class="col-md-3">
 										<input type="text" class="form-control" placeholder="" name="career_service4"></input>
@@ -867,6 +1208,8 @@
 									</small>
 									
 								</div>
+
+
 								<div class="row">
 									<div class="col-md-3">
 										<input type="text" class="form-control" placeholder="" name="career_service6"></input>
@@ -895,6 +1238,45 @@
 									</small>
 									
 								</div>
+
+							<?php } else { ?>
+							<?php foreach ($civil_srvc as $cs) : ?>
+											<div class="row">
+													<div class="col-md-3">
+														<input type="text" class="form-control" placeholder="" name="career_service6" value = "<?php echo $cs->career_srvc ;?>"></input>
+													</div>
+													<div class="col-md-2">
+														<input type="text" class="form-control" placeholder="" name="rating6" value = "<?php echo $cs->rating ;?>"></input>
+													</div>
+													<div class="col-md-2">
+														<input type="text" class="form-control" placeholder="" name="date_of_examination6" value = "<?php echo $cs->date_of_exam ;?>"></input>
+													</div>
+													<div class="col-md-3">
+														<input type="text" class="form-control" placeholder="" name="place_of_examination6" value = "<?php echo $cs->conferment ;?>"></input>
+													</div>
+													<small><div class="col-md-2">
+														<div class="row">
+															<div class="col-md-6">
+																<input type="text" class="form-control" placeholder="" name="license_number6" value = "<?php echo $cs->license_number ;?>"></input>
+															</div>
+													
+															<div class="col-md-6">
+																<input type="text" class="form-control" placeholder="" name="date_release6" value = "<?php echo $cs->license_release ;?>"></input>
+															</div>
+														</div>
+
+													</div>
+													</small>
+													
+												</div>
+
+
+							<?php endforeach; ?>
+							<?php  } ?>
+								
+
+								
+								
 
 							</div>
 
@@ -1499,6 +1881,9 @@ QuickSidebar.init(); // init quick sidebar
 Demo.init(); // init demo features
    TableAdvanced.init();
 });
+</script>
+<script type="text/javascript">
+	//window.print();
 </script>
 </body>
 <!-- END BODY -->

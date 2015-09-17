@@ -361,7 +361,7 @@
 						
 							<div class="row">
 									<div class="col-md-2">
-										<input type="hidden" class="form-control" placeholder="" name = "elementary" value = "elementary"></input> ELEMENTARY
+										<input type="hidden" class="form-control" placeholder="" name = "elementary" value = "ELEMENTARY"></input> ELEMENTARY
 									</div>
 									<div class="col-md-2">
 										<input type="text" class="form-control" placeholder="" name = "elem_school_name"></input>
@@ -396,7 +396,7 @@
 								<hr>
 							<div class="row">
 									<div class="col-md-2">
-										<input type="hidden" class="form-control" placeholder="" name = "secondary" value = "secondary"></input> SECONDARY
+										<input type="hidden" class="form-control" placeholder="" name = "secondary" value = "SECONDARY"></input> SECONDARY
 									</div>
 									<div class="col-md-2">
 										<input type="text" class="form-control" placeholder="" name = "secondary_school_name"></input>
@@ -435,7 +435,7 @@
 								<hr>
 								<div class="row">
 									<div class="col-md-2">
-										<input type="hidden" class="form-control" placeholder="" name = "vocational" value = "vocational"></input> VOCATIONAL/TRADE COURSE
+										<input type="hidden" class="form-control" placeholder="" name = "vocational" value = "VOCATIONAL/TRADE COURSE"></input> VOCATIONAL/TRADE COURSE
 									</div>
 									<div class="col-md-2">
 										<input type="text" class="form-control" placeholder="" name = "vocational_school_name"></input>
@@ -472,7 +472,7 @@
 								<hr>
 								<div class="row">
 									<div class="col-md-2">
-										<input type="hidden" class="form-control" placeholder="" name = "college" value = "college"></input> COLLEGE
+										<input type="hidden" class="form-control" placeholder="" name = "college" value = "COLLEGE"></input> COLLEGE
 									</div>
 									<div class="col-md-2">
 										<input type="text" class="form-control" placeholder="" name = "college_school_name"></input>
@@ -511,7 +511,7 @@
 								<hr>
 								<div class="row">
 									<div class="col-md-2">
-										<input type="hidden" class="form-control" placeholder="" name = "graduate_studies" value = "graduate_studies"></input> GRADUATE STUDIES
+										<input type="hidden" class="form-control" placeholder="" name = "graduate_studies" value = "GRADUATE STUDIES"></input> GRADUATE STUDIES
 									</div>
 									<div class="col-md-2">
 										<input type="text" class="form-control" placeholder="" name = "graduate_studies_school_name"></input>

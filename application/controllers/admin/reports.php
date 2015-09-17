@@ -101,22 +101,30 @@ class Reports extends Admin_Controller {
     }
 
     function teachers_pds() {
+        $id = $this->session->userdata('id');
         $data['admin'] = $this->getdata();
         $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
         $data['count_request'] = $query->num_rows();
+        
         $data['alumni'] = $this->custom_m->getAllalumni();
+        $id = $this->uri->segment(4);
+        $data['personal'] = $this->custom_m->get_personalinfo_m($id);
+        $data['family_bg'] = $this->custom_m->get_family_background($id);
+        $data['educ_bg'] = $this->custom_m->get_education_background($id);
+        $data['civil_srvc'] = $this->custom_m->get_civil_srvc_elig($id);
+        $data['work_exp'] = $this->custom_m->get_work_experience($id);
+        $data['voluntary'] = $this->custom_m->get_voluntary_work($id);
+        $data['training'] = $this->custom_m->get_training_programs($id);
+        $data['child'] = $this->custom_m->get_child($id);
 
-
-
-        $this->load->view('/admin/reports/teacher_pds', $data);
+        //var_dump($id);
+       // var_dump($data['personal']);
+       
+       $this->load->view('/admin/reports/teacher_pds', $data);
     }
 
 
-    function get(){
-
-      
-    }
-
+    
 
 
 }

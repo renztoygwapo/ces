@@ -272,6 +272,121 @@
     }
   }
 
+  function get_personalinfo_m($id){
+
+       $q = $this->db->query("SELECT * FROM personal_information where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+
+  function get_family_background($id){
+
+       $q = $this->db->query("SELECT * FROM family_bg where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+
+
+
+  function get_education_background($id){
+
+       $q = $this->db->query("SELECT * FROM educ_bg where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+
+  function get_civil_srvc_elig($id){
+
+       $q = $this->db->query("SELECT * FROM civil_srvc_elig where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+  function get_work_experience($id){
+
+       $q = $this->db->query("SELECT * FROM work_experience where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+  function get_voluntary_work($id){
+
+       $q = $this->db->query("SELECT * FROM voluntary_work where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+  function get_training_programs($id){
+
+       $q = $this->db->query("SELECT * FROM training_programs where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+  function get_other_information($id){
+
+       $q = $this->db->query("SELECT * FROM other_information where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+  function get_child($id){
+
+       $q = $this->db->query("SELECT * FROM child where user_id =".$id);
+      if ($q->num_rows() > 0 ) {
+        foreach ($q->result() as $row) {
+          $data[] = $row;
+      }
+      return $data;
+    }
+
+  }
+
+
+
 
 
 
