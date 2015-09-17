@@ -1,7 +1,7 @@
 
 		<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			<?php echo $this->uri->segment(4).' '.$this->uri->segment(5); ?> <small><?php //echo  ?></small>
+			<?php echo urldecode($id); ?> <?php echo urldecode($this->uri->segment(5)); ?> <small><?php //echo  ?></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
