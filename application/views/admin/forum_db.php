@@ -36,7 +36,7 @@
 					</a>
 				</li>
 				<li >
-					<a href="<?php echo site_url('admin/rankings/')?>" >
+					<a href="<?php echo site_url('admin/rankings/select_year')?>" >
 					<i class="icon-trophy"></i>
 					<span class="title">Rankings</span>
 					<span class="selected"></span>

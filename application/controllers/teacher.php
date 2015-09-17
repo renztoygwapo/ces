@@ -899,13 +899,14 @@ class Teacher extends Admin_Controller {
   public function student_grades(){
       $this->header();
       $id = $this->uri->segment(3);
+      $data['id'] = $this->uri->segment(4);
      $data['student'] = $this->student_m->get($id);
       $query = $this->db->query('SELECT * FROM grade where student_id = '.$id.'' );
      $data['grades'] = $query->result();
 
       //$data['grades'] = $query->result();
 
-      var_dump($id);
+     // var_dump($id);
 
      $this->load->view('admin/teacher/student_grades',$data);
 

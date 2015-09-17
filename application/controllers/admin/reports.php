@@ -67,6 +67,40 @@ class Reports extends Admin_Controller {
       $this->load->view('admin/reports_alumni' ,$data);
 
     }
+       function form138() {
+        $this->load->helper('pdf_helper');
+        /*
+          ---- ---- ---- ----
+          your code here
+          ---- ---- ---- ----
+         */
+        $data['id'] = $this->uri->segment(4);
+        $id = $this->uri->segment(4);
+        $query = $this->db->query('SELECT * FROM students where id = '.$id.' ');
+        $data['students'] = $query->result();
+
+        $query = $this->db->query("SELECT * FROM grade where student_id = '".$id."' and subject_name = 'Mathematics' ");
+        $data['math'] = $query->result();
+        
+        //var_dump($data['first_grading']);
+        $this->load->view('/admin/reports/form138', $data);
+    }
+
+        function form137() {
+        $this->load->helper('pdf_helper');
+        /*
+          ---- ---- ---- ----
+          your code here
+          ---- ---- ---- ----
+         */
+        $data['id'] = $this->uri->segment(4);
+        $id = $this->uri->segment(4);
+        $query = $this->db->query('SELECT * FROM students where id = '.$id.' ');
+        $data['students'] = $query->result();
+        
+
+        $this->load->view('/admin/reports/form137', $data);
+    }
 
      function goodmoral() {
         $this->load->helper('pdf_helper');
