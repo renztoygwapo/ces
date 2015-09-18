@@ -102,6 +102,22 @@ class Reports extends Admin_Controller {
         $this->load->view('/admin/reports/form137', $data);
     }
 
+    function form137_alumni() {
+        $this->load->helper('pdf_helper');
+        /*
+          ---- ---- ---- ----
+          your code here
+          ---- ---- ---- ----
+         */
+        $data['id'] = $this->uri->segment(4);
+        $id = $this->uri->segment(4);
+        $query = $this->db->query('SELECT * FROM users where id = '.$id.' ');
+        $data['students'] = $query->result();
+        
+
+        $this->load->view('/admin/reports/form137', $data);
+    }
+
      function goodmoral() {
         $this->load->helper('pdf_helper');
         /*

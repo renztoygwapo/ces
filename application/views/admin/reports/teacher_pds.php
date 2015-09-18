@@ -2157,7 +2157,7 @@ Demo.init(); // init demo features
 });
 </script>
 <script type="text/javascript">
-	//window.print();
+	window.print();
 </script>
 </body>
 <!-- END BODY -->

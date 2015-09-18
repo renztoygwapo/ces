@@ -106,7 +106,7 @@
 			<!-- BEGIN PAGE HEADER-->
 				<!-- BEGIN PAGE HEADER-->
 			<h3 class="page-title">
-			Event Page <small></small>
+			Gallery Page <small></small>
 			</h3>
 			<div class="page-bar">
 				<ul class="page-breadcrumb">
@@ -116,7 +116,7 @@
 						<i class="fa fa-angle-right"></i>
 					</li>
 					<li>
-						<a href="#">Event</a>
+						<a href="#">Gallery</a>
 					</li>
 				</ul>
 		
@@ -158,7 +158,7 @@
 													<label class="col-md-3 control-label">Gallery Title</label>
 													<div class="col-md-4">
 														<div class="input-icon right">
-															<input type="text" class="form-control" name ="title" placeholder="Title of Event">
+															<input type="text" class="form-control" name ="title" placeholder="">
 														</div>
 													</div>
 
@@ -166,7 +166,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Gallery Description</label>
 													<div class="col-md-4">
-														<textarea name="description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
+														<textarea name="description"  rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
 													</div>
 													
 

@@ -165,7 +165,7 @@
 									 <?php echo ''.$s->firstname.' '.$s->lastname; ?>
 								</td>
 								<td>
-									 <a href="#addstudent" data-toggle="modal" class="btn default btn-xs green">
+							<a href="<?php echo site_url('admin/reports/form137_alumni/').'/'.$s->id; ?>" data-toggle="modal" class="btn default btn-xs green">
 							<i class="fa fa-edit"></i> Form-137</a>
 							<a href="<?php echo site_url('admin/reports/goodmoral/').'/'.$s->id; ?>" target="_blank" class="btn default btn-xs blue">
 							<i class="fa fa-edit"></i> Good Moral</a>
