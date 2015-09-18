@@ -4,6 +4,7 @@ class Home_admin extends Admin_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('teacher_m');
+        $this->load->model('student_m');
         $this->load->model('profile_m');
         $this->load->model('familybg_m');
         $this->load->model('personalinfo_m');
@@ -23,7 +24,7 @@ class Home_admin extends Admin_Controller {
      	$query = $this->db->query('SELECT * FROM users where role = "Teacher" ');
 		$data['teachers'] = $query->num_rows();
 
-		$query = $this->db->query('SELECT * FROM users where role = "Student" ');
+		$query = $this->db->query('SELECT * FROM students  ');
 		$data['students'] = $query->num_rows();
     $query = $this->db->query('SELECT * FROM request_tb where req_file = "none" ');
     $data['count_request'] = $query->num_rows();
@@ -55,8 +56,7 @@ class Home_admin extends Admin_Controller {
 
     public function student_list(){
       $data['admin'] = $this->getdata();
-      $this->db->where('role', 'student');
-       $data['rows'] = $this->teacher_m->get();
+       $data['rows'] = $this->student_m->get();
      	//$data['rows'] = $this->db->query('SELECT * FROM users where role = "Teacher" ');
       $this->load->view('admin/student/student_list', $data);
     }

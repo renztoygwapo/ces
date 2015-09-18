@@ -166,7 +166,7 @@
 												<div class="form-group">
 													<label class="col-md-3 control-label">Event Description</label>
 													<div class="col-md-4">
-														<textarea name="event_description" data-provide="markdown" rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
+														<textarea name="event_description"  rows="10" data-width="600" class="form-control md-input" style="width: 600px; resize: none;"></textarea>
 													</div>
 													
 

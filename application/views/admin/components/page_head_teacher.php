@@ -221,22 +221,7 @@ License: You must have a valid license purchased only from themeforest(the above
 				
 					</a>
 				</li>
-				<li >
-					<a href="<?php echo site_url('teacher/pds')?>" >
-					<i class="icon-note"></i>
-					<span class="title">DepEd FORM 137-E</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
-				<li >
-					<a href="<?php echo site_url('teacher/onethreeeight')?>" >
-					<i class="icon-note"></i>
-					<span class="title">DepEd FORM 138-E</span>
-					<span class="selected"></span>
-				
-					</a>
-				</li>
+			
 			
 					
 			</ul>
